@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Node (for the future backend)
+node_modules/
+.env
+
+# The research workbook IS committed, on purpose: it's the provenance of
+# every fact on the site, and tools/convert.py is useless without it. Each
+# release adds roughly 250KB, which is a fine price for a self-contained
+# repo. Git can't diff it, so treat each release as a whole new file.
