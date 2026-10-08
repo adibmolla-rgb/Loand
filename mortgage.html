@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator | LoanD</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Order matters: data first, then shared helpers, then this page's code -->
+    <script src="data/research.js" defer></script>
+    <script src="data/lender-registry.js" defer></script>
+    <script src="data/glossary.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/lender-match.js" defer></script>
+    <script src="js/mortgage.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="LoanD home">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="mortgage.html" aria-current="page">Mortgages</a>
+                <a href="lenders.html">Lenders</a>
+                <a href="compare.html">Compare</a>
+                <a href="market.html">Market</a>
+                <button type="button" class="nav-link-button" data-action="loan-coming-soon">Loans</button>
+            </nav>
+            <button type="button" class="icon-button" data-action="toggle-theme" aria-label="Switch theme"></button>
+            <button type="button" class="icon-button menu-button" data-action="open-menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile navigation; hidden until the menu button opens it -->
+    <div class="drawer" id="menu-drawer" data-open="false">
+        <div class="drawer-scrim" data-action="close-menu"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="drawer-head">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+                <button type="button" class="icon-button" data-action="close-menu" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Main">
+                    <a href="mortgage.html" aria-current="page">Mortgages</a>
+                    <a href="lenders.html">Lenders</a>
+                    <a href="compare.html">Compare</a>
+                    <a href="market.html">Market</a>
+                <button type="button" data-action="loan-coming-soon">Loans</button>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <a href="index.html" class="back-link">Back to home</a>
+                <h1>Mortgage Calculator</h1>
+                <p class="hero-text">Find out how much you may be able to borrow, what it could cost each month, and how your figures compare with each lender's published limits.</p>
+                <div class="market-strip" id="market-strip" aria-label="Current market rates"></div>
+            </div>
+        </section>
+
+        <!-- Level 1: inputs and the headline result -->
+        <section class="calculator-section" id="calculator-section" aria-labelledby="calc-heading">
+            <div class="container calculator">
+                <form id="mortgage-form" class="calc-form" novalidate>
+                    <h2 id="calc-heading" class="section-title">Your details</h2>
+                    <p class="form-note">The form starts with example figures. Replace them with your own, then press Calculate.</p>
+
+                    <div class="field">
+                        <label for="income">Yearly income before tax</label>
+                        <div class="input-wrap"><span class="input-prefix">£</span>
+                            <input id="income" type="number" inputmode="decimal" min="0" step="1000" value="45000"></div>
+                        <p class="hint">Combined, if you're buying with someone.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="price">Property price</label>
+                        <div class="input-wrap"><span class="input-prefix">£</span>
+                            <input id="price" type="number" inputmode="decimal" min="0" step="5000" value="250000"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="deposit">Deposit</label>
+                        <div class="input-wrap"><span class="input-prefix">£</span>
+                            <input id="deposit" type="number" inputmode="decimal" min="0" step="1000" value="25000"></div>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="term">Mortgage term</label>
+                            <div class="input-wrap"><input id="term" type="number" inputmode="numeric" min="5" max="40" step="1" value="25"><span class="input-suffix">years</span></div>
+                        </div>
+                        <div class="field">
+                            <label for="rate">Interest rate</label>
+                            <div class="input-wrap"><input id="rate" type="number" inputmode="decimal" min="0" max="20" step="0.01" value="5"><span class="input-suffix">%</span></div>
+                        </div>
+                    </div>
+                    <p class="hint" id="rate-hint"></p>
+
+                    <div class="field">
+                        <label for="debts">Monthly credit repayments</label>
+                        <div class="input-wrap"><span class="input-prefix">£</span>
+                            <input id="debts" type="number" inputmode="decimal" min="0" step="10" value="0"></div>
+                        <p class="hint">Loans, car finance and credit cards. Leave at 0 if you have none.</p>
+                    </div>
+
+                    <fieldset class="field-group">
+                        <legend>About the purchase</legend>
+                        <p class="hint">Used for purchase tax and to check lenders' limits.</p>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="buyer-type">Buying as</label>
+                                <select id="buyer-type" class="select">
+                                    <option value="first-time buyer">First-time buyer</option>
+                                    <option value="home mover">Moving home</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="nation">Property in</label>
+                                <select id="nation" class="select">
+                                    <option>England</option>
+                                    <option>Scotland</option>
+                                    <option>Wales</option>
+                                    <option>Northern Ireland</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="property-type">Property type</label>
+                                <select id="property-type" class="select">
+                                    <option value="house">House</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="new build house">New-build house</option>
+                                    <option value="new build flat">New-build flat</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="applicants">Buying</label>
+                                <select id="applicants" class="select">
+                                    <option value="sole">On my own</option>
+                                    <option value="joint">With someone</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="age">Age of oldest buyer <span class="optional">(optional)</span></label>
+                            <div class="input-wrap input-short"><input id="age" type="number" inputmode="numeric" min="16" max="100" step="1"><span class="input-suffix">years</span></div>
+                            <p class="hint">Lets us check lenders' age limits at the end of the term.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- The one action on this page -->
+                    <div class="form-actions">
+                        <button type="submit" class="button-primary" id="calculate">Calculate my estimate</button>
+                        <p class="form-actions-note" id="calculate-note">Nothing is sent anywhere. Everything is worked out in your browser.</p>
+                    </div>
+                </form>
+
+                <aside class="results" id="results" aria-live="polite" aria-label="Your estimate"></aside>
+            </div>
+        </section>
+
+        <!-- Level 2: lender limits and scenarios -->
+        <div class="container with-sidebar lower">
+                <nav class="page-sidebar" aria-label="On this page">
+                    <p class="sidebar-title">On this page</p>
+                    <div class="sidebar-nav">
+                        <a href="#calculator-section">Your details</a>
+                        <a href="#limits-section">Lenders' limits</a>
+                        <a href="#scenarios-section">What if</a>
+                        <a href="#detail-section">More detail</a>
+                    </div>
+                </nav>
+                <div class="lower-body">
+        <section class="lower-section" id="limits-section" aria-labelledby="limits-heading">
+                <h2 id="limits-heading" class="section-title">Lenders' published limits</h2>
+                <p class="section-intro">How your figures compare with the limits each lender publishes. Being within them doesn't mean a lender would lend: they also score your credit, check your spending and value the property. Lenders are listed in research order, not ranked.</p>
+                <div id="limits"></div>
+        </section>
+
+        <section class="lower-section" id="scenarios-section" aria-labelledby="scenario-heading">
+                <h2 id="scenario-heading" class="section-title">What if things change?</h2>
+                <p class="section-intro">See how one change affects your monthly repayment.</p>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead><tr>
+                            <th scope="col">Scenario</th><th scope="col">Monthly</th><th scope="col">Change</th>
+                            <th scope="col"><span class="term" data-term="LTV">LTV</span></th><th scope="col">Total interest*</th>
+                        </tr></thead>
+                        <tbody id="scenarios-body"></tbody>
+                    </table>
+                </div>
+                <p class="table-note">*If the rate stayed the same for the whole term. In practice most deals end after 2 to 5 years.</p>
+        </section>
+
+        <!-- Level 3: detail on request -->
+        <section class="lower-section" id="detail-section" aria-labelledby="detail-heading">
+                <h2 id="detail-heading" class="section-title">More detail</h2>
+                <div class="accordion">
+                    <details>
+                        <summary id="band-rates-summary">Rates for your LTV band</summary>
+                        <div class="accordion-body">
+                            <div class="field inline-field">
+                                <label for="rate-period">Deal length</label>
+                                <select id="rate-period" class="select">
+                                    <option value="24">2 years</option>
+                                    <option value="36">3 years</option>
+                                    <option value="60">5 years</option>
+                                    <option value="120">10 years</option>
+                                    <option value="all">All lengths</option>
+                                </select>
+                            </div>
+                            <div id="band-rates"></div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Affordability stress tests</summary>
+                        <div class="accordion-body" id="stress-rates"></div>
+                    </details>
+
+                    <details>
+                        <summary>What lenders also check</summary>
+                        <div class="accordion-body">
+                            <p>This calculator looks at your income, deposit and debts. Lenders also look at your credit history, employment, spending and the property itself, and each has its own rules.</p>
+                            <div id="lender-checks"></div>
+                            <p><a href="lenders.html">Browse each lender's published criteria</a></p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Government schemes for buyers</summary>
+                        <div class="accordion-body" id="schemes"></div>
+                    </details>
+
+                    <details>
+                        <summary>How this estimate works</summary>
+                        <div class="accordion-body">
+                            <p><strong>Monthly repayment</strong> uses the standard formula for a repayment mortgage, where each payment covers interest plus some of the loan so it's paid off by the end of the term.</p>
+                            <p><strong>Borrowing capacity</strong> multiplies your income by 4.49, the standard limit published by Barclays, Lloyds Banking Group (incomes under £40,000), Nationwide and TSB (incomes up to £50,000).</p>
+                            <p><strong>Purchase tax</strong> uses the official bands for Stamp Duty (England and Northern Ireland), LBTT (Scotland) or LTT (Wales), including first-time buyer relief where it exists. It assumes the property will be your only home, so surcharges for additional homes aren't included.</p>
+                            <p><strong>Lenders' limits</strong> compare your LTV, income multiple, loan size, term and (if given) age with each lender's published numeric rules, using only rules confirmed by an official source. Special routes, such as family-assisted mortgages, are shown separately and never used to judge your figures.</p>
+                            <p>It doesn't include lender fees, legal costs or insurance, and it assumes the rate stays the same for the whole term.</p>
+                        </div>
+                    </details>
+                </div>
+        </section>
+                </div>
+            </div>
+
+
+        <!-- Only shown when the estimate is stacked below the form -->
+        <div class="jump-bar" id="jump-bar" hidden>
+            <div class="jump-inner">
+                <span class="jump-label">Estimated monthly repayment</span>
+                <span class="jump-figure"></span>
+            </div>
+            <a class="jump-action" href="#results">See full estimate</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>LoanD provides estimates and research for guidance only. It is not a lender and cannot approve or reject applications. Lenders make their own decisions using their own criteria, and published criteria can change.</p>
+            <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

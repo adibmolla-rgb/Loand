@@ -1,0 +1,2177 @@
+/* ==========================================================
+   LoanD – shared stylesheet
+   Design: "the annotated rate sheet". Fine rules and tabular
+   figures borrowed from lenders' printed product guides;
+   source codes treated as citation marks, not clutter.
+
+   1. Tokens          2. Base             3. Layout
+   4. Wordmark        5. Site header      6. Sidebar & drawer
+   7. Home page       8. Page intro       9. Sections
+   10. Accordions     11. Tables          12. Facts & sources
+   13. Badges, notes, tooltips            14. Forms
+   15. Calculator     16. Lender limits   17. Lenders
+   18. Compare        19. Market          20. Footer
+   21. Motion         22. Responsive (last, so it wins)
+   ========================================================== */
+
+
+/* ---------- 1. Tokens ---------- */
+:root {
+    /* Ink is a blue-black: it reads as printed document rather than UI grey. */
+    --ink: #14181F;
+    --ink-soft: #2B333F;
+    --muted: #5A6472;
+    --faint: #8A93A1;
+
+    --red: #D8232A;          /* brand: the D, and the primary action */
+    --red-dark: #B01B21;
+    --red-wash: #FDF2F2;
+
+    --surface: #FFFFFF;
+    --background: #FBFBFC;
+    --soft: #F3F4F6;         /* quiet panels and table headers */
+    --line: #E3E5E9;
+    --line-strong: #C8CCD4;
+
+    --caution: #9A6218;      /* "check this" only */
+    --caution-bg: #FDF6EA;
+    --good: #1F6F4A;         /* "within limits" only */
+
+    --on-red: #FFFFFF;
+    --tip-bg: #14181F;
+    --tip-fg: #FFFFFF;
+    --shadow-sm: 0 1px 2px rgba(20, 24, 31, 0.05);
+    --shadow-md: 0 4px 16px rgba(20, 24, 31, 0.08);
+    --shadow-lg: 0 12px 40px rgba(20, 24, 31, 0.14);
+
+    --display: "Bricolage Grotesque", "Manrope", system-ui, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --radius: 10px;
+    --radius-sm: 6px;
+    --max-width: 1140px;
+    --rule: 1px solid var(--line);
+
+    --chart-1: #14181F;
+    --chart-2: #D8232A;
+    --chart-3: #2F5FD0;
+    --chart-4: #9A6218;
+    --chart-5: #8A93A1;
+
+    color-scheme: light;     /* native controls and scrollbars match */
+}
+
+/* Dark theme: only the tokens change, so every component follows.
+   Applied when the user picks dark, or when their device prefers dark
+   and they haven't picked light. The same block appears twice because
+   CSS can't share one declaration between a media query and an attribute. */
+:root[data-theme="dark"] {
+    --ink: #E8EAEE;
+    --ink-soft: #C9CED6;
+    --muted: #9AA3B0;
+    --faint: #6E7684;
+
+    --red: #FF5A61;
+    --red-dark: #E0353D;
+    --red-wash: #2A1618;
+
+    --surface: #171A20;
+    --background: #0F1115;
+    --soft: #1D2129;
+    --line: #2A2F38;
+    --line-strong: #3C434F;
+
+    --caution: #E3B060;
+    --caution-bg: #26200F;
+    --good: #5FC08D;
+
+    --on-red: #1A0A0B;
+    --tip-bg: #E8EAEE;
+    --tip-fg: #0F1115;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+
+    --chart-1: #E8EAEE;
+    --chart-2: #FF5A61;
+    --chart-3: #7FA4F0;
+    --chart-4: #E3B060;
+    --chart-5: #8A93A1;
+
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --ink: #E8EAEE;
+        --ink-soft: #C9CED6;
+        --muted: #9AA3B0;
+        --faint: #6E7684;
+
+        --red: #FF5A61;
+        --red-dark: #E0353D;
+        --red-wash: #2A1618;
+
+        --surface: #171A20;
+        --background: #0F1115;
+        --soft: #1D2129;
+        --line: #2A2F38;
+        --line-strong: #3C434F;
+
+        --caution: #E3B060;
+        --caution-bg: #26200F;
+        --good: #5FC08D;
+
+        --on-red: #1A0A0B;
+        --tip-bg: #E8EAEE;
+        --tip-fg: #0F1115;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+
+        --chart-1: #E8EAEE;
+        --chart-2: #FF5A61;
+        --chart-3: #7FA4F0;
+        --chart-4: #E3B060;
+        --chart-5: #8A93A1;
+
+        color-scheme: dark;
+    }
+}
+
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;   /* so anchors clear the sticky header */
+}
+
+body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--display);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+a {
+    color: var(--ink);
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    text-decoration-color: currentColor;
+}
+
+/* Figures line up in columns wherever they're compared. */
+.num,
+.result-figure,
+.borrowing-figure,
+.market-value,
+.stat-grid dd,
+.data-table td,
+.tax-line strong {
+    font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Keyboard users can jump past the header. */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    color: var(--on-red);
+    background: var(--red);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* ---------- 3. Layout ---------- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Long pages get a sticky contents rail beside the content. */
+.with-sidebar {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: start;
+}
+
+/* Grid children default to min-width:auto, which lets a wide table
+   stretch the column. Zero lets the table scroll inside itself instead. */
+.with-sidebar > * {
+    min-width: 0;
+}
+
+
+/* ---------- 4. Wordmark ---------- */
+.wordmark {
+    font-family: var(--display);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    color: var(--ink);
+}
+
+.wordmark-d {
+    color: var(--red);
+}
+
+.wordmark-large {
+    font-size: clamp(4.5rem, 17vw, 10.5rem);
+}
+
+.wordmark-small {
+    font-size: 1.5rem;
+}
+
+
+/* ---------- 5. Site header ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: color-mix(in srgb, var(--background) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: var(--rule);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 68px;
+}
+
+.brand {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    gap: 0.25rem;
+    margin-left: auto;
+}
+
+.site-nav a,
+.nav-link-button {
+    position: relative;
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.site-nav a:hover,
+.nav-link-button:hover {
+    color: var(--ink);
+    background: var(--soft);
+}
+
+/* The current page is marked with a rule beneath it, not a colour swap. */
+.site-nav a[aria-current="page"] {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.site-nav a[aria-current="page"]::after {
+    position: absolute;
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: -0.35rem;
+    height: 2px;
+    background: var(--red);
+    content: "";
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    color: var(--muted);
+    background: none;
+    border: var(--rule);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    color: var(--ink);
+    border-color: var(--line-strong);
+}
+
+.icon-button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle-floating {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+/* ---------- 6. Sidebar and mobile drawer ---------- */
+.page-sidebar {
+    position: sticky;
+    top: 5.5rem;
+    padding-top: 0.5rem;
+}
+
+.sidebar-title {
+    font-family: var(--body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--faint);
+    margin: 0 0 0.75rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    border-left: var(--rule);
+}
+
+.sidebar-nav a {
+    padding: 0.4rem 0 0.4rem 0.9rem;
+    margin-left: -1px;
+    font-size: 0.9375rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+}
+
+.sidebar-nav a:hover {
+    color: var(--ink);
+}
+
+.sidebar-nav a.is-active {
+    color: var(--ink);
+    font-weight: 600;
+    border-left-color: var(--red);
+}
+
+/* Mobile navigation slides in from the right. */
+.drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    visibility: hidden;
+    overflow: hidden;   /* clips the panel while it sits off-screen */
+}
+
+.drawer[data-open="true"] {
+    visibility: visible;
+}
+
+.drawer-scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 24, 31, 0.45);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.drawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(20rem, 84vw);
+    height: 100%;
+    padding: 1.25rem;
+    overflow-y: auto;
+    background: var(--surface);
+    border-left: var(--rule);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.drawer[data-open="true"] .drawer-scrim {
+    opacity: 1;
+}
+
+.drawer[data-open="true"] .drawer-panel {
+    transform: none;
+}
+
+.drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: var(--rule);
+}
+
+.drawer-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.drawer-nav a,
+.drawer-nav button {
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--ink);
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-bottom: var(--rule);
+    padding: 0.85rem 0.25rem;
+    cursor: pointer;
+}
+
+.drawer-nav a[aria-current="page"] {
+    color: var(--red);
+    font-weight: 600;
+}
+
+
+/* ---------- 7. Home page ---------- */
+body.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* A faint ledger rule behind the wordmark: the page's one flourish. */
+.home-main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(3rem, 9vw, 6rem) 1.5rem 4rem;
+    overflow: hidden;
+}
+
+.home-main::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(760px, 92vw);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, transparent, var(--line-strong), transparent);
+    content: "";
+}
+
+.home-header {
+    max-width: 44rem;
+}
+
+.home-intro {
+    max-width: 40ch;
+    margin: 1.75rem auto 0;
+    font-size: 1.1875rem;
+    line-height: 1.55;
+    color: var(--muted);
+    text-wrap: balance;
+}
+
+.home-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+    width: 100%;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Shared by the <a> and the <button> so they match exactly. */
+.action-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.18s ease, color 0.18s ease,
+                border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.action-primary {
+    width: min(100%, 400px);
+    min-height: 132px;
+    font-size: 2.6rem;
+}
+
+.action-primary:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--on-red);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.action-secondary {
+    width: min(100%, 220px);
+    min-height: 92px;
+    font-size: 2rem;
+}
+
+.action-secondary:hover {
+    border-color: var(--red);
+    color: var(--red);
+    transform: translateY(-2px);
+}
+
+.action-caption {
+    margin: 0.7rem 0 0;
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.75rem;
+    margin-top: 3.5rem;
+}
+
+.home-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    border: var(--rule);
+    border-radius: 999px;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.home-link:hover {
+    color: var(--ink);
+    border-color: var(--line-strong);
+}
+
+
+/* ---------- 8. Page intro ---------- */
+.page-intro {
+    padding: 3.5rem 0 2.25rem;
+}
+
+.page-intro h1 {
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 700;
+    max-width: 20ch;
+}
+
+.hero-text {
+    max-width: 62ch;
+    margin: 1.25rem 0 0;
+    font-size: 1.125rem;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.back-link::before {
+    content: "\2190\00a0";
+}
+
+.back-link:hover {
+    color: var(--red);
+}
+
+
+/* ---------- 9. Sections ---------- */
+.content-section {
+    padding: 1.25rem 0 3.5rem;
+}
+
+.section-title {
+    font-size: 1.625rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.section-intro,
+.section-note,
+.table-intro,
+.table-note {
+    color: var(--muted);
+    max-width: 68ch;
+}
+
+.section-intro {
+    margin: 0 0 1.5rem;
+}
+
+.section-note,
+.table-intro {
+    margin: 0 0 1rem;
+    font-size: 0.9375rem;
+}
+
+.table-note {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+}
+
+.group-heading {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.75rem 0 0.6rem;
+}
+
+.accordion-body > .group-heading:first-child,
+.loan-card > .group-heading:first-child {
+    margin-top: 0;
+}
+
+.empty {
+    color: var(--muted);
+    margin: 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.plain-list {
+    margin: 0.25rem 0 0.75rem;
+    padding-left: 1.1rem;
+}
+
+.plain-list li + li {
+    margin-top: 0.4rem;
+}
+
+
+/* ---------- 10. Accordions ---------- */
+.accordion {
+    border-top: var(--rule);
+    margin-top: 1rem;
+}
+
+.accordion details {
+    border-bottom: var(--rule);
+}
+
+.accordion summary {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.05rem 0.25rem;
+    font-family: var(--display);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+/* A plus that becomes a minus when the section opens. */
+.accordion summary::after {
+    margin-left: auto;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    background:
+        linear-gradient(var(--muted), var(--muted)) center/12px 1.5px no-repeat,
+        linear-gradient(var(--muted), var(--muted)) center/1.5px 12px no-repeat;
+    transition: transform 0.25s ease;
+    content: "";
+}
+
+.accordion details[open] > summary::after {
+    background: linear-gradient(var(--red), var(--red)) center/12px 1.5px no-repeat;
+    transform: rotate(180deg);
+}
+
+.accordion summary:hover {
+    color: var(--red);
+}
+
+.count {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted);
+    background: var(--soft);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+}
+
+.accordion-body {
+    padding: 0 0.25rem 1.5rem;
+}
+
+.accordion-body > p {
+    max-width: 70ch;
+}
+
+
+/* ---------- 11. Tables ---------- */
+.table-scroll {
+    overflow-x: auto;
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: var(--rule);
+}
+
+.data-table thead th {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--soft);
+    white-space: nowrap;
+}
+
+.data-table tbody tr:last-child > * {
+    border-bottom: none;
+}
+
+.data-table tbody th {
+    font-weight: 500;
+}
+
+.data-table tbody tr:hover {
+    background: color-mix(in srgb, var(--soft) 55%, transparent);
+}
+
+.data-table .num {
+    white-space: nowrap;
+}
+
+.row-base {
+    background: var(--soft);
+}
+
+.row-base th {
+    font-weight: 600;
+}
+
+.text-button {
+    font: inherit;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.text-button:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.cell-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.rate-matrix td,
+.rate-matrix th {
+    white-space: nowrap;
+}
+
+.full-list {
+    margin-top: 1.25rem;
+}
+
+.full-list > summary {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    color: var(--muted);
+}
+
+.full-list > summary:hover {
+    color: var(--red);
+}
+
+.full-list-body {
+    margin-top: 0.75rem;
+}
+
+
+/* ---------- 12. Facts and sources ---------- */
+.fact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fact {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 0.25rem 2rem;
+    padding: 0.9rem 0;
+    border-bottom: var(--rule);
+}
+
+.fact:last-child {
+    border-bottom: none;
+}
+
+.fact p {
+    margin: 0;
+}
+
+.fact-title {
+    font-weight: 600;
+}
+
+.fact-value,
+.fact-note {
+    max-width: 66ch;
+}
+
+.fact-note {
+    margin-top: 0.3rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+.fact-status {
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+.fact-meta {
+    margin-top: 0.35rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.fact-list .fact-meta:empty {
+    display: none;
+}
+
+.scheme .fact-title {
+    grid-column: 1 / -1;
+}
+
+/* Source codes are citation marks: monospaced, quiet, always clickable. */
+.source-ref {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--faint);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0 0.3rem;
+    line-height: 1.55;
+    vertical-align: 1px;
+}
+
+a.source-ref:hover {
+    color: var(--red);
+    border-color: var(--red);
+    background: var(--red-wash);
+}
+
+.source-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.source-list li {
+    display: flex;
+    gap: 0.9rem;
+    padding: 0.8rem 0;
+    border-bottom: var(--rule);
+}
+
+.source-list p {
+    margin: 0.2rem 0 0;
+}
+
+.source-id {
+    flex: 0 0 2.6rem;
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--faint);
+}
+
+
+/* ---------- 13. Badges, notes, tooltips ---------- */
+.badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--soft);
+    border-radius: 999px;
+    padding: 0.05rem 0.5rem;
+    line-height: 1.65;
+    vertical-align: 1px;
+    white-space: nowrap;
+    cursor: help;
+}
+
+/* Jargon gets a dotted underline: hover or tap for a definition. */
+.term:not(.badge) {
+    text-decoration: underline dotted;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+    cursor: help;
+}
+
+.term:not(.badge):hover {
+    text-decoration-color: var(--red);
+}
+
+.glossary-tip {
+    position: fixed;
+    z-index: 150;
+    padding: 0.8rem 0.95rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--tip-fg);
+    background: var(--tip-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    pointer-events: none;
+}
+
+.glossary-tip strong {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.notes {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.note {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9375rem;
+    background: var(--soft);
+    border-left: 2px solid var(--line-strong);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.note-caution {
+    color: var(--caution);
+    border-left-color: var(--caution);
+    background: var(--caution-bg);
+}
+
+.note-caution a {
+    color: inherit;
+}
+
+.notice {
+    max-width: 72ch;
+    margin: 1.25rem 0 0;
+    padding: 0.85rem 1rem;
+    font-size: 0.9375rem;
+    background: var(--surface);
+    border: var(--rule);
+    border-left: 2px solid var(--ink);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+
+/* ---------- 14. Forms ---------- */
+.field {
+    margin-bottom: 1.2rem;
+}
+
+.field label,
+.field-group legend {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.field-row .field {
+    margin-bottom: 0.4rem;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-wrap:focus-within {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px var(--soft);
+}
+
+.input-wrap input {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    padding: 0.65rem 0.8rem;
+    border: none;
+    background: none;
+    color: var(--ink);
+}
+
+.input-wrap input:focus {
+    outline: none;
+}
+
+.input-prefix,
+.input-suffix {
+    color: var(--faint);
+    font-size: 0.9375rem;
+}
+
+.input-prefix { padding-left: 0.85rem; }
+.input-prefix + input { padding-left: 0.35rem; }
+.input-suffix { padding-right: 0.85rem; }
+.input-short { max-width: 12rem; }
+
+.select {
+    width: 100%;
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    padding: 0.6rem 0.8rem;
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px var(--soft);
+}
+
+.hint {
+    margin: 0.35rem 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+#rate-hint {
+    margin-bottom: 1.2rem;
+}
+
+.field-group {
+    border: none;
+    border-top: var(--rule);
+    margin: 1.75rem 0 0;
+    padding: 1.4rem 0 0;
+}
+
+.field-group legend {
+    font-family: var(--display);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.field-group > .hint {
+    margin: -0.2rem 0 1rem;
+}
+
+.optional {
+    font-weight: 400;
+    color: var(--faint);
+}
+
+.inline-field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.inline-field label {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.inline-field .select {
+    width: auto;
+}
+
+.form-note {
+    margin: 0 0 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+
+/* ---------- 15. Calculator ---------- */
+.market-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem 2.75rem;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: var(--rule);
+}
+
+.market-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.market-label {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.market-value {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.market-meta {
+    font-size: 0.75rem;
+    color: var(--faint);
+}
+
+.market-link {
+    margin-left: auto;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.market-link:hover {
+    color: var(--red);
+}
+
+.calculator-section {
+    padding: 0 0 3.5rem;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+/* The result stays in view while you edit the form. */
+.results {
+    position: sticky;
+    top: 5.5rem;
+    padding: 1.75rem;
+    background: var(--surface);
+    border: var(--rule);
+    border-top: 3px solid var(--red);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.results p {
+    margin: 0;
+}
+
+.result-label,
+.borrowing-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.results .result-figure {
+    margin-top: 0.15rem;
+    font-family: var(--display);
+    font-size: clamp(2.8rem, 6vw, 3.9rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+}
+
+.result-caption,
+.borrowing-caption {
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.4rem 0;
+    padding: 1.2rem 0;
+    border-top: var(--rule);
+    border-bottom: var(--rule);
+}
+
+.stat-grid dt {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.stat-grid dd {
+    margin: 0.15rem 0 0;
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.tax-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.tax-line strong {
+    font-family: var(--display);
+    font-size: 1.25rem;
+}
+
+.borrowing {
+    margin-top: 1.3rem;
+    padding-top: 1.3rem;
+    border-top: var(--rule);
+}
+
+.borrowing-figure {
+    font-family: var(--display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.limits-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.3rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--soft);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s ease;
+}
+
+.limits-link::after {
+    color: var(--muted);
+    content: "\2193";
+}
+
+.limits-link:hover {
+    background: var(--red-wash);
+}
+
+.limits-link:hover::after {
+    color: var(--red);
+}
+
+.results .result-disclaimer {
+    margin-top: 1.2rem;
+    font-size: 0.8125rem;
+    color: var(--faint);
+}
+
+.result-problem {
+    font-weight: 500;
+    color: var(--muted);
+}
+
+
+/* ---------- 16. Lender limits ---------- */
+.limits-summary {
+    margin: 0 0 1rem;
+    color: var(--muted);
+}
+
+.limits-summary strong {
+    color: var(--ink);
+}
+
+.match summary {
+    flex-wrap: wrap;
+    font-family: var(--body);
+    font-size: 1rem;
+}
+
+.match-name {
+    flex: 0 0 14rem;
+    font-weight: 600;
+}
+
+.match-verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.match-verdict::before {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    content: "";
+}
+
+.match-within .match-verdict { color: var(--good); }
+.match-within .match-verdict::before { background: var(--good); }
+.match-outside .match-verdict { color: var(--caution); }
+.match-outside .match-verdict::before { background: var(--caution); }
+.match-partial .match-verdict::before { border: 1.5px solid var(--faint); }
+
+.check-mark {
+    font-weight: 600;
+    margin-right: 0.3rem;
+}
+
+.check-mark.is-pass { color: var(--good); }
+.check-mark.is-fail { color: var(--caution); }
+
+.data-table td .fact-meta {
+    display: block;
+    margin-top: 0.2rem;
+}
+
+
+/* ---------- 17. Lenders ---------- */
+.directory {
+    margin-top: 2.5rem;
+}
+
+.lender-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 1rem;
+}
+
+.lender-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.35rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius);
+    transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.lender-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.lender-card h3 {
+    font-size: 1.1875rem;
+    font-weight: 700;
+}
+
+.lender-card:hover h3 {
+    color: var(--red);
+}
+
+.lender-type {
+    margin: 0.3rem 0 1rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.lender-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    padding-top: 0.9rem;
+    border-top: var(--rule);
+}
+
+.lender-facts dt {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.lender-facts dd {
+    margin: 0.1rem 0 0;
+    font-weight: 600;
+}
+
+.lender-coverage {
+    margin: auto 0 0;
+    font-size: 0.75rem;
+    color: var(--faint);
+}
+
+.pending {
+    margin-top: 2.5rem;
+}
+
+.profile h1 {
+    margin-top: 0;
+}
+
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.tile {
+    padding: 1.15rem;
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius);
+}
+
+.tile p {
+    margin: 0;
+}
+
+.tile-label {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.tile .tile-value {
+    margin-top: 0.2rem;
+    font-family: var(--display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.tile .tile-detail {
+    margin-top: 0.45rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.tile .tile-sources {
+    margin-top: 0.5rem;
+}
+
+.tile-footnote {
+    margin: 0.75rem 0 0;
+    font-size: 0.8125rem;
+    color: var(--faint);
+}
+
+.approval-line {
+    max-width: 72ch;
+    margin: 1.5rem 0 0;
+    font-size: 0.9375rem;
+}
+
+.profile-meta {
+    margin: 1.25rem 0 2.5rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+.profile-meta > p {
+    margin: 0 0 0.5rem;
+}
+
+.how-to-read summary {
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.how-to-read .accordion-body {
+    padding: 0.75rem 0 0;
+}
+
+.legend {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.loan-card + .loan-card {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: var(--rule);
+}
+
+.detail-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.9rem 1.5rem;
+    margin: 0.75rem 0;
+}
+
+.detail-list dt {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.detail-list dd {
+    margin: 0.1rem 0 0;
+}
+
+
+/* ---------- 18. Compare ---------- */
+.compare-controls {
+    margin-top: 2rem;
+    max-width: 54rem;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9375rem;
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.chip input {
+    accent-color: var(--red);
+    margin: 0;
+}
+
+.chip.is-on {
+    font-weight: 600;
+    border-color: var(--ink);
+}
+
+.chip.is-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.chip:not(.is-disabled):hover {
+    border-color: var(--line-strong);
+}
+
+.chip:focus-within {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+}
+
+.compare-selects {
+    max-width: 30rem;
+    margin-top: 1.25rem;
+}
+
+.compare {
+    margin-top: 1.75rem;
+}
+
+.compare-table {
+    min-width: 760px;
+}
+
+.compare-table thead th {
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.compare-table thead th a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.compare-table thead th a:hover {
+    color: var(--red);
+}
+
+/* The first column stays put while the table scrolls sideways. */
+.compare-table tbody th[scope="row"],
+.compare-table thead th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--surface);
+    width: 14rem;
+}
+
+.compare-table thead th:first-child {
+    background: var(--soft);
+}
+
+.compare-table td {
+    width: calc((100% - 14rem) / 3);
+}
+
+.group-row th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    background: var(--soft);
+}
+
+.group-row th[scope="rowgroup"] {
+    position: static;
+    width: auto;
+}
+
+.group-hint {
+    font-weight: 400;
+    color: var(--faint);
+}
+
+.cell-line + .cell-line {
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: var(--rule);
+}
+
+
+/* ---------- 19. Market ---------- */
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart-card {
+    padding: 1.6rem;
+    background: var(--surface);
+    border: var(--rule);
+    border-radius: var(--radius);
+}
+
+.chart-wide {
+    grid-column: 1 / -1;
+}
+
+.chart-card .section-title {
+    font-size: 1.3rem;
+}
+
+.chart-takeaway {
+    max-width: 72ch;
+    margin: 0.5rem 0 1.25rem;
+    color: var(--muted);
+}
+
+.chart-box {
+    position: relative;
+    height: 320px;
+}
+
+.chart-wide .chart-box {
+    height: 360px;
+}
+
+
+/* ---------- 20. Footer ---------- */
+.site-footer {
+    padding: 2.5rem 0;
+    margin-top: auto;
+    border-top: var(--rule);
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.home .site-footer {
+    text-align: center;
+}
+
+.site-footer p {
+    max-width: 78ch;
+    margin: 0;
+}
+
+.home .site-footer p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-footer .footer-small {
+    margin-top: 0.6rem;
+    font-size: 0.8125rem;
+    color: var(--faint);
+}
+
+
+/* ---------- 21. Motion ----------
+   One orchestrated entrance on the home page. Everything else
+   moves only in response to something the person did. */
+@keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.home-main .wordmark-large,
+.home-main .home-intro,
+.home-actions .action,
+.home-main .home-links {
+    animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.home-main .wordmark-large { animation-delay: 0.05s; }
+.home-main .home-intro     { animation-delay: 0.16s; }
+.home-actions .action:nth-of-type(1) { animation-delay: 0.26s; }
+.home-actions .action:nth-of-type(2) { animation-delay: 0.34s; }
+.home-main .home-links     { animation-delay: 0.44s; }
+
+
+/* ---------- 22. Responsive ---------- */
+@media (max-width: 1000px) {
+    .with-sidebar {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .page-sidebar {
+        display: none;
+    }
+
+    /* Stacked: cap the width so fields and text don't run edge to edge. */
+    .calculator {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 44rem;
+    }
+
+    .results {
+        position: static;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tile-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    html {
+        scroll-padding-top: 5rem;
+    }
+
+    .site-nav {
+        display: none;    /* replaced by the drawer */
+    }
+
+    .menu-button {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .header-inner {
+        min-height: 60px;
+    }
+
+    .page-intro {
+        padding: 2.5rem 0 1.75rem;
+    }
+
+    .home-actions {
+        margin-top: 2.5rem;
+    }
+
+    .action-primary {
+        min-height: 112px;
+        font-size: 2.2rem;
+    }
+
+    .fact {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+    }
+
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results {
+        padding: 1.4rem;
+    }
+
+    .theme-toggle-floating {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .match-name {
+        flex-basis: 100%;
+    }
+
+    .market-link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tile-grid,
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1.1rem;
+    }
+}
+
+/* Respect a device set to reduce motion: keep the meaning, drop the movement. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .action-box:hover,
+    .lender-card:hover {
+        transform: none;
+    }
+}
+
+/* The three lower sections of the calculator share one contents rail. */
+.lower-section {
+    padding: 1.25rem 0 3.25rem;
+}
+
+.lower-body > .lower-section:first-child {
+    padding-top: 0;
+}
+
+/* The estimate panel announces itself, so it reads as the answer
+   rather than another block of page. */
+.results-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: var(--rule);
+}
+
+.results-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.live-note {
+    font-size: 0.75rem;
+    color: var(--faint);
+}
+
+.next-steps {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: var(--rule);
+}
+
+.next-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.next-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+    font-size: 0.9375rem;
+}
+
+.next-list li + li {
+    margin-top: 0.35rem;
+}
+
+/* Pinned to the bottom of the screen only when the layout stacks,
+   because that's when the estimate is far below the form. */
+.jump-bar {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .jump-bar:not([hidden]) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.7rem 1.1rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+        background: color-mix(in srgb, var(--surface) 94%, transparent);
+        backdrop-filter: blur(12px);
+        border-top: var(--rule);
+        box-shadow: 0 -4px 16px rgba(20, 24, 31, 0.08);
+    }
+
+    .jump-inner {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .jump-label {
+        font-size: 0.75rem;
+        color: var(--muted);
+    }
+
+    .jump-figure {
+        font-family: var(--display);
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .jump-action {
+        flex: 0 0 auto;
+        padding: 0.55rem 0.9rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--on-red);
+        text-decoration: none;
+        background: var(--red);
+        border-radius: var(--radius-sm);
+    }
+
+    /* Room so the bar never covers the footer. */
+    .site-footer {
+        padding-bottom: 6rem;
+    }
+}
+
+/* The one action on the calculator: a full-width red button that sits
+   directly under the last input, so it reads as "finish here". */
+.form-actions {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: var(--rule);
+}
+
+.button-primary {
+    display: block;
+    width: 100%;
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--on-red);
+    background: var(--red);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.95rem 1.25rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.15s ease, transform 0.12s ease;
+}
+
+.button-primary:hover {
+    background: var(--red-dark);
+}
+
+.button-primary:active {
+    transform: translateY(1px);
+}
+
+.form-actions-note {
+    margin: 0.7rem 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* A problem is reported next to the button, where the person is looking. */
+.form-actions-note.is-problem {
+    color: var(--caution);
+    font-weight: 600;
+}
+
+.result-waiting {
+    font-size: 1.0625rem;
+    margin-bottom: 0.6rem !important;
+}
+
+.results:focus {
+    outline: none;
+}
+
+/* A rate that undercuts the same lender's smaller-loan bands: shown, but
+   marked, so nobody is pointed at a deal that may not exist. */
+.flag {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0 0.4rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--caution);
+    background: var(--caution-bg);
+    border-radius: 999px;
+    vertical-align: 1px;
+    cursor: help;
+}

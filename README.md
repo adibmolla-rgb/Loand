@@ -52,7 +52,7 @@ page's own file. A page file assumes the shared helpers already exist.
 
 ## Putting it on GitHub
 
-One command, the first time:
+**If you have NOT created the repository yet**, one command does everything:
 
 ```
 bash tools/setup-github.sh
@@ -76,6 +76,17 @@ REPO_PRIVATE=1 bash tools/setup-github.sh  # private repo
 
 It refuses to touch a repository that already exists, so it can't overwrite
 anything by accident.
+
+**If you already created the repository on GitHub** (with a README, a licence
+or a .gitignore), use this instead:
+
+```
+bash tools/push-to-existing.sh your-name/loand
+```
+
+It joins your files onto the repository's existing history, prints exactly what
+will change, warns you if anything on GitHub would be deleted, and pushes only
+after you confirm. Nothing is sent if you answer no.
 
 For every change after that:
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LoanD helps you estimate mortgage and loan affordability, compare products and understand your repayments.">
+    <title>LoanD | Estimate what you can borrow</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="home">
+
+    <button type="button" class="icon-button theme-toggle-floating" data-action="toggle-theme" aria-label="Switch theme"></button>
+
+    <main class="home-main" id="main">
+        <header class="home-header">
+            <!-- Logo: swap this h1's contents for <img src="images/logo.png" alt="LoanD"> later -->
+            <h1 class="wordmark wordmark-large">Loan<span class="wordmark-d">D</span></h1>
+
+            <p class="home-intro">
+                Estimate how much you could borrow, what your monthly repayments might be and how
+                your deposit, term and interest rate change the numbers.
+            </p>
+        </header>
+
+        <section class="home-actions" aria-label="Choose a calculator">
+            <!-- Link: goes to another page -->
+            <div class="action">
+                <a href="mortgage.html" class="action-box action-primary">Mortgage</a>
+                <p class="action-caption">Check your mortgage eligibility.</p>
+            </div>
+
+            <!-- Button: performs an action (the alert) -->
+            <div class="action">
+                <button type="button" class="action-box action-secondary" data-action="loan-coming-soon">Loans</button>
+                <p class="action-caption">Coming soon.</p>
+            </div>
+        </section>
+
+        <nav class="home-links" aria-label="More">
+            <a href="lenders.html" class="home-link">Browse lender criteria</a>
+            <a href="compare.html" class="home-link">Compare lenders</a>
+            <a href="market.html" class="home-link">Market trends</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                LoanD provides estimates for guidance only. It is not a lender and cannot approve or
+                reject applications. Lenders make their own decisions using their own criteria.
+            </p>
+            <p class="footer-small">&copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

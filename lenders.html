@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenders | LoanD</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Order matters: data first, then shared helpers, then this page's code -->
+    <script src="data/research.js" defer></script>
+    <script src="data/lender-registry.js" defer></script>
+    <script src="data/glossary.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/lender-pages.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="LoanD home">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="mortgage.html">Mortgages</a>
+                <a href="lenders.html" aria-current="page">Lenders</a>
+                <a href="compare.html">Compare</a>
+                <a href="market.html">Market</a>
+                <button type="button" class="nav-link-button" data-action="loan-coming-soon">Loans</button>
+            </nav>
+            <button type="button" class="icon-button" data-action="toggle-theme" aria-label="Switch theme"></button>
+            <button type="button" class="icon-button menu-button" data-action="open-menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile navigation; hidden until the menu button opens it -->
+    <div class="drawer" id="menu-drawer" data-open="false">
+        <div class="drawer-scrim" data-action="close-menu"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="drawer-head">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+                <button type="button" class="icon-button" data-action="close-menu" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Main">
+                    <a href="mortgage.html">Mortgages</a>
+                    <a href="lenders.html" aria-current="page">Lenders</a>
+                    <a href="compare.html">Compare</a>
+                    <a href="market.html">Market</a>
+                <button type="button" data-action="loan-coming-soon">Loans</button>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <a href="index.html" class="back-link">Back to home</a>
+                <h1>Lenders</h1>
+                <p class="hero-text">See what each lender publishes about who they lend to, how much, and on what terms. Choose a lender for its full criteria and sources, or <a href="compare.html">compare lenders side by side</a>.</p>
+                <div id="lender-directory" class="directory"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>LoanD provides estimates and research for guidance only. It is not a lender and cannot approve or reject applications. Lenders make their own decisions using their own criteria, and published criteria can change.</p>
+            <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
