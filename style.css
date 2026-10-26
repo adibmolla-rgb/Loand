@@ -21,7 +21,7 @@
     --ink: #14181F;
     --ink-soft: #2B333F;
     --muted: #5A6472;
-    --faint: #8A93A1;
+    --faint: #626B78;
 
     --red: #D8232A;          /* brand: the D, and the primary action */
     --red-dark: #B01B21;
@@ -32,6 +32,7 @@
     --soft: #F3F4F6;         /* quiet panels and table headers */
     --line: #E3E5E9;
     --line-strong: #C8CCD4;
+    --control-border: #7D8696;   /* borders of inputs and buttons: 3:1 against the page */
 
     --caution: #9A6218;      /* "check this" only */
     --caution-bg: #FDF6EA;
@@ -70,7 +71,7 @@
     --ink: #E8EAEE;
     --ink-soft: #C9CED6;
     --muted: #9AA3B0;
-    --faint: #6E7684;
+    --faint: #959EAB;
 
     --red: #FF5A61;
     --red-dark: #E0353D;
@@ -81,6 +82,7 @@
     --soft: #1D2129;
     --line: #2A2F38;
     --line-strong: #3C434F;
+    --control-border: #78818F;
 
     --caution: #E3B060;
     --caution-bg: #26200F;
@@ -107,7 +109,7 @@
         --ink: #E8EAEE;
         --ink-soft: #C9CED6;
         --muted: #9AA3B0;
-        --faint: #6E7684;
+        --faint: #959EAB;
 
         --red: #FF5A61;
         --red-dark: #E0353D;
@@ -118,6 +120,7 @@
         --soft: #1D2129;
         --line: #2A2F38;
         --line-strong: #3C434F;
+        --control-border: #78818F;
 
         --caution: #E3B060;
         --caution-bg: #26200F;
@@ -1134,7 +1137,7 @@ a.source-ref:hover {
     display: flex;
     align-items: center;
     background: var(--surface);
-    border: var(--rule);
+    border: 1px solid var(--control-border);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -1180,7 +1183,7 @@ a.source-ref:hover {
     font-weight: 500;
     color: var(--ink);
     background: var(--surface);
-    border: var(--rule);
+    border: 1px solid var(--control-border);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
     padding: 0.6rem 0.8rem;
@@ -1692,7 +1695,7 @@ a.source-ref:hover {
     padding: 0.4rem 0.85rem;
     font-size: 0.9375rem;
     background: var(--surface);
-    border: var(--rule);
+    border: 1px solid var(--control-border);
     border-radius: 999px;
     cursor: pointer;
     transition: border-color 0.15s ease, background-color 0.15s ease;
@@ -1799,11 +1802,12 @@ a.source-ref:hover {
 /* ---------- 19. Market ---------- */
 .chart-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
 .chart-card {
+    min-width: 0;
     padding: 1.6rem;
     background: var(--surface);
     border: var(--rule);
@@ -1909,7 +1913,7 @@ a.source-ref:hover {
     }
 
     .chart-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .tile-grid {
@@ -2261,4 +2265,62 @@ a.source-ref:hover {
 .loan-fit-no {
     color: var(--caution);
     font-weight: 600;
+}
+
+
+/* ---------- Charts: historical label and data tables ---------- */
+.badge-hist {
+    cursor: default;
+    color: var(--ink-soft);
+    border: 1px solid var(--control-border);
+    background: transparent;
+}
+
+.chart-kind {
+    margin: 0 0 0.35rem;
+}
+
+.market-heading {
+    margin: 1.25rem 0 0.25rem;
+    font-size: 1rem;
+    font-family: var(--display);
+}
+
+.chart-data {
+    margin-top: 0.75rem;
+}
+
+.chart-data summary {
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.chart-table {
+    max-height: 18rem;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+}
+
+.chart-table thead th {
+    position: sticky;
+    top: 0;
+}
+
+/* ---------- Footer: disclaimer and links ---------- */
+.footer-disclaimer {
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0.75rem 0;
+    font-size: 0.9375rem;
+}
+
+.footer-links a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
