@@ -426,9 +426,10 @@ function fillSourceLinks() {
 
 // Fills any element marked data-fill="data-date" with the research date.
 function fillResearchDates() {
-    if (!RESEARCH) return;
+    const meta = RESEARCH ? RESEARCH.meta : window.LOAND_META;
+    if (!meta) return;
     document.querySelectorAll('[data-fill="data-date"]').forEach(element => {
-        element.textContent = formatDate(RESEARCH.meta.data_as_at);
+        element.textContent = formatDate(meta.data_as_at);
     });
 }
 
