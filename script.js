@@ -10,13 +10,6 @@
    ========================================================== */
 
 
-/* ---------- 1. General UI ---------- */
-
-function loanComingSoon() {
-    alert("Loan calculator is not available yet.");
-}
-
-
 /* ---------- 2. Formatting helpers ---------- */
 
 // Research text must never be inserted into the page as raw HTML.
@@ -88,8 +81,9 @@ function countTo(element, to, format) {
 
 const RESEARCH = window.LOAND_RESEARCH || null;
 
-// Rates older than this are flagged, as the research README recommends.
-const RATE_STALE_AFTER_DAYS = 7;
+// RATE_STALE_AFTER_DAYS, SPECIAL_PRODUCT, rateMatchesBuyer, ltvInBand and
+// isDisplayable live in js/engine/rates.js (pure and tested); pages that use
+// rate data load that file before this one.
 
 function findSource(sourceId) {
     if (!RESEARCH) return null;
@@ -116,6 +110,18 @@ function sourceLinks(ids) {
     }).join(" ");
 }
 
+// "Official" for lender, regulator and government documents; "Third-party" for
+// brokers, publications and comparison sites; otherwise the source's own type.
+// Based on the first source ID given.
+function sourceKind(ids) {
+    const list = Array.isArray(ids) ? ids : parseSourceIds(ids);
+    const source = list.length ? findSource(list[0]) : null;
+    if (!source || !source.source_type) return "Unknown source";
+    if (/^Official/.test(source.source_type)) return "Official";
+    if (/third-party|trade publication|financial publication|comparison/i.test(source.source_type)) return "Third-party";
+    return source.source_type;
+}
+
 // Confirmed facts get no badge, which keeps the page quiet.
 // Everything else gets a badge whose tooltip explains the status.
 function statusBadge(status) {
@@ -123,25 +129,6 @@ function statusBadge(status) {
     const label = status === "NOT VERIFIED" ? "Not yet verified"
                 : status.charAt(0) + status.slice(1).toLowerCase();
     return `<span class="badge term" data-term="${escapeHtml(status)}" tabindex="0">${escapeHtml(label)}</span>`;
-}
-
-// Mortgage products only open to specific groups (Premier customers, shared
-// ownership, existing borrowers...). Left out of general rate comparisons.
-const SPECIAL_PRODUCT = /shared equity|shared ownership|premier|help to buy|right to buy|springboard|joint borrower|retention|existing|further advance|buy to let|btl|offset/i;
-
-// Does a rate row suit this kind of buyer? ("first-time buyer" or "home mover")
-function rateMatchesBuyer(row, buyerType) {
-    if (buyerType === "remortgage") return row.purpose === "Remortgage" && row.buyer_type === "Remortgage";
-    const buyers = buyerType === "first-time buyer"
-        ? ["First-time buyer", "Purchase", "Purchase (segment not disambiguated)"]
-        : ["Home mover / purchase", "Purchase", "Purchase (segment not disambiguated)"];
-    return row.purpose === "Purchase" && buyers.includes(row.buyer_type);
-}
-
-// LTV bands: "60-75%" covers above 60% up to 75%. A band starting at 0 includes 0.
-function ltvInBand(ltv, min, max) {
-    if (max === null || max === undefined) return false;
-    return (!min ? ltv >= 0 : ltv > min) && ltv <= max + 1e-9;
 }
 
 // Rates normally rise as LTV rises: borrowing more of the price costs more.
@@ -198,12 +185,6 @@ function isRateAnomalous(row) {
 }
 
 const RATE_ANOMALY_NOTE = "Lower than this lender's rates at smaller loan-to-values, which is unlikely. The research couldn't tell this lender's product segments apart, so check it with the lender.";
-
-// OUTDATED rows are kept in the research for audit only, never shown as facts.
-function isDisplayable(row) {
-    return (row.status || row.data_status) !== "OUTDATED";
-}
-
 
 /* ---------- 4. Glossary tooltips ---------- */
 
@@ -409,15 +390,6 @@ function setUpSectionNav() {
 
 /* ---------- 7. Page setup ---------- */
 
-function setUpLoanButtons() {
-    // Finds every element marked data-action="loan-coming-soon".
-    // If a page has none, the list is empty and nothing happens.
-    const loanButtons = document.querySelectorAll('[data-action="loan-coming-soon"]');
-    loanButtons.forEach(function (button) {
-        button.addEventListener("click", loanComingSoon);
-    });
-}
-
 // Fills any element marked data-source="S83" with a link to that source.
 function fillSourceLinks() {
     document.querySelectorAll("[data-source]").forEach(element => {
@@ -438,7 +410,6 @@ buildGlossaryPattern();
 setUpThemeToggle();
 setUpDrawer();
 setUpSectionNav();
-setUpLoanButtons();
 setUpGlossaryTooltips();
 fillResearchDates();
 fillSourceLinks();
