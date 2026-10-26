@@ -1,9 +1,10 @@
 /* ==========================================================
-   LoanD – published limits check (used by mortgage.html)
+   LoanD – published limits engine (used by mortgage.html and compare.html)
    ----------------------------------------------------------
    Compares a user's figures with each lender's published
    numeric rules (Rules_Numeric sheet). Pure functions only:
-   no page access, so this can move to the backend unchanged.
+   no page access, so it runs unchanged in the browser, in the
+   tests (Node) and later in the backend.
 
    What this is NOT: an eligibility or approval decision.
    Lenders also score credit, check spending and value the
@@ -17,13 +18,21 @@
       list below. Special routes are shown, never used to judge.
       So a new, unreviewed condition can only make the check more
       cautious, never less.
+
+   The user object:
+     income, price, loan, ltv, incomeMultiple, dti, termYears,
+     propertyType ("house" | "flat" | "new build house" | "new build flat"),
+     buyerType ("first-time buyer" | "home mover" | "remortgage"),
+     applicants ("sole" | "joint"),
+     repaymentType ("capital & interest" | "interest-only"),
+     age (oldest applicant, or null),
+     selfEmployed (boolean), yearsTrading (number or null)
    ========================================================== */
 
 
 /* Rules whose "Other condition" only describes or refines the standard
-   case this calculator models: a UK-resident, employed buyer on a
-   capital-and-interest mortgage, not using a special scheme.
-   Reviewed against the release dated 2026-09-27. Re-check this list
+   case this calculator models: a UK-resident buyer, not using a special
+   scheme. Reviewed against the release dated 2026-09-27. Re-check this list
    whenever a new research release arrives. */
 const GENERAL_CONDITION_RULES = new Set([
     "R0014", "R0015",         // HSBC: first-time buyer max loan, from the rate table
@@ -41,6 +50,7 @@ const GENERAL_CONDITION_RULES = new Set([
 ]);
 
 const DTI_TRIGGER_TEXT = "dti_threshold triggered";
+const DEFAULT_REPAYMENT = "capital & interest";
 
 
 /* ---------- Matching one rule to one user ---------- */
@@ -73,7 +83,9 @@ function ruleApplies(rule, user, { ignoreLtv = false } = {}) {
         if (!buyers.includes(user.buyerType)) return false;
     }
     if (rule.applicants && rule.applicants !== "any" && rule.applicants !== user.applicants) return false;
-    if (rule.repayment_type && rule.repayment_type !== "any" && rule.repayment_type !== "capital & interest") return false;
+    if (rule.repayment_type && rule.repayment_type !== "any" && rule.repayment_type !== (user.repaymentType || DEFAULT_REPAYMENT)) return false;
+    // "not SE/SO" or "not self-employed" conditions must not apply to a self-employed user.
+    if (user.selfEmployed && /\bnot (self-employed|SE\b)/i.test(rule.other_condition || "")) return false;
     const byValue = propertyValueCondition(rule);
     if (byValue && !inRange(user.price, byValue.min, byValue.max)) return false;
     return true;
@@ -93,6 +105,15 @@ function isGeneralRule(rule) {
 
 /* ---------- Checking all rules for one lender ---------- */
 
+/* Returns { verdict, checks, failed, specials, unverified }.
+   verdict: "within" | "outside" | "partial" (a core limit isn't published).
+   Each check: { key, label, limit, yours, unit, pass, rules, ... } or { key, label, unknown: true }.
+
+   Where several rules apply, the most restrictive wins for LTV, loan, term and
+   age limits. The income multiple is the exception: lenders publish it as a
+   table of income/LTV bands, so the conditioned rows that match your band are
+   alternatives for that band and the highest of them is the limit; the DTI rule
+   then lowers it. */
 function checkLender(rules, user, { productMaxLtv = null } = {}) {
     const confirmed = rules.filter(rule => rule.status === "CONFIRMED");
     const general = confirmed.filter(isGeneralRule);
@@ -110,9 +131,7 @@ function checkLender(rules, user, { productMaxLtv = null } = {}) {
         checks.push({ key: "ltv", label: "Maximum LTV", unknown: true });
     }
 
-    // 2. Maximum income multiple. Income/LTV band tables are written so the
-    //    applicable conditioned rows describe your band; the highest of those
-    //    applies. Unconditioned rows are the lender's fallback default.
+    // 2. Maximum income multiple.
     const ltiRules = of("max_lti").filter(rule => ruleApplies(rule, user));
     const conditioned = ltiRules.filter(hasStructuredConditions);
     const ltiBasis = conditioned.length ? conditioned : ltiRules;
@@ -150,19 +169,31 @@ function checkLender(rules, user, { productMaxLtv = null } = {}) {
         checks.push({ key: "loan", label: "Maximum loan", limit: lowest.value, yours: user.loan, unit: "£", pass: user.loan <= lowest.value, rules: [lowest.rule] });
     }
 
-    // 4. Minimum loan (only rules that apply to everyone).
+    // 4. Minimum loan and minimum income (only rules that apply to this user).
     const minLoan = of("min_loan").filter(rule => ruleApplies(rule, user));
     if (minLoan.length) {
         const limit = Math.max(...minLoan.map(rule => rule.value_numeric));
         checks.push({ key: "minloan", label: "Minimum loan", limit, yours: user.loan, unit: "£", pass: user.loan >= limit, rules: minLoan, isMinimum: true });
     }
+    const minIncome = of("min_income").filter(rule => ruleApplies(rule, user));
+    if (minIncome.length) {
+        const limit = Math.max(...minIncome.map(rule => rule.value_numeric));
+        checks.push({ key: "minincome", label: "Minimum income", limit, yours: user.income, unit: "£", pass: user.income >= limit, rules: minIncome, isMinimum: true });
+    }
 
-    // 5. Term and age (age is optional).
+    // 5. Term.
     const termRules = of("max_term_years").filter(rule => ruleApplies(rule, user));
     if (termRules.length) {
         const limit = Math.min(...termRules.map(rule => rule.value_numeric));
         checks.push({ key: "term", label: "Maximum term", limit, yours: user.termYears, unit: "years", pass: user.termYears <= limit, rules: termRules });
     }
+    const minTermRules = of("min_term_years").filter(rule => ruleApplies(rule, user));
+    if (minTermRules.length) {
+        const limit = Math.max(...minTermRules.map(rule => rule.value_numeric));
+        checks.push({ key: "minterm", label: "Minimum term", limit, yours: user.termYears, unit: "years", pass: user.termYears >= limit, rules: minTermRules, isMinimum: true });
+    }
+
+    // 6. Age (optional input).
     if (user.age) {
         const ageRules = of("max_age_end_of_term").filter(rule => ruleApplies(rule, user));
         if (ageRules.length) {
@@ -174,6 +205,15 @@ function checkLender(rules, user, { productMaxLtv = null } = {}) {
         if (minAge.length) {
             const limit = Math.max(...minAge.map(rule => rule.value_numeric));
             checks.push({ key: "minage", label: "Minimum age", limit, yours: user.age, unit: "years", pass: user.age >= limit, rules: minAge, isMinimum: true });
+        }
+    }
+
+    // 7. Self-employed: minimum years trading (only when the user said they are self-employed).
+    if (user.selfEmployed && typeof user.yearsTrading === "number") {
+        const tradingRules = of("self_employed_min_years_trading").filter(rule => ruleApplies(rule, user));
+        if (tradingRules.length) {
+            const limit = Math.max(...tradingRules.map(rule => rule.value_numeric));
+            checks.push({ key: "trading", label: "Self-employed: minimum years trading", limit, yours: user.yearsTrading, unit: "years", pass: user.yearsTrading >= limit, rules: tradingRules, isMinimum: true });
         }
     }
 
@@ -194,7 +234,7 @@ function checkLender(rules, user, { productMaxLtv = null } = {}) {
     // Rules that would matter but aren't confirmed yet.
     const unverified = rules.filter(rule =>
         rule.status !== "CONFIRMED" &&
-        ["max_ltv", "max_lti", "max_age_end_of_term", "max_term_years", "max_loan"].includes(rule.rule_type) &&
+        ["max_ltv", "max_lti", "max_age_end_of_term", "max_term_years", "max_loan", "min_income"].includes(rule.rule_type) &&
         ruleApplies(rule, user));
 
     const known = checks.filter(check => !check.unknown);
@@ -203,4 +243,31 @@ function checkLender(rules, user, { productMaxLtv = null } = {}) {
     const verdict = failed.length ? "outside" : coreKnown ? "within" : "partial";
 
     return { verdict, checks, failed, specials, unverified };
+}
+
+
+/* ---------- Indicative maximum borrowing ---------- */
+
+/* From a checkLender() result, the most this lender's published caps would
+   allow for your figures: the lowest of income × income-multiple cap,
+   price × LTV cap and the maximum-loan cap. Returns null when the income
+   multiple isn't published. Lenders' own affordability models are not public,
+   so this is an upper bound from published caps, not what a lender would lend.
+   The caps are the ones that apply to your current LTV and loan size. */
+function indicativeMaxBorrowing(result, user) {
+    const get = key => result.checks.find(check => check.key === key && !check.unknown);
+    const lti = get("lti");
+    if (!lti) return null;
+    const limits = [{ factor: "income multiple", amount: user.income * lti.limit, multiple: lti.limit, rules: lti.rules }];
+    const ltv = get("ltv");
+    if (ltv && user.price > 0) limits.push({ factor: "maximum LTV", amount: user.price * ltv.limit / 100, rules: ltv.rules });
+    const loan = get("loan");
+    if (loan) limits.push({ factor: "maximum loan", amount: loan.limit, rules: loan.rules });
+    const lowest = limits.reduce((a, b) => (b.amount < a.amount ? b : a));
+    return { amount: lowest.amount, limitedBy: lowest.factor, multiple: lti.limit, rules: lowest.rules };
+}
+
+
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = { GENERAL_CONDITION_RULES, inRange, ruleApplies, isGeneralRule, hasStructuredConditions, checkLender, indicativeMaxBorrowing };
 }
