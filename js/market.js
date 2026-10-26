@@ -2,7 +2,7 @@
    LoanD – market trends (market.html)
    Charts built from the Time_Series sheet (Bank of England
    data). Everything here is historical context, not offers.
-   Chart.js is loaded from a CDN in market.html.
+   Chart.js 4.4.1 is vendored in js/vendor/ and loaded by market.html.
    ========================================================== */
 
 const marketRoot = document.getElementById("market-charts");
@@ -210,5 +210,5 @@ if (marketRoot && RESEARCH && window.Chart) {
     // Charts read colours from CSS, so redraw them when the theme changes.
     document.addEventListener("loand:themechange", drawAll);
 } else if (marketRoot) {
-    marketRoot.innerHTML = `<p class="empty">The charts couldn't load. Check your internet connection: the chart library comes from a CDN.</p>`;
+    marketRoot.innerHTML = `<p class="empty">The charts couldn't load. The charts couldn't load. Try reloading the page.</p>`;
 }

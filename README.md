@@ -131,6 +131,7 @@ Loand/
 │   │   ├── calc.js         repayments, purchase taxes, stress rates, scenarios
 │   │   ├── rates.js        rate filtering, freshness, cost over the deal
 │   │   └── loans.js        loan APR bands and payments
+│   ├── vendor/             Chart.js 4.4.1 (MIT) with its licence; hash pinned by a test
 │   └── *.js                page code that reads forms and draws results
 ├── data/
 │   ├── research.js, meta.js, json/   GENERATED from the workbook: do not edit
@@ -170,7 +171,7 @@ bash tools/deploy.sh "what you changed"           # commit, push and rebuild dat
 
 Built in stages.
 
-- **Now:** static HTML, CSS and JavaScript, with Chart.js for the market charts.
+- **Now:** static HTML, CSS and JavaScript, with a self-hosted copy of Chart.js for the market charts.
 - **Next:** shareable results using only non-personal inputs (to be discussed
   first), save and compare up to three scenarios in the browser, and a script
   that diffs two workbook releases using the `Changelog` sheet.
@@ -184,8 +185,8 @@ Built in stages.
 - The workbook has a defect: some `Lender_Overview` detail cells read
   "t verified" instead of "Not verified". The build warns about it; it needs
   fixing in the workbook.
-- Chart.js loads from a CDN without an integrity hash; self-hosting it or adding
-  a hash is still to do.
+- The pages still load their fonts from Google Fonts. Everything else, including
+  Chart.js, is served from this repository.
 - The engine doesn't model part-and-part repayment, or Virgin Money's
   "also applies to self-employed" income-multiple rule.
 - Purchase-tax surcharges have no minimum price, because the workbook states none.
