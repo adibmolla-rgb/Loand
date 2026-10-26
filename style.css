@@ -2188,3 +2188,77 @@ a.source-ref:hover {
     vertical-align: 1px;
     cursor: help;
 }
+
+
+/* ---------- Rates and loans pages ---------- */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 0.25rem 1rem;
+}
+
+.filter-grid .field {
+    margin-bottom: 0.4rem;
+}
+
+.filter-checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.filter-checks .check-field {
+    margin-bottom: 0.3rem;
+}
+
+.rates-table {
+    min-width: 62rem;
+}
+
+.rates-table .cell-wrap {
+    min-width: 11rem;
+    max-width: 16rem;
+}
+
+.rates-table th .sort-button {
+    all: unset;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rates-table th .sort-button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.rates-table th[aria-sort="ascending"] .sort-button::after { content: "\2191"; }
+.rates-table th[aria-sort="descending"] .sort-button::after { content: "\2193"; }
+
+.badge-stale {
+    color: var(--caution);
+    background: var(--caution-bg);
+    cursor: default;
+}
+
+.result-count {
+    margin: 1rem 0 0.6rem;
+    font-weight: 600;
+}
+
+.est-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.loan-fit-no {
+    color: var(--caution);
+    font-weight: 600;
+}

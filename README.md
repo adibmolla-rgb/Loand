@@ -30,6 +30,8 @@ Loand/
 ├── lenders.html            lender directory
 ├── lender.html             one profile template: lender.html?id=barclays
 ├── compare.html            side-by-side comparison
+├── rates.html              filterable, sortable mortgage rate table
+├── loans.html              personal loan APRs by amount and term
 ├── market.html             Bank of England trend charts
 ├── style.css               one shared stylesheet
 ├── script.js               shared helpers: formatting, sources, glossary,
@@ -38,9 +40,12 @@ Loand/
 │   ├── mortgage.js         calculator page code (reads the form, writes results)
 │   ├── engine/
 │   │   ├── rules.js        checks figures against lenders' published rules (pure, tested)
-│   │   └── calc.js         repayments, purchase taxes, stress rates, scenarios (pure, tested)
+│   │   ├── calc.js         repayments, purchase taxes, stress rates, scenarios (pure, tested)
+│   │   ├── rates.js        rate filtering, freshness, cost over the deal (pure, tested)
+│   │   └── loans.js        loan APR bands and payments (pure, tested)
 │   ├── lender-pages.js     directory and profile pages
 │   ├── compare.js          comparison table
+│   ├── rates.js, loans.js  page code for the rates and loans pages
 │   └── market.js           charts
 ├── data/
 │   ├── research.js         GENERATED from the workbook — do not edit
@@ -153,6 +158,6 @@ Deliberate, and worth keeping:
 
 ## Still to build
 
-- Loans calculator (the personal-loan data is already in place)
+- A "Data & methodology" page and a site-wide disclaimer
 - Node/Express backend and PostgreSQL, replacing the generated data file
 - User accounts and saved calculations

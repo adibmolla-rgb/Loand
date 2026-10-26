@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage rates | LoanD</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Order matters: data first, then shared helpers, then this page's code -->
+    <script src="data/research.js" defer></script>
+    <script src="data/lender-registry.js" defer></script>
+    <script src="data/glossary.js" defer></script>
+    <script src="js/engine/rates.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/engine/calc.js" defer></script>
+    <script src="js/rates.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="LoanD home">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="mortgage.html">Mortgages</a>
+                <a href="lenders.html">Lenders</a>
+                <a href="compare.html">Compare</a>
+                <a href="rates.html" aria-current="page">Rates</a>
+                <a href="market.html">Market</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+            <button type="button" class="icon-button" data-action="toggle-theme" aria-label="Switch theme"></button>
+            <button type="button" class="icon-button menu-button" data-action="open-menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile navigation; hidden until the menu button opens it -->
+    <div class="drawer" id="menu-drawer" data-open="false">
+        <div class="drawer-scrim" data-action="close-menu"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="drawer-head">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+                <button type="button" class="icon-button" data-action="close-menu" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Main">
+                    <a href="mortgage.html">Mortgages</a>
+                    <a href="lenders.html">Lenders</a>
+                    <a href="compare.html">Compare</a>
+                    <a href="rates.html" aria-current="page">Rates</a>
+                    <a href="market.html">Market</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <a href="index.html" class="back-link">Back to home</a>
+                <h1>Mortgage rates</h1>
+                <p class="hero-text">Products from lenders' published rate sheets, each with the date the rate applies from. Nothing is ranked: sort by whichever column matters to you. Rates change often, so any older than 7 days are marked.</p>
+                <p class="note note-caution" id="rates-freshness" role="status"></p>
+
+                <form id="rates-form" class="rates-filters" aria-label="Filter and sort mortgage rates" novalidate>
+                    <fieldset class="field-group">
+                        <legend>Your figures</legend>
+                        <p class="hint">Used to match your loan-to-value, the maximum loan, and to estimate cost over the deal. Clear a box to stop filtering on it.</p>
+                        <div class="filter-grid">
+                            <div class="field">
+                                <label for="f-price">Property value</label>
+                                <div class="input-wrap"><span class="input-prefix">£</span><input id="f-price" type="number" inputmode="decimal" min="0" step="5000" value="250000"></div>
+                            </div>
+                            <div class="field">
+                                <label for="f-loan">Mortgage amount</label>
+                                <div class="input-wrap"><span class="input-prefix">£</span><input id="f-loan" type="number" inputmode="decimal" min="0" step="1000" value="225000"></div>
+                            </div>
+                            <div class="field">
+                                <label for="f-term">Mortgage term</label>
+                                <div class="input-wrap"><input id="f-term" type="number" inputmode="numeric" min="5" max="40" step="1" value="25"><span class="input-suffix">years</span></div>
+                            </div>
+                        <div class="field">
+                            <label for="f-repayment">Repayment type</label>
+                            <select id="f-repayment" class="select"><option value="capital &amp; interest">Repayment</option><option value="interest-only">Interest-only</option></select>
+                        </div>
+                        </div>
+                        <p class="hint" id="f-ltv-note" aria-live="polite"></p>
+                    </fieldset>
+
+                    <fieldset class="field-group">
+                        <legend>Filter</legend>
+                        <div class="filter-grid">
+                        <div class="field">
+                            <label for="f-buyer">Buying as</label>
+                            <select id="f-buyer" class="select"><option value="any">Any</option><option value="first-time buyer">First-time buyer</option><option value="home mover">Moving home</option><option value="remortgage">Remortgaging</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="f-months">Deal length</label>
+                            <select id="f-months" class="select"><option value="all">Any</option><option value="24">2 years</option><option value="36">3 years</option><option value="60">5 years</option><option value="120">10 years</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="f-rate-type">Rate type</label>
+                            <select id="f-rate-type" class="select"><option value="all">Any</option><option value="Fixed">Fixed</option><option value="Tracker">Tracker</option><option value="Variable">Variable</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="f-lender">Lender</label>
+                            <select id="f-lender" class="select"><option value="all">All lenders</option></select>
+                        </div>
+                        </div>
+                        <div class="filter-checks">
+                            <div class="field check-field"><label><input id="f-nofee" type="checkbox"> No product fee only</label></div>
+                            <div class="field check-field"><label><input id="f-special" type="checkbox"> Include products for specific groups (Premier, shared ownership, existing customers)</label></div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <p class="result-count" id="rates-count" aria-live="polite"></p>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Mortgage rates table, scrollable">
+                    <table class="data-table rates-table" id="rates-table">
+                        <thead><tr>
+                            <th scope="col" data-sort="lender" aria-sort="ascending"><button type="button" class="sort-button">Lender and product</button></th>
+                            <th scope="col" data-sort="rate"><button type="button" class="sort-button">Initial rate</button></th>
+                            <th scope="col" data-sort="aprc"><button type="button" class="sort-button"><span class="term" data-term="APRC">APRC</span></button></th>
+                            <th scope="col" data-sort="fee"><button type="button" class="sort-button">Product fee</button></th>
+                            <th scope="col" data-sort="maxloan"><button type="button" class="sort-button">Max loan</button></th>
+                            <th scope="col"><span class="term" data-term="ERC">Early repayment charge</span></th>
+                            <th scope="col">Incentives</th>
+                            <th scope="col" data-sort="cost"><button type="button" class="sort-button">Estimated cost over the deal</button></th>
+                            <th scope="col" data-sort="date"><button type="button" class="sort-button">Rate date</button></th>
+                            <th scope="col">Source</th>
+                        </tr></thead>
+                        <tbody id="rates-body"></tbody>
+                    </table>
+                </div>
+                <p><button type="button" class="text-button" id="rates-more" hidden>Show more</button></p>
+                <p class="table-note">Estimated cost over the deal is the interest you would pay during the initial period plus the product fee, for the mortgage amount and term above. It assumes the fee is paid up front, the rate stays fixed for the period, and no overpayments, valuation or legal costs. It is an estimate for comparing deals, not a quote. "Not published" means the lender's sheet doesn't state it; it does not mean none applies. Rates marked "may be out of date" are more than 7 days past the date shown; check the lender's current sheet. Products open only to specific groups are left out unless you tick the box.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>LoanD provides estimates and research for guidance only. It is not a lender and cannot approve or reject applications. Lenders make their own decisions using their own criteria, and published criteria can change.</p>
+            <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

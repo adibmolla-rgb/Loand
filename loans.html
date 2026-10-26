@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal loans | LoanD</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Order matters: data first, then shared helpers, then this page's code -->
+    <script src="data/research.js" defer></script>
+    <script src="data/lender-registry.js" defer></script>
+    <script src="data/glossary.js" defer></script>
+    <script src="js/engine/rates.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/engine/calc.js" defer></script>
+    <script src="js/engine/loans.js" defer></script>
+    <script src="js/loans.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="LoanD home">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="mortgage.html">Mortgages</a>
+                <a href="lenders.html">Lenders</a>
+                <a href="compare.html">Compare</a>
+                <a href="rates.html">Rates</a>
+                <a href="market.html">Market</a>
+                <a href="loans.html" aria-current="page">Loans</a>
+            </nav>
+            <button type="button" class="icon-button" data-action="toggle-theme" aria-label="Switch theme"></button>
+            <button type="button" class="icon-button menu-button" data-action="open-menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile navigation; hidden until the menu button opens it -->
+    <div class="drawer" id="menu-drawer" data-open="false">
+        <div class="drawer-scrim" data-action="close-menu"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="drawer-head">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+                <button type="button" class="icon-button" data-action="close-menu" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Main">
+                    <a href="mortgage.html">Mortgages</a>
+                    <a href="lenders.html">Lenders</a>
+                    <a href="compare.html">Compare</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="market.html">Market</a>
+                <a href="loans.html" aria-current="page">Loans</a>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <a href="index.html" class="back-link">Back to home</a>
+                <h1>Personal loans</h1>
+                <p class="hero-text">The APRs lenders publish for the amount you want to borrow. Nothing is ranked, and these are not offers: the rate you are offered depends on your circumstances and may be higher.</p>
+
+                <form id="loan-form" class="rates-filters" aria-label="Loan amount and term" novalidate>
+                    <fieldset class="field-group">
+                        <legend>What you want to borrow</legend>
+                        <div class="filter-grid">
+                            <div class="field">
+                                <label for="l-amount">Amount</label>
+                                <div class="input-wrap"><span class="input-prefix">£</span><input id="l-amount" type="number" inputmode="decimal" min="0" step="100" value="8000"></div>
+                            </div>
+                            <div class="field">
+                                <label for="l-term">Term</label>
+                                <div class="input-wrap"><input id="l-term" type="number" inputmode="numeric" min="1" max="120" step="1" value="36"><span class="input-suffix">months</span></div>
+                            </div>
+                        </div>
+                        <p class="hint" id="l-problem" role="alert"></p>
+                    </fieldset>
+                </form>
+
+                <p class="result-count" id="loans-count" aria-live="polite"></p>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Personal loans table, scrollable">
+                    <table class="data-table rates-table" id="loans-table">
+                        <thead><tr>
+                            <th scope="col">Lender and product</th>
+                            <th scope="col">Published APR for this amount</th>
+                            <th scope="col">Highest APR</th>
+                            <th scope="col">Estimated monthly payment</th>
+                            <th scope="col">Estimated total repayable</th>
+                            <th scope="col">Product limits</th>
+                            <th scope="col">Eligibility check</th>
+                            <th scope="col">Source and date</th>
+                        </tr></thead>
+                        <tbody id="loans-body"></tbody>
+                    </table>
+                </div>
+                <div id="loans-other"></div>
+                <p class="table-note">Payments and totals use the published APR as if it were the rate you were offered, with no fees other than interest. Your offer will differ. A <span class="term" data-term="Representative APR">representative APR</span> is the rate at least 51% of accepted applicants get; other labels are shown as the lender publishes them. Counts and rates here are not approval rates. Loans over a lender's own limits, or shorter or longer than it offers, are marked.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>LoanD provides estimates and research for guidance only. It is not a lender and cannot approve or reject applications. Lenders make their own decisions using their own criteria, and published criteria can change.</p>
+            <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
