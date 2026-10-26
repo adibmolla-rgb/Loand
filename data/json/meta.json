@@ -1,0 +1,35 @@
+{
+ "data_as_at": "2026-09-27",
+ "source_file": "Loand_UK_Lender_Research_2026-09-27.xlsx",
+ "row_counts": {
+  "lender_overview": 20,
+  "mortgage_requirements": 125,
+  "affordability": 49,
+  "credit_requirements": 28,
+  "mortgage_rates": 748,
+  "market_rates": 6,
+  "remortgage": 23,
+  "personal_loans": 12,
+  "support_schemes": 16,
+  "fees_charges": 13,
+  "flexibility": 15,
+  "approval_rates": 14,
+  "market_reports": 14,
+  "historical_data": 20,
+  "conflicts": 14,
+  "sources": 95,
+  "sheet_notes": 8,
+  "changelog": 111,
+  "rules_numeric": 194,
+  "property_taxes": 31,
+  "stress_and_benchmarks": 13,
+  "time_series": 487,
+  "loan_apr_tiers": 25,
+  "comparison_fields": 77,
+  "status_definitions": 6
+ },
+ "source_count": 95,
+ "warnings": [
+  "Lender_Overview: truncated text \"t verified\" (should be \"Not verified\") in 7 columns: shared_ownership_detail, shared_equity_detail, first_time_buyer_support_detail, remortgage_detail, buy_to_let_detail, self_employed_support_detail, personal_loans_detail"
+ ]
+}

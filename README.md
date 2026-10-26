@@ -11,7 +11,9 @@ LoanD is not a lender. It gives estimates, not decisions.
 
 ## Running it
 
-No build step and no server. Open `index.html` in a browser.
+No server needed to view the site: open `index.html` in a browser. (A build
+step is only needed when the research workbook changes; see "Updating the
+research data".)
 Everything runs in the browser; no data is sent anywhere.
 
 ## Structure
@@ -39,10 +41,12 @@ Loand/
 │   └── market.js           charts
 ├── data/
 │   ├── research.js         GENERATED from the workbook — do not edit
+│   ├── meta.js, json/      GENERATED: release date; one JSON file per sheet
 │   ├── lender-registry.js  lender IDs, brand grouping, summaries (hand-written)
 │   └── glossary.js         plain-English definitions for jargon
+├── scripts/                build-data.js (workbook -> data/) and its helpers
+├── tests/                  Node test runner: `npm test`
 ├── tools/
-│   ├── convert.py          workbook -> data/research.js
 │   └── *.xlsx              the research workbook (source data)
 └── docs/                   research report, database notes, original sketch
 ```
@@ -95,21 +99,31 @@ bash tools/deploy.sh "what you changed"
 ```
 
 That commits, pushes and republishes. If a newer research workbook is sitting
-in `tools/`, it rebuilds `data/research.js` first, so a new release can't be
+in `tools/`, it rebuilds the data first, so a new release can't be
 left half-applied.
 
 ## Updating the research data
 
 The site reads `data/research.js`, generated from the research workbook. When a
-new workbook arrives, put it in `tools/` and run:
+new workbook arrives, put it in `data/` or `tools/` and run (needs
+[Node.js](https://nodejs.org) 20 or later):
 
 ```
-pip install openpyxl
-python3 tools/convert.py
+npm install
+npm run build-data
 ```
 
-It uses the newest workbook it finds, or pass a path as an argument.
-Never edit `data/research.js` by hand: fix the spreadsheet and re-run.
+It uses the newest workbook it finds, or pass a path as an argument. The build
+validates the workbook first and stops with a clear message if a required
+column is missing, a Source ID isn't in `Sources`, a status isn't one of the six
+labels, a numeric column holds text, or a date isn't `YYYY-MM-DD`. Known
+workbook defects are printed as warnings; `npm run build-data:strict` makes them
+fail the build.
+
+Output: `data/json/<sheet>.json` (one file per sheet), `data/json/meta.json`
+(release date, row counts, source count), `data/meta.js` (release date only) and
+`data/research.js` (the bundle the pages load today). Never edit these by hand:
+fix the spreadsheet and re-run. Run the tests with `npm test`.
 
 After a new release, re-check `GENERAL_CONDITION_RULES` in
 `js/lender-match.js`. It lists the rule IDs reviewed as applying to ordinary

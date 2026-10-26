@@ -1,0 +1,119 @@
+[
+ {
+  "lender_scope": "Regulation",
+  "item": "FCA MCOB 11.6.18R interest-rate stress",
+  "detail": "Lenders must consider likely future rate rises over at least 5 years unless rate fixed for 5+ years; firms set their own basis; no prevailing FPC recommendation",
+  "value_numeric": null,
+  "unit": null,
+  "status": "CONFIRMED",
+  "source_id": "S88"
+ },
+ {
+  "lender_scope": "Regulation",
+  "item": "FPC affordability test (3pp above reversion rate)",
+  "detail": "Withdrawn with effect from 1 Aug 2022",
+  "value_numeric": 3,
+  "unit": "percentage points (historic)",
+  "status": "CONFIRMED",
+  "source_id": "S89"
+ },
+ {
+  "lender_scope": "Regulation",
+  "item": "FPC LTI flow limit",
+  "detail": "Max 15% of new residential lending at LTI >=4.5",
+  "value_numeric": 15,
+  "unit": "% of new lending",
+  "status": "CONFIRMED",
+  "source_id": "S89"
+ },
+ {
+  "lender_scope": "Regulation",
+  "item": "Proposed change to LTI flow limit",
+  "detail": "CP26/12 / CP6/26 proposes removing firm-level 15% limit while aggregate stays 15%; final outcome not verified",
+  "value_numeric": null,
+  "unit": null,
+  "status": "CONFIRMED",
+  "source_id": "S90"
+ },
+ {
+  "lender_scope": "TSB",
+  "item": "Stress rate - fixes 5 years+",
+  "detail": "6.25% or product rate +1% if higher",
+  "value_numeric": 6.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S78"
+ },
+ {
+  "lender_scope": "TSB",
+  "item": "Stress rate - fixes <5 years and trackers",
+  "detail": "6.75% or product rate +1% if higher",
+  "value_numeric": 6.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S78"
+ },
+ {
+  "lender_scope": "Lloyds Banking Group",
+  "item": "Stress rates",
+  "detail": "Reduced from 15 April (per notice); values not published",
+  "value_numeric": null,
+  "unit": null,
+  "status": "NOT DISCLOSED",
+  "source_id": "S55"
+ },
+ {
+  "lender_scope": "Nationwide",
+  "item": "Stress test",
+  "detail": "Applied to all DIPs; rate not published",
+  "value_numeric": null,
+  "unit": null,
+  "status": "NOT DISCLOSED",
+  "source_id": "S30"
+ },
+ {
+  "lender_scope": "HSBC UK / Barclays / NatWest Group / Santander UK / Virgin Money",
+  "item": "Stress rates",
+  "detail": "Not published on pages reviewed",
+  "value_numeric": null,
+  "unit": null,
+  "status": "NOT DISCLOSED",
+  "source_id": "S10;S21;S25;S76"
+ },
+ {
+  "lender_scope": "All lenders",
+  "item": "Household expenditure benchmark (e.g. ONS Family Spending)",
+  "detail": "No lender page reviewed states which expenditure data source it uses",
+  "value_numeric": null,
+  "unit": null,
+  "status": "NOT DISCLOSED",
+  "source_id": "S13;S21;S30;S78"
+ },
+ {
+  "lender_scope": "Lloyds Banking Group",
+  "item": "Card/overdraft commitment rule",
+  "detail": "5% of outstanding balance treated as monthly commitment",
+  "value_numeric": 5,
+  "unit": "% of balance",
+  "status": "CONFIRMED",
+  "source_id": "S13"
+ },
+ {
+  "lender_scope": "Barclays",
+  "item": "Card/overdraft commitment rule",
+  "detail": "3% of outstanding balance",
+  "value_numeric": 3,
+  "unit": "% of balance",
+  "status": "CONFIRMED",
+  "source_id": "S10"
+ },
+ {
+  "lender_scope": "Lloyds Banking Group",
+  "item": "EPC energy-cost adjustment",
+  "detail": "EPC A/B small increase; F/G small decrease in max loan",
+  "value_numeric": null,
+  "unit": null,
+  "status": "CONFIRMED",
+  "source_id": "S13"
+ }
+]

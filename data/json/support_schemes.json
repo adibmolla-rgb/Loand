@@ -1,0 +1,162 @@
+[
+ {
+  "scheme_product": "Mortgage Guarantee Scheme ('Freedom to Buy')",
+  "type": "UK Government scheme (HM Treasury)",
+  "status_sep_2026": "Active - permanent from July 2025",
+  "description": "Government guarantee to lenders on 91-95% LTV repayment mortgages; FTBs and movers; not BTL/second homes",
+  "key_limits": "2021 scheme: property <=£600,000 (CONFIRMED). Permanent scheme cap: UNCONFIRMED (see C08)",
+  "notes": "NatWest withdrew Dec 2022 but offers 95% to £570k outside scheme (S21)",
+  "data_status": "SUPPORTED",
+  "source_id": "S44;S45;S46"
+ },
+ {
+  "scheme_product": "Lifetime ISA",
+  "type": "UK Government scheme",
+  "status_sep_2026": "Active; replacement (First Time Buyer ISA) under consultation from 23 Jun 2026, not expected before ~April 2028",
+  "description": "25% bonus on up to £4,000/yr; first home <=£450,000",
+  "key_limits": "Existing LISAs continue indefinitely",
+  "notes": "Deposit source, not a lender product",
+  "data_status": "SUPPORTED",
+  "source_id": "S47"
+ },
+ {
+  "scheme_product": "Shared Ownership",
+  "type": "Government/housing-association scheme; lender products",
+  "status_sep_2026": "Active",
+  "description": "Buy a share and pay rent on remainder",
+  "key_limits": "Nationwide 90% LTV (min 25% share); Barclays 90%/85%; LBG LTI 4.49x",
+  "notes": "Lender limits differ",
+  "data_status": "CONFIRMED",
+  "source_id": "S29;S10;S13"
+ },
+ {
+  "scheme_product": "Help to Buy Equity Loan (England)",
+  "type": "UK Government scheme",
+  "status_sep_2026": "Closed to new purchases (historic); lenders still handle remortgage/redemption",
+  "description": "Equity loan scheme",
+  "key_limits": "Barclays: remortgage to repay equity loan up to 85%",
+  "notes": "Relevant for remortgage flows",
+  "data_status": "SUPPORTED",
+  "source_id": "S10"
+ },
+ {
+  "scheme_product": "First Homes (England) / First Homes Fund (Scotland)",
+  "type": "Government schemes",
+  "status_sep_2026": "Status NOT VERIFIED as of Sep 2026",
+  "description": "Discounted-price homes",
+  "key_limits": "Listed in Halifax criteria A-Z",
+  "notes": "Verify before use",
+  "data_status": "NOT VERIFIED",
+  "source_id": "S13"
+ },
+ {
+  "scheme_product": "Forces Help to Buy",
+  "type": "MoD scheme",
+  "status_sep_2026": "Active (accepted as deposit source by lenders)",
+  "description": "Interest-free loan for service personnel used as deposit",
+  "key_limits": "Halifax: key as savings, commitment = loan/120; Barclays: up to £25k, treat as commitment",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S13;S10"
+ },
+ {
+  "scheme_product": "Nationwide Helping Hand",
+  "type": "Lender product",
+  "status_sep_2026": "Active",
+  "description": "FTBs borrow up to 6x income",
+  "key_limits": "95% LTV on 5-yr fixes; 90% on 10-yr fixes; £500 cashback + up to £500 Green Reward",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S35"
+ },
+ {
+  "scheme_product": "Barclays Family Springboard",
+  "type": "Lender product (family-assisted)",
+  "status_sep_2026": "Active",
+  "description": "Helper deposits 10% for 5 years; buyer 0-5% deposit",
+  "key_limits": "Max loan £500k; term 35 yrs; LTI 4.0x (4.49x >£50k); not new build",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S10"
+ },
+ {
+  "scheme_product": "Barclays Mortgage Boost (JBSP)",
+  "type": "Lender product (joint borrower sole proprietor)",
+  "status_sep_2026": "Active",
+  "description": "Family member on mortgage but not title",
+  "key_limits": "Max 90% LTV where proprietor keeps other home",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S10"
+ },
+ {
+  "scheme_product": "NatWest Joint Borrower Sole Proprietor / Family-backed hub",
+  "type": "Lender product",
+  "status_sep_2026": "Active",
+  "description": "JBSP",
+  "key_limits": "Main owner min £20k income; max 2 applicants",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S21"
+ },
+ {
+  "scheme_product": "Halifax First-Time Buyer Boost",
+  "type": "Lender policy",
+  "status_sep_2026": "Active",
+  "description": "Up to 5.5x income for FTBs",
+  "key_limits": "Income >=£40k; <=90% LTV",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S13"
+ },
+ {
+  "scheme_product": "Halifax £5,000 Deposit mortgage",
+  "type": "Lender product",
+  "status_sep_2026": "Active",
+  "description": "FTBs >95% LTV with £5,000 deposit",
+  "key_limits": "LTI 4.49x",
+  "notes": "No Green A/B EPC products above 95%",
+  "data_status": "CONFIRMED",
+  "source_id": "S13;S55"
+ },
+ {
+  "scheme_product": "Santander >95% to 98% LTV",
+  "type": "Lender product",
+  "status_sep_2026": "Active",
+  "description": "FTB houses up to £600k",
+  "key_limits": "Loan £190,001-£500,000; LTI 4.45x",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S26"
+ },
+ {
+  "scheme_product": "Skipton Track Record",
+  "type": "Lender product",
+  "status_sep_2026": "Active",
+  "description": "100% LTV for renters with 12 months' rent history",
+  "key_limits": "Up to £600k; age 21+",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S42"
+ },
+ {
+  "scheme_product": "Green / EPC incentives",
+  "type": "Lender products",
+  "status_sep_2026": "Active",
+  "description": "EPC-linked benefits",
+  "key_limits": "Halifax: EPC in affordability; TSB: £250-£750 cashback on EPC A/B; Nationwide: Green Reward up to £500",
+  "notes": null,
+  "data_status": "CONFIRMED",
+  "source_id": "S13;S40;S35"
+ },
+ {
+  "scheme_product": "Lloyds Premier discount via brokers",
+  "type": "Lender incentive",
+  "status_sep_2026": "Active from 7 Jul 2026 (reported)",
+  "description": "Premier current account discount on Halifax intermediary mortgages",
+  "key_limits": null,
+  "notes": null,
+  "data_status": "SUPPORTED",
+  "source_id": "S59"
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "sheet": "Lender_Overview",
+  "note": "Last verified 2026-09-27 for updated rows (2026-09-26 otherwise). Research depth: Full / Partial / Overview = how much official data was captured."
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "note": "Rates are time-sensitive. Official rows: HSBC consumer rate pages (S69/S70, APRC shown), NatWest (S73, 24 Sep 2026), Nationwide (S74, 15 Sep 2026), Virgin Money (S75, 16 Sep 2026), TSB (S40, 23 Sep 2026). Third-party MAB rows (S02) remain only for Barclays, Lloyds Banking Group, Danske, Skipton and are SUPPORTED; MAB rows for lenders now covered officially are marked OUTDATED."
+ },
+ {
+  "sheet": "Personal_Loans",
+  "note": "Representative APR = rate at least 51% of accepted applicants receive (it is not an approval rate). Full APR tiers are in Loan_APR_Tiers."
+ },
+ {
+  "sheet": "Approval_Rates",
+  "note": "No approval, acceptance or completion percentages were invented. Counts are labelled as counts."
+ },
+ {
+  "sheet": "Historical_Data",
+  "note": "HISTORICAL ONLY - never use as current rates or criteria. See Time_Series for full monthly official series."
+ },
+ {
+  "sheet": "Time_Series",
+  "note": "Historical records from the Bank of England database (S83) plus sparse Moneyfacts points (SUPPORTED). BoE quoted rates are average quoted rates, not Moneyfacts averages. Monthly Moneyfacts series and BoE effective rate on new mortgages were not retrievable as full series."
+ },
+ {
+  "sheet": "Rules_Numeric",
+  "note": "One published rule per row. Blank condition columns mean 'no condition stated'. Rules not published by a lender have no row. Use CONFIRMED rows for eligibility estimates; treat others as indicative."
+ },
+ {
+  "sheet": "Property_Taxes",
+  "note": "Band rows are marginal rates on the portion of price within the band. Band to blank = no upper limit."
+ }
+]

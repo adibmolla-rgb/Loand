@@ -1,0 +1,106 @@
+[
+ {
+  "lender_group": "TSB",
+  "product_line": "Mortgage",
+  "fee_type": "Product fee",
+  "value": "£0 / £995 / £1,495 depending on product",
+  "status": "CONFIRMED",
+  "source_id": "S40"
+ },
+ {
+  "lender_group": "TSB",
+  "product_line": "Mortgage",
+  "fee_type": "Valuation fee (scale, when not free)",
+  "value": "£256 (to £100k) rising to £1,051 (£1m-£2m)",
+  "status": "CONFIRMED",
+  "source_id": "S40"
+ },
+ {
+  "lender_group": "TSB",
+  "product_line": "Mortgage",
+  "fee_type": "Early repayment charges",
+  "value": "2-yr fix: 2.5% then 1.5%; 5-yr fix: 5/4/3/2%; trackers: none",
+  "status": "CONFIRMED",
+  "source_id": "S40"
+ },
+ {
+  "lender_group": "TSB",
+  "product_line": "Mortgage",
+  "fee_type": "Reversion rate",
+  "value": "Homeowner Variable Rate 7.24%",
+  "status": "CONFIRMED",
+  "source_id": "S40"
+ },
+ {
+  "lender_group": "Nationwide",
+  "product_line": "Mortgage",
+  "fee_type": "Product fee",
+  "value": "Fee and fee-free ranges; fee can be added to loan (excluded from LTV for product eligibility); non-refundable",
+  "status": "CONFIRMED",
+  "source_id": "S36"
+ },
+ {
+  "lender_group": "Nationwide",
+  "product_line": "Mortgage",
+  "fee_type": "Arrears fees",
+  "value": "Home visit up to £100+VAT; unpaid DD £0; unpaid ground rent £65",
+  "status": "CONFIRMED",
+  "source_id": "S36"
+ },
+ {
+  "lender_group": "Nationwide",
+  "product_line": "Mortgage",
+  "fee_type": "Telegraphic transfer",
+  "value": "£20 at completion if requested",
+  "status": "CONFIRMED",
+  "source_id": "S36"
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "product_line": "Mortgage",
+  "fee_type": "Product fee added to loan",
+  "value": "Allowed (not affecting LTV band) except at 95% LTV",
+  "status": "CONFIRMED",
+  "source_id": "S13"
+ },
+ {
+  "lender_group": "HSBC UK",
+  "product_line": "Mortgage",
+  "fee_type": "Booking fee (new build)",
+  "value": "May be added to the loan",
+  "status": "CONFIRMED",
+  "source_id": "S03"
+ },
+ {
+  "lender_group": "NatWest Group",
+  "product_line": "Mortgage",
+  "fee_type": "Fees added to loan",
+  "value": "Only one fee type may be added (per criteria); does not affect LTV banding",
+  "status": "CONFIRMED",
+  "source_id": "S21"
+ },
+ {
+  "lender_group": "HSBC UK",
+  "product_line": "Personal loan",
+  "fee_type": "Arrangement fee",
+  "value": "None",
+  "status": "CONFIRMED",
+  "source_id": "S06"
+ },
+ {
+  "lender_group": "All lenders",
+  "product_line": "Personal loan",
+  "fee_type": "Early settlement",
+  "value": "UK consumer credit rules: interest to 28 days after notice plus up to 1 month if term >12 months (as stated by HSBC)",
+  "status": "CONFIRMED",
+  "source_id": "S06"
+ },
+ {
+  "lender_group": "All lenders",
+  "product_line": "Mortgage",
+  "fee_type": "Broker fees",
+  "value": "Vary by broker; lenders pay procuration fees (e.g. NatWest pays on full ported amount; min £25k loan)",
+  "status": "CONFIRMED",
+  "source_id": "S21"
+ }
+]

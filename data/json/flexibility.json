@@ -1,0 +1,122 @@
+[
+ {
+  "lender_group": "HSBC UK",
+  "product_line": "Mortgage",
+  "feature": "Overpayments",
+  "detail": "Fixed & discount: 10% of balance at drawdown/switch per year; trackers: unlimited",
+  "status": "CONFIRMED",
+  "source_id": "S03"
+ },
+ {
+  "lender_group": "HSBC UK",
+  "product_line": "Mortgage",
+  "feature": "Porting",
+  "detail": "Fixed/term tracker/lifetime tracker/SVR customers with >=6 months remaining; simultaneous sale & purchase; term changes allowed (not lifetime tracker extension)",
+  "status": "CONFIRMED",
+  "source_id": "S03"
+ },
+ {
+  "lender_group": "NatWest Group",
+  "product_line": "Mortgage",
+  "feature": "Overpayments",
+  "detail": "20% per year before ERC",
+  "status": "CONFIRMED",
+  "source_id": "S21"
+ },
+ {
+  "lender_group": "NatWest Group",
+  "product_line": "Mortgage",
+  "feature": "Track and Switch",
+  "detail": "Tracker with option to fix later",
+  "status": "CONFIRMED",
+  "source_id": "S21"
+ },
+ {
+  "lender_group": "Nationwide",
+  "product_line": "Mortgage",
+  "feature": "Overpayments / underpayments",
+  "detail": "10% allowance (remortgage range); overpayment reserve can fund agreed underpayments; daily interest",
+  "status": "CONFIRMED",
+  "source_id": "S37;S36"
+ },
+ {
+  "lender_group": "Nationwide",
+  "product_line": "Mortgage",
+  "feature": "Trackers",
+  "detail": "No ERCs on tracker products; 0% floor on BBR",
+  "status": "CONFIRMED",
+  "source_id": "S36;S37"
+ },
+ {
+  "lender_group": "Barclays",
+  "product_line": "Mortgage",
+  "feature": "Offset",
+  "detail": "Offset product range exists; ERC waived when moving from offset in porting scenarios",
+  "status": "CONFIRMED",
+  "source_id": "S10"
+ },
+ {
+  "lender_group": "Barclays",
+  "product_line": "Mortgage",
+  "feature": "Portability",
+  "detail": "Help to Buy and Family Springboard products not portable",
+  "status": "CONFIRMED",
+  "source_id": "S10"
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "product_line": "Mortgage",
+  "feature": "Repayment-type change",
+  "detail": "Loans >75% LTV cannot switch to interest-only within 12 months",
+  "status": "CONFIRMED",
+  "source_id": "S13"
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "product_line": "Mortgage",
+  "feature": "Payment holidays / overpayments",
+  "detail": "Sections exist in A-Z; detail not captured",
+  "status": "NOT VERIFIED",
+  "source_id": "S13"
+ },
+ {
+  "lender_group": "TSB",
+  "product_line": "Mortgage",
+  "feature": "Trackers",
+  "detail": "No ERC on 2-yr trackers",
+  "status": "CONFIRMED",
+  "source_id": "S40"
+ },
+ {
+  "lender_group": "All lenders",
+  "product_line": "Mortgage",
+  "feature": "Mortgage Charter support",
+  "detail": "Term extensions / temporary interest-only: ~22,400 mortgages in Q2 2026",
+  "status": "CONFIRMED",
+  "source_id": "S51"
+ },
+ {
+  "lender_group": "HSBC UK",
+  "product_line": "Personal loan",
+  "feature": "Overpayments",
+  "detail": "Free of charge",
+  "status": "CONFIRMED",
+  "source_id": "S06"
+ },
+ {
+  "lender_group": "Santander UK",
+  "product_line": "Personal loan",
+  "feature": "Overpayments",
+  "detail": "Unlimited at no extra cost",
+  "status": "CONFIRMED",
+  "source_id": "S24"
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "product_line": "Personal loan",
+  "feature": "Repayment holidays",
+  "detail": "Up to 2 non-consecutive one-month holidays per rolling 12 months (interest still accrues)",
+  "status": "CONFIRMED",
+  "source_id": "S16;S18"
+ }
+]

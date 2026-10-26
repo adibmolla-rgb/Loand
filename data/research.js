@@ -1,4 +1,4 @@
-/* AUTO-GENERATED from Loand_UK_Lender_Research_2026-09-27.xlsx by tools/convert.py.
+/* AUTO-GENERATED from Loand_UK_Lender_Research_2026-09-27.xlsx by scripts/build-data.js.
    Do not edit by hand: fix the spreadsheet and re-run the script. */
 window.LOAND_RESEARCH = {
  "meta": {

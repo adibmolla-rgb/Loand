@@ -1,0 +1,26 @@
+[
+ {
+  "status": "CONFIRMED",
+  "definition": "An official lender, regulator or government source directly states the information and it applies at the research date."
+ },
+ {
+  "status": "SUPPORTED",
+  "definition": "Multiple credible sources support it, or an official source supports it indirectly (e.g. group criteria applied to a sister brand); not stated in one official place for this exact scope."
+ },
+ {
+  "status": "UNCONFIRMED",
+  "definition": "Some evidence exists (usually a single third-party source) but insufficient confirmation."
+ },
+ {
+  "status": "NOT DISCLOSED",
+  "definition": "The lender (or market) does not publicly disclose the information, after checking the relevant official pages."
+ },
+ {
+  "status": "OUTDATED",
+  "definition": "Information was found but appears superseded; retained only for audit trail."
+ },
+ {
+  "status": "NOT VERIFIED",
+  "definition": "Operational gap flag added for this project: the item likely exists but could not be retrieved in this pass (script-rendered page, blocked site). It must NOT be read as 'not disclosed'."
+ }
+]

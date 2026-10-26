@@ -1,0 +1,68 @@
+[
+ {
+  "metric": "Bank of England Bank Rate",
+  "value": "3.75%",
+  "date": "2026-09-17",
+  "source_id": "S01",
+  "status": "CONFIRMED",
+  "notes": "Held 6-3; three members voted for 4.00%. Next decision 5 Nov 2026.",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "date_iso": "2026-09-17"
+ },
+ {
+  "metric": "Average 2-year fixed (Moneyfacts)",
+  "value": "5.92%",
+  "date": "2026-09-25",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": "Highest since 14 Jul 2024.",
+  "value_numeric": 5.92,
+  "unit": "%",
+  "date_iso": "2026-09-25"
+ },
+ {
+  "metric": "Average 5-year fixed (Moneyfacts)",
+  "value": "5.96%",
+  "date": "2026-09-25",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": "Highest since 10 Oct 2023.",
+  "value_numeric": 5.96,
+  "unit": "%",
+  "date_iso": "2026-09-25"
+ },
+ {
+  "metric": "Average SVR (Moneyfacts)",
+  "value": "7.13%",
+  "date": "2026-09",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": "Range e.g. Newcastle BS 6.31% to Aldermore 8.38% (HOA).",
+  "value_numeric": 7.13,
+  "unit": "%",
+  "date_iso": "2026-09-01"
+ },
+ {
+  "metric": "BoE effective rate, new mortgages",
+  "value": "4.45%",
+  "date": "2026-07 (data)",
+  "source_id": "S48",
+  "status": "CONFIRMED",
+  "notes": "Up from 4.35% in June 2026.",
+  "value_numeric": 4.45,
+  "unit": "%",
+  "date_iso": "2026-07-31"
+ },
+ {
+  "metric": "BoE effective rate, outstanding stock",
+  "value": "3.97%",
+  "date": "2026-07 (data)",
+  "source_id": "S48",
+  "status": "CONFIRMED",
+  "notes": null,
+  "value_numeric": 3.97,
+  "unit": "%",
+  "date_iso": "2026-07-31"
+ }
+]

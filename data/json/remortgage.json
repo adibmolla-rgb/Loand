@@ -1,0 +1,232 @@
+[
+ {
+  "lender_group": "HSBC UK",
+  "item": "Timing after purchase",
+  "value": "Remortgage allowed any time after completion; extra solicitor checks if owned <6 months",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S03",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "HSBC UK",
+  "item": "Product switch + additional borrowing",
+  "value": "Can run simultaneously as two applications (within 3 working days); one fee refundable if same product",
+  "status": "CONFIRMED",
+  "customer_scope": "Existing",
+  "source_id": "S03",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "HSBC UK",
+  "item": "Additional borrowing",
+  "value": "Min £10,000 stand-alone; 6 months after latest drawdown; existing fixed/tracker/SVR customers",
+  "status": "CONFIRMED",
+  "customer_scope": "Existing",
+  "source_id": "S03",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "item": "Max LTV like-for-like",
+  "value": "90% (houses <=£640k / flats <=£310k); 85% above",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "item": "Capital raising / debt consolidation",
+  "value": "85% capital raising; 80% with any debt consolidation",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "item": "Rate switch near term end",
+  "value": "<=6 months left on term: rate switch team cannot assist (SVR or apply direct); 6-12 months: tracker with no ERC may be reviewed",
+  "status": "CONFIRMED",
+  "customer_scope": "Existing",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "item": "Max LTV",
+  "value": "90% no extra borrowing; 85% with extra borrowing; 85% unencumbered",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "item": "Enhanced LTI like-for-like",
+  "value": "Up to 5.50x at <=75% LTV, no extra borrowing",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "item": "Capital raising age limit",
+  "value": "Max working age 70 for remortgage with capital raising",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S13;S55",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "item": "Further advance",
+  "value": "Max 85% LTV; not within 6 months of completion; min £10,000",
+  "status": "CONFIRMED",
+  "customer_scope": "Existing",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "item": "Product transfers after rebrand",
+  "value": "Existing Halifax PTs, further advances and porting to be submitted via Lloyds Intermediaries",
+  "status": "SUPPORTED",
+  "customer_scope": "Existing",
+  "source_id": "S59",
+  "last_verified": "2026-09-26",
+  "notes": "Timing: from 2027 rebrand."
+ },
+ {
+  "lender_group": "NatWest Group",
+  "item": "Debt consolidation",
+  "value": "Max 80% LTV; consolidated debts excluded from affordability commitments",
+  "status": "CONFIRMED",
+  "customer_scope": "Both",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "item": "Additional borrowing into retirement",
+  "value": "Not permitted where new borrowing term extends into retirement (>10 yrs to retirement required)",
+  "status": "CONFIRMED",
+  "customer_scope": "Existing",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "item": "Free legals",
+  "value": "Available on selected products (see product guide)",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "item": "Remortgage incentives",
+  "value": "Free standard valuation; choice of free standard legal fees or £500 cashback",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S37",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "item": "Other remortgage features",
+  "value": "90-day product reservation; capital raising on mortgage-free property; no ERC on trackers; IO or part & part available; 10% overpayment allowance",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S37",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "item": "Max LTV remortgage (flats, lease >=90 yrs)",
+  "value": "90%",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S29",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "item": "Like-for-like LTI",
+  "value": "6.5x capital & interest; 5.5x interest-only",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "item": "Remortgage incentives",
+  "value": "Free standard legals (not SO/SE) or £300 cashback; free basic valuation",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S40",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "item": "Remortgage LTV / size",
+  "value": "2yr fix remortgage up to 90% LTV; 85-90% max loan £500k",
+  "status": "CONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S40",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Santander UK",
+  "item": "Remortgage LTV",
+  "value": "Reported 90% max for remortgage",
+  "status": "UNCONFIRMED",
+  "customer_scope": "New",
+  "source_id": "S66",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "All lenders",
+  "item": "Remortgage with adverse credit",
+  "value": "No mainstream lender reviewed publishes a specific adverse-credit remortgage product",
+  "status": "NOT DISCLOSED",
+  "customer_scope": "New",
+  "source_id": "S10;S13;S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Market",
+  "item": "Remortgage approvals (switching lender)",
+  "value": "34,500 in July 2026 (34,100 June)",
+  "status": "CONFIRMED",
+  "customer_scope": "n/a",
+  "source_id": "S48",
+  "last_verified": "2026-09-26",
+  "notes": "Counts of approvals, not approval rates."
+ }
+]

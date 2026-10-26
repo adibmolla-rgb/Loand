@@ -1,0 +1,3898 @@
+[
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2023-09-01",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2023-09-30",
+  "value_numeric": 44027,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2023-09-30",
+  "value_numeric": 20613,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 5.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 5.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 6.14,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 6.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 6.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 5.24,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 6.01,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2023-09-30",
+  "value_numeric": 5.69,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2023-09-30",
+  "value_numeric": 7.98,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2023-09-30",
+  "value_numeric": 3.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2023-10-31",
+  "value_numeric": 48082,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2023-10-31",
+  "value_numeric": 24081,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.52,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.6,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.94,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 6.06,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 6.6,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.02,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2023-10-31",
+  "value_numeric": 5.67,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2023-10-31",
+  "value_numeric": 8.02,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2023-10-31",
+  "value_numeric": 3.22,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2023-11-30",
+  "value_numeric": 50287,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2023-11-30",
+  "value_numeric": 25862,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.13,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.28,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.65,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.81,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 6.38,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 4.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.71,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2023-11-30",
+  "value_numeric": 5.7,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2023-11-30",
+  "value_numeric": 8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2023-11-30",
+  "value_numeric": 3.28,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2023-12-31",
+  "value_numeric": 52530,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2023-12-31",
+  "value_numeric": 31536,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 4.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 5.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 5.38,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 5.69,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 6.18,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 4.68,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 5.52,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2023-12-31",
+  "value_numeric": 5.69,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2023-12-31",
+  "value_numeric": 7.92,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2023-12-31",
+  "value_numeric": 3.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-01-31",
+  "value_numeric": 56032,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-01-31",
+  "value_numeric": 30931,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 4.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 4.71,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 5.04,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 5.44,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 5.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 4.43,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 5.24,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-01-31",
+  "value_numeric": 5.72,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-01-31",
+  "value_numeric": 7.94,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-01-31",
+  "value_numeric": 3.42,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-02-29",
+  "value_numeric": 59676,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-02-29",
+  "value_numeric": 36671,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 4.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 4.76,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 4.99,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 5.26,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 5.73,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 4.41,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-02-29",
+  "value_numeric": 5.72,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-02-29",
+  "value_numeric": 7.94,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-02-29",
+  "value_numeric": 3.49,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-03-31",
+  "value_numeric": 61146,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-03-31",
+  "value_numeric": 32564,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 4.96,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 5.39,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 5.83,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 4.53,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 5.3,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-03-31",
+  "value_numeric": 5.71,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-03-31",
+  "value_numeric": 7.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-03-31",
+  "value_numeric": 3.51,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-04-30",
+  "value_numeric": 61208,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-04-30",
+  "value_numeric": 28626,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 4.86,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 4.98,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 5.47,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 5.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 4.51,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 5.34,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-04-30",
+  "value_numeric": 5.71,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-04-30",
+  "value_numeric": 8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-04-30",
+  "value_numeric": 3.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-05-31",
+  "value_numeric": 60800,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-05-31",
+  "value_numeric": 28562,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.01,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.32,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.66,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 6.04,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 4.66,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.48,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-05-31",
+  "value_numeric": 5.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-05-31",
+  "value_numeric": 8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-05-31",
+  "value_numeric": 3.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-06-30",
+  "value_numeric": 61254,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-06-30",
+  "value_numeric": 27597,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5.3,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5.65,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 6.07,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 4.64,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5.47,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-06-30",
+  "value_numeric": 5.76,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-06-30",
+  "value_numeric": 8.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-06-30",
+  "value_numeric": 3.66,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-07-31",
+  "value_numeric": 62854,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-07-31",
+  "value_numeric": 25374,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 4.99,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 5.21,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 5.61,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 5.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 4.49,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 5.43,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-07-31",
+  "value_numeric": 5.7,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-07-31",
+  "value_numeric": 8.07,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-07-31",
+  "value_numeric": 3.7,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2024-08-01",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-08-31",
+  "value_numeric": 65361,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-08-31",
+  "value_numeric": 28047,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 4.55,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 5.07,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 5.54,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 5.9,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 4.33,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 5.33,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-08-31",
+  "value_numeric": 5.5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-08-31",
+  "value_numeric": 7.86,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-08-31",
+  "value_numeric": 3.73,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-09-30",
+  "value_numeric": 65596,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-09-30",
+  "value_numeric": 31405,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 4.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 4.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 4.86,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 5.4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 5.76,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 4.09,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 5.23,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-09-30",
+  "value_numeric": 5.45,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-09-30",
+  "value_numeric": 7.7,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-09-30",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-10-31",
+  "value_numeric": 67846,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-10-31",
+  "value_numeric": 32678,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 4.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 4.4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 5.3,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 5.61,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 4.06,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 5.14,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-10-31",
+  "value_numeric": 5.32,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-10-31",
+  "value_numeric": 7.68,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-10-31",
+  "value_numeric": 3.79,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2024-11-07",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-11-30",
+  "value_numeric": 65907,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-11-30",
+  "value_numeric": 32060,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 4.39,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 4.53,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 4.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 5.41,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 5.69,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 4.29,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 5.24,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-11-30",
+  "value_numeric": 5.13,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-11-30",
+  "value_numeric": 7.56,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-11-30",
+  "value_numeric": 3.81,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2024-12-31",
+  "value_numeric": 66942,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2024-12-31",
+  "value_numeric": 31256,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 4.47,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 4.6,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 4.88,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 5.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 5.7,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 4.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 5.24,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2024-12-31",
+  "value_numeric": 5.02,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2024-12-31",
+  "value_numeric": 7.47,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2024-12-31",
+  "value_numeric": 3.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-01-31",
+  "value_numeric": 66270,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-01-31",
+  "value_numeric": 33782,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 4.48,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 4.63,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 4.9,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 5.35,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 5.69,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 4.37,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-01-31",
+  "value_numeric": 4.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-01-31",
+  "value_numeric": 7.48,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-01-31",
+  "value_numeric": 3.82,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2025-02-06",
+  "value_numeric": 4.5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-02-28",
+  "value_numeric": 64611,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-02-28",
+  "value_numeric": 32250,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 4.45,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 4.65,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 4.86,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 5.26,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 5.64,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 4.38,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 5.26,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-02-28",
+  "value_numeric": 4.79,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-02-28",
+  "value_numeric": 7.35,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-02-28",
+  "value_numeric": 3.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-03-31",
+  "value_numeric": 63461,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-03-31",
+  "value_numeric": 32990,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 4.31,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 4.54,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 4.73,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 5.09,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 5.44,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 4.32,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 5.12,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-03-31",
+  "value_numeric": 4.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-03-31",
+  "value_numeric": 7.24,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-03-31",
+  "value_numeric": 3.85,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-04-30",
+  "value_numeric": 59736,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-04-30",
+  "value_numeric": 34363,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.23,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.42,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.63,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.96,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 5.29,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.29,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 5.04,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-04-30",
+  "value_numeric": 4.76,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-04-30",
+  "value_numeric": 7.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-04-30",
+  "value_numeric": 3.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2025-05-08",
+  "value_numeric": 4.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-05-31",
+  "value_numeric": 62618,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-05-31",
+  "value_numeric": 40674,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.07,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.18,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.49,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.82,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 5.1,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.95,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-05-31",
+  "value_numeric": 4.61,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-05-31",
+  "value_numeric": 7.08,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-05-31",
+  "value_numeric": 3.87,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-06-30",
+  "value_numeric": 64721,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-06-30",
+  "value_numeric": 42286,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.18,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.28,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.47,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 5.1,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.26,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.96,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-06-30",
+  "value_numeric": 4.52,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-06-30",
+  "value_numeric": 6.98,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-06-30",
+  "value_numeric": 3.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-07-31",
+  "value_numeric": 65905,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-07-31",
+  "value_numeric": 39177,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.02,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.21,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.28,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 5.05,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.15,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.88,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-07-31",
+  "value_numeric": 4.51,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-07-31",
+  "value_numeric": 6.99,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-07-31",
+  "value_numeric": 3.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2025-08-07",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-08-31",
+  "value_numeric": 65278,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-08-31",
+  "value_numeric": 38365,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 3.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.1,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.21,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.55,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.11,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.86,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-08-31",
+  "value_numeric": 4.35,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-08-31",
+  "value_numeric": 6.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-08-31",
+  "value_numeric": 3.9,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-09-30",
+  "value_numeric": 66053,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-09-30",
+  "value_numeric": 37499,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.32,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 5.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.9,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-09-30",
+  "value_numeric": 4.26,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-09-30",
+  "value_numeric": 6.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-09-30",
+  "value_numeric": 3.9,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-10-31",
+  "value_numeric": 64762,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-10-31",
+  "value_numeric": 33636,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.2,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.31,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.57,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.17,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.88,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-10-31",
+  "value_numeric": 4.27,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-10-31",
+  "value_numeric": 6.81,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-10-31",
+  "value_numeric": 3.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-11-30",
+  "value_numeric": 64592,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-11-30",
+  "value_numeric": 37306,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 3.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.06,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.23,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.49,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.06,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.81,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-11-30",
+  "value_numeric": 4.27,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-11-30",
+  "value_numeric": 6.82,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-11-30",
+  "value_numeric": 3.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - change effective date",
+  "date": "2025-12-18",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2025-12-31",
+  "value_numeric": 61395,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2025-12-31",
+  "value_numeric": 38943,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 3.78,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 3.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 4.15,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 4.42,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 4.83,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 3.99,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2025-12-31",
+  "value_numeric": 4.19,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2025-12-31",
+  "value_numeric": 6.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2025-12-31",
+  "value_numeric": 3.92,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-01-31",
+  "value_numeric": 60145,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-01-31",
+  "value_numeric": 38681,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 3.72,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 3.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 4.1,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 4.36,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 3.94,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 4.73,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-01-31",
+  "value_numeric": 4.04,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-01-31",
+  "value_numeric": 6.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-01-31",
+  "value_numeric": 3.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-02-28",
+  "value_numeric": 62278,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-02-28",
+  "value_numeric": 41323,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 3.78,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 3.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4.06,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4.34,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4.82,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-02-28",
+  "value_numeric": 4.04,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-02-28",
+  "value_numeric": 6.59,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-02-28",
+  "value_numeric": 3.95,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-03-31",
+  "value_numeric": 62920,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-03-31",
+  "value_numeric": 50121,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.3,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.45,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.51,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.79,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 5.23,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.42,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 5.12,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-03-31",
+  "value_numeric": 4.1,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-03-31",
+  "value_numeric": 6.6,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-03-31",
+  "value_numeric": 3.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-04-30",
+  "value_numeric": 65044,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-04-30",
+  "value_numeric": 50304,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 4.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 5.14,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 5.46,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 5.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 4.96,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 5.61,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-04-30",
+  "value_numeric": 4.13,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-04-30",
+  "value_numeric": 6.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-04-30",
+  "value_numeric": 3.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-05-31",
+  "value_numeric": 56396,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-05-31",
+  "value_numeric": 33816,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 4.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 4.91,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 5.03,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 5.31,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 5.63,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 4.77,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 5.42,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-05-31",
+  "value_numeric": 4.13,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-05-31",
+  "value_numeric": 6.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-05-31",
+  "value_numeric": 3.92,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-06-30",
+  "value_numeric": 58215,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-06-30",
+  "value_numeric": 34111,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 4.59,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 4.8,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 4.93,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 5.18,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 5.54,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 4.62,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 5.31,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-06-30",
+  "value_numeric": 4.12,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-06-30",
+  "value_numeric": 6.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-06-30",
+  "value_numeric": 3.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - house purchase (seasonally adjusted)",
+  "date": "2026-07-31",
+  "value_numeric": 56053,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE mortgage approvals - remortgaging with a different lender (SA)",
+  "date": "2026-07-31",
+  "value_numeric": 34500,
+  "unit": "count",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 4.6,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 4.79,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 4.89,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 5.07,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 5.48,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 4.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 5.28,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-07-31",
+  "value_numeric": 4.15,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-07-31",
+  "value_numeric": 6.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE effective rate - outstanding stock of mortgages",
+  "date": "2026-07-31",
+  "value_numeric": 3.97,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 60% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 4.79,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 75% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 4.92,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 85% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 5.02,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 90% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 5.16,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr fixed 95% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 5.52,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 75% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 4.78,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 5yr fixed 95% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 5.36,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - 2yr variable 75% LTV",
+  "date": "2026-08-31",
+  "value_numeric": 4.23,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "BoE quoted rate - revert-to rate (SVR proxy)",
+  "date": "2026-08-31",
+  "value_numeric": 6.58,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2023-09-29",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2023-10-31",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2023-11-30",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2023-12-29",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-01-31",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-02-29",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-03-28",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-04-30",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-05-31",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-06-28",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-07-31",
+  "value_numeric": 5.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-08-30",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-09-30",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-10-31",
+  "value_numeric": 5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-11-29",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2024-12-31",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-01-31",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-02-28",
+  "value_numeric": 4.5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-03-31",
+  "value_numeric": 4.5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-04-30",
+  "value_numeric": 4.5,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-05-30",
+  "value_numeric": 4.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-06-30",
+  "value_numeric": 4.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-07-31",
+  "value_numeric": 4.25,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-08-29",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-09-30",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-10-31",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-11-28",
+  "value_numeric": 4,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2025-12-31",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-01-30",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-02-27",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-03-31",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-04-30",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-05-29",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-06-30",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-07-31",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-08-28",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - month end",
+  "date": "2026-09-24",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S83"
+ },
+ {
+  "series": "Bank Rate - MPC decision (hold)",
+  "date": "2026-09-17",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S01"
+ },
+ {
+  "series": "Moneyfacts average 2yr fixed",
+  "date": "2024-09-01",
+  "value_numeric": 5.56,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 5yr fixed",
+  "date": "2021-09-01",
+  "value_numeric": 2.63,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 2yr fixed",
+  "date": "2026-03-01",
+  "value_numeric": 4.84,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S60"
+ },
+ {
+  "series": "Moneyfacts average 5yr fixed",
+  "date": "2026-03-01",
+  "value_numeric": 4.94,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 2yr fixed",
+  "date": "2026-09-01",
+  "value_numeric": 5.52,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 5yr fixed",
+  "date": "2026-09-01",
+  "value_numeric": 5.64,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 2yr fixed",
+  "date": "2026-09-25",
+  "value_numeric": 5.92,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average 5yr fixed",
+  "date": "2026-09-25",
+  "value_numeric": 5.96,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "Moneyfacts average SVR",
+  "date": "2026-09-01",
+  "value_numeric": 7.13,
+  "unit": "%",
+  "status": "SUPPORTED",
+  "source_id": "S02"
+ },
+ {
+  "series": "BoE effective rate - new mortgages",
+  "date": "2025-06-30",
+  "value_numeric": 4.34,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S57"
+ },
+ {
+  "series": "BoE effective rate - new mortgages",
+  "date": "2026-05-31",
+  "value_numeric": 4.22,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S57"
+ },
+ {
+  "series": "BoE effective rate - new mortgages",
+  "date": "2026-06-30",
+  "value_numeric": 4.35,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S57"
+ },
+ {
+  "series": "BoE effective rate - new mortgages",
+  "date": "2026-07-31",
+  "value_numeric": 4.45,
+  "unit": "%",
+  "status": "CONFIRMED",
+  "source_id": "S48"
+ }
+]

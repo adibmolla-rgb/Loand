@@ -1,0 +1,128 @@
+[
+ {
+  "organisation": "Bank of England",
+  "report": "Monetary Policy Summary & Minutes",
+  "date": "2026-09-17",
+  "subject": "Base rate",
+  "key_relevant_findings": "Bank Rate held 3.75% (6-3); CPI 3.1% Aug; BoE expects inflation slightly above 4% in 2027 Q1.",
+  "source_id": "S01",
+  "date_iso": "2026-09-17"
+ },
+ {
+  "organisation": "Bank of England",
+  "report": "Money and Credit - July 2026",
+  "date": "2026-09",
+  "subject": "Approvals, rates, consumer credit",
+  "key_relevant_findings": "House-purchase approvals 56,100 (6-month avg ~60,800); remortgage 34,500; effective new mortgage rate 4.45%; consumer credit +£2.0bn.",
+  "source_id": "S48",
+  "date_iso": "2026-09"
+ },
+ {
+  "organisation": "FCA / PRA",
+  "report": "Mortgage lending statistics (MLAR) 2026 Q2",
+  "date": "2026-09",
+  "subject": "Lending volumes, arrears",
+  "key_relevant_findings": "Outstanding £1,760.6bn (+3.1% y/y); gross advances £77.4bn (+31.7% y/y); commitments £79.2bn; arrears 1.1% of balances.",
+  "source_id": "S49",
+  "date_iso": "2026-09"
+ },
+ {
+  "organisation": "Bank of England",
+  "report": "MLAR 2026 Q2",
+  "date": "2026-09",
+  "subject": "High-LTV share, possessions",
+  "key_relevant_findings": ">90% LTV share 8.4% (highest since 2008 Q2); new possessions 2,058 (-15.6% y/y).",
+  "source_id": "S50",
+  "date_iso": "2026-09"
+ },
+ {
+  "organisation": "FCA",
+  "report": "Mortgage Charter uptake - Sept 2026",
+  "date": "2026-09",
+  "subject": "Forbearance",
+  "key_relevant_findings": "~22,400 mortgages had payments reduced via temporary IO or term extension in Q2 2026.",
+  "source_id": "S51",
+  "date_iso": "2026-09"
+ },
+ {
+  "organisation": "Bank of England",
+  "report": "Credit Conditions Survey 2026 Q1",
+  "date": "2026",
+  "subject": "Credit availability",
+  "key_relevant_findings": "Lenders reported secured credit availability increased in 3 months to end-Feb 2026.",
+  "source_id": "S52",
+  "date_iso": null
+ },
+ {
+  "organisation": "House of Commons Library",
+  "report": "Interest rates and monetary policy",
+  "date": "2026-09-26",
+  "subject": "Base rate history",
+  "key_relevant_findings": "Rates cut 1.5pp in total Aug 2024-Dec 2025; CPI 3.1% Aug 2026.",
+  "source_id": "S53",
+  "date_iso": "2026-09-26"
+ },
+ {
+  "organisation": "HM Treasury",
+  "report": "Mortgage Guarantee Scheme statistics (final)",
+  "date": "2025-11-05",
+  "subject": "High-LTV scheme",
+  "key_relevant_findings": "2021 scheme closed to new accounts 30 Jun 2025; £600k property cap.",
+  "source_id": "S45",
+  "date_iso": "2025-11-05"
+ },
+ {
+  "organisation": "Moneyfacts (via HOA / IFA Magazine)",
+  "report": "Mortgage pricing analysis",
+  "date": "2026-09",
+  "subject": "Rates",
+  "key_relevant_findings": "Avg 2-yr fix 5.92%, 5-yr 5.96% (25 Sep); big six repriced twice in Sept.",
+  "source_id": "S02;S60",
+  "date_iso": "2026-09"
+ },
+ {
+  "organisation": "Santander UK",
+  "report": "Q2-26 Management Statement (6-K)",
+  "date": "2026",
+  "subject": "Consolidation",
+  "key_relevant_findings": "TSB integration via Part VII targeted H1 2027.",
+  "source_id": "S28",
+  "date_iso": null
+ },
+ {
+  "organisation": "FCA",
+  "report": "Interest rate 'stress test' rule - MCOB 11.6.18R",
+  "date": "2025-12",
+  "subject": "Affordability regulation",
+  "key_relevant_findings": "Lenders set own stress basis; 5-year horizon unless fixed 5+ years; no prevailing FPC recommendation.",
+  "source_id": "S88",
+  "date_iso": "2025-12-01"
+ },
+ {
+  "organisation": "FCA / PRA",
+  "report": "CP26/12 & CP6/26 - LTI flow limit",
+  "date": "2026-03-31",
+  "subject": "High-LTI lending",
+  "key_relevant_findings": "Proposal to remove firm-level 15% limit while keeping 15% aggregate.",
+  "source_id": "S90",
+  "date_iso": "2026-03-31"
+ },
+ {
+  "organisation": "Bank of England",
+  "report": "Statistical database - quoted rates by LTV and approvals",
+  "date": "2026-09-27",
+  "subject": "Time series",
+  "key_relevant_findings": "2yr fixed 95% LTV quoted rate 5.52% (Aug 2026); 5yr 95% 5.36%; revert-to rate 6.58%.",
+  "source_id": "S83",
+  "date_iso": "2026-09-27"
+ },
+ {
+  "organisation": "The Co-operative Bank",
+  "report": "Part VII transfer to Coventry BS",
+  "date": "2026-08-25",
+  "subject": "Consolidation",
+  "key_relevant_findings": "Final hearing 2 Dec 2026; completion expected 1 Jan 2027.",
+  "source_id": "S82",
+  "date_iso": "2026-08-25"
+ }
+]

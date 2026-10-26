@@ -1,0 +1,156 @@
+[
+ {
+  "lender_scope": "HSBC UK",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Barclays",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Lloyds Banking Group",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "NatWest Group",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Santander UK",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "TSB",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Nationwide",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Skipton BS",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Co-operative Bank",
+  "metric": "Mortgage & personal loan approval / acceptance / completion rate",
+  "figure": "Not publicly disclosed",
+  "period": "n/a",
+  "population": "n/a",
+  "definition": "n/a",
+  "status": "NOT DISCLOSED",
+  "source_id": "Lender websites & criteria reviewed (see Sources)",
+  "notes": "No lender-level approval, acceptance or completion rate found in official pages or filings reviewed."
+ },
+ {
+  "lender_scope": "Market (all lenders)",
+  "metric": "Net mortgage approvals for house purchase (COUNT, not rate)",
+  "figure": "56,100",
+  "period": "July 2026",
+  "population": "All UK lenders reporting to BoE",
+  "definition": "Approvals net of cancellations",
+  "status": "CONFIRMED",
+  "source_id": "S48",
+  "notes": "A volume indicator of future lending - NOT an approval percentage."
+ },
+ {
+  "lender_scope": "Market (all lenders)",
+  "metric": "Remortgage approvals (COUNT)",
+  "figure": "34,500",
+  "period": "July 2026",
+  "population": "Remortgages with a different lender only",
+  "definition": "Approvals",
+  "status": "CONFIRMED",
+  "source_id": "S48",
+  "notes": null
+ },
+ {
+  "lender_scope": "Market (all lenders)",
+  "metric": "New mortgage commitments (VALUE)",
+  "figure": "£79.2bn",
+  "period": "2026 Q2",
+  "population": "~340 MLAR reporters",
+  "definition": "Lending agreed",
+  "status": "CONFIRMED",
+  "source_id": "S49",
+  "notes": null
+ },
+ {
+  "lender_scope": "Market (all lenders)",
+  "metric": "Share of gross advances >90% LTV",
+  "figure": "8.4%",
+  "period": "2026 Q2",
+  "population": "MLAR",
+  "definition": "Advances",
+  "status": "CONFIRMED",
+  "source_id": "S50",
+  "notes": "Highest since 2008 Q2."
+ },
+ {
+  "lender_scope": "Regulatory definition",
+  "metric": "Representative APR (personal loans)",
+  "figure": ">=51% of accepted applicants must receive the rep APR or lower",
+  "period": "Standing rule",
+  "population": "Accepted applicants only",
+  "definition": "Offer pricing, not acceptance",
+  "status": "CONFIRMED",
+  "source_id": "S24",
+  "notes": "Frequently misread as an approval rate - it is NOT one."
+ }
+]

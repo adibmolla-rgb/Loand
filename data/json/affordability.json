@@ -1,0 +1,492 @@
+[
+ {
+  "lender_group": "HSBC UK",
+  "criterion": "Premier customers",
+  "value": "Up to 6.5x income at up to 90% LTV",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S05",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "HSBC UK",
+  "criterion": "First-time buyers",
+  "value": "Higher multiple available with min sole income £35k or joint £55k (multiple reported as 5.5x by third parties)",
+  "status": "SUPPORTED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S05;S68",
+  "last_verified": "2026-09-26",
+  "notes": "Multiple itself not stated on retrieved HSBC page."
+ },
+ {
+  "lender_group": "HSBC UK",
+  "criterion": "Home movers £45k-£99,999",
+  "value": "Reported 5.0x at <=85% LTV",
+  "status": "UNCONFIRMED",
+  "disclosure_type": "Third-party only",
+  "source_id": "S68",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "HSBC UK",
+  "criterion": "Leasehold costs",
+  "value": "Ground rent and service charge treated as basic essential expenditure",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S03",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "HSBC UK",
+  "criterion": "Background BTLs",
+  "value": "Full BTL running costs included in income & expenditure, not just rent",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S03",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "LTI: <=85% LTV, combined income >=£75k",
+  "value": "6.0x (capital & interest)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "LTI: <=85% LTV, income >=£45k",
+  "value": "5.5x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "LTI: <85% LTV, income >=£35k",
+  "value": "5.0x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "LTI: >90% LTV and income <=£50k",
+  "value": "4.0x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "Debt-to-income ratio",
+  "value": "If monthly credit commitments after completion >=20% of gross monthly income, max LTI 4.0x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": "Explicit DTI rule - useful for Loand eligibility logic."
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "LTI: all other scenarios",
+  "value": "4.49x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Barclays",
+  "criterion": "Commitments treatment",
+  "value": "Credit cards and overdrafts at 3% of balance; debts with <6 months remaining may be ignored",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S10",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Standard LTI: income <£40k",
+  "value": "4.49x (0-95% LTV)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Standard LTI: £40k-<£50k",
+  "value": "4.75x to 85% LTV; 4.49x 85.01-95%",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Standard LTI: £50k-£75k",
+  "value": "5.00x to 85% LTV; 4.49x 85.01-95%",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Standard LTI: >£75k-£125k",
+  "value": "5.50x to 75%; 5.00x 75.01-85%; 4.75x 85.01-90% (loan <=£500k); 4.49x otherwise",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Standard LTI: >£125k",
+  "value": "5.50x to 85%; 4.75x/4.49x above 85% by loan size",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "First-Time Buyer Boost",
+  "value": "5.50x at 0-90% LTV; income >=£40k; purchase only; not shared equity/ownership; may be cut to 5.00x or standard by credit score",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Shared equity / shared ownership",
+  "value": "Max LTI 4.49x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Like-for-like remortgage",
+  "value": "Up to 5.50x, no extra borrowing, max 75% LTV, subject to credit score",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Credit-score reductions",
+  "value": "Max LTI may drop to 5.00x, 4.49x, or 4.00x (income >£75k, loan >£500k)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "EPC adjustment",
+  "value": "EPC A/B small increase in max loan; F/G small decrease; C-E or unknown no change",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Commitments",
+  "value": "Credit cards/overdrafts at 5% of balance; student loan always deducted; BNPL keyed; above 85% LTV debts may be treated as ongoing even if repaid",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Stress rates",
+  "value": "Stress rates reduced from 15 April (year per S55 notice); typical max loan +~13%; enhanced affordability on 5-year+ products",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S55",
+  "last_verified": "2026-09-26",
+  "notes": "Actual stress rate values not published."
+ },
+ {
+  "lender_group": "Lloyds Banking Group",
+  "criterion": "Dependants",
+  "value": "Child and adult dependants keyed separately and included in affordability model",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S13",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "criterion": "Credit scoring",
+  "value": "All applicants credit-scored using multiple CRAs plus internal data; adverse credit score appeals not processed (except like-for-like porting)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "criterion": "Childcare",
+  "value": "Actual declared childcare cost used",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "criterion": "Student loans",
+  "value": "Included as commitment where already repaying",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "NatWest Group",
+  "criterion": "Stress / second APRC",
+  "value": "Second APRC shows cost if base rate rises to 20-year high (regulatory illustration)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S21",
+  "last_verified": "2026-09-26",
+  "notes": "Internal affordability stress rate not published."
+ },
+ {
+  "lender_group": "Santander UK",
+  "criterion": "Over-95% product LTI",
+  "value": "Max 4.45x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S26",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Santander UK",
+  "criterion": "General LTI",
+  "value": "Reported 4.45x-5.5x; 5.5x like-for-like remortgage; FTB reported 4.49x",
+  "status": "UNCONFIRMED",
+  "disclosure_type": "Third-party only",
+  "source_id": "S66;S67",
+  "last_verified": "2026-09-26",
+  "notes": "See Conflicts C09."
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Standard LTI",
+  "value": "4.49x",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Helping Hand (FTB)",
+  "value": "Up to 6x; 95% LTV on 5-yr fixes, 90% on 10-yr fixes",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30;S35",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "High income (new borrowers)",
+  "value": "Up to 6x for home movers/remortgage with extra borrowing and income >=£75k (sole or joint); self-employed eligible",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Existing customers",
+  "value": "Up to 6x moving home or borrowing more; no minimum income",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Like-for-like remortgage",
+  "value": "6.5x capital & interest; 5.5x interest-only",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Equity share / further advance",
+  "value": "4.49x equity share; 4.75x further advance",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Extra help with affordability",
+  "value": "More lending on 5-10 year fixes for min income £40k sole/£70k joint (movers & remortgage)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Stress testing",
+  "value": "All applications stress-tested at DIP; decision can change at product reservation",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S30",
+  "last_verified": "2026-09-26",
+  "notes": "Stress rate not published."
+ },
+ {
+  "lender_group": "All lenders",
+  "criterion": "Internal scoring models",
+  "value": "Proprietary credit-scoring and affordability models are not publicly available; LTI caps are maxima, not entitlements",
+  "status": "NOT DISCLOSED",
+  "disclosure_type": "Not publicly disclosed",
+  "source_id": "S13;S21;S30",
+  "last_verified": "2026-09-26",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "LTI: income <=£50,000",
+  "value": "4.49 (all columns, all LTVs)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "LTI: income £50,001-£75,000",
+  "value": "<=85% LTV 5.00 (remortgage LFL 5.50); 85-90% 4.49 (LFL 5.50); >90% 4.49",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "LTI: income £75,001-£100,000",
+  "value": "<=85% 5.50; 85-90% 5.50 new build employed / 4.49 mainstream & self-employed / 5.50 LFL; >90% 4.49",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "LTI: income Over £100,001",
+  "value": "As £75,001-£100,000",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "Stress rate",
+  "value": "6.25% (or product rate +1% if higher) for fixes of 5+ years; 6.75% (or product +1%) for fixes <5 years and trackers",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": "One of the few published lender stress rates."
+ },
+ {
+  "lender_group": "TSB",
+  "criterion": "Debt-to-income decline rule",
+  "value": "Declined if 3+ accounts opened in 6 months OR unsecured balances up >20% in 3 months, AND unsecured payments >20% of gross monthly income or unsecured balances >100% of gross annual income",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S78",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "Nationwide",
+  "criterion": "Virgin Money LTI",
+  "value": "<£50k 4.49x; £50k-£74,999 5.0x; >=£75k 5.5x; 4.49x if >85% LTV, self-employed, shared ownership; remortgage no extra borrowing 5.5x to 85% LTV; variable income at 60%",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S76",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "Coventry BS",
+  "criterion": "First-time buyers",
+  "value": "Up to 6.5x LTI (conditions not captured)",
+  "status": "CONFIRMED",
+  "disclosure_type": "Explicitly stated by lender",
+  "source_id": "S79",
+  "last_verified": "2026-09-27",
+  "notes": null
+ },
+ {
+  "lender_group": "Santander UK",
+  "criterion": "General LTI (latest third-party)",
+  "value": "Reported Sept 2026: 5.5x for households >=£100k to 90% LTV; 4.45x at 95% LTV; 5.5x all remortgages",
+  "status": "SUPPORTED",
+  "disclosure_type": "Third-party only",
+  "source_id": "S91",
+  "last_verified": "2026-09-27",
+  "notes": "Still not in official A-Z capture; see C09."
+ }
+]

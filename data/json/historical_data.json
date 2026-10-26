@@ -1,0 +1,222 @@
+[
+ {
+  "series": "Base rate",
+  "value": "Cut 5.25% -> 5.00%",
+  "date_period": "2024-08",
+  "source_id": "S02",
+  "status": "CONFIRMED",
+  "notes": "Historic",
+  "value_numeric": 5,
+  "unit": "%",
+  "date": "2026-09-25"
+ },
+ {
+  "series": "Base rate",
+  "value": "Cut to 4.75%",
+  "date_period": "2024-11",
+  "source_id": "S02",
+  "status": "CONFIRMED",
+  "notes": "Historic",
+  "value_numeric": 4.75,
+  "unit": "%",
+  "date": "2024-11-07"
+ },
+ {
+  "series": "Base rate",
+  "value": "Cut to 4.50%",
+  "date_period": "2025-02",
+  "source_id": "S02",
+  "status": "CONFIRMED",
+  "notes": "Historic",
+  "value_numeric": 4.5,
+  "unit": "%",
+  "date": "2025-02-06"
+ },
+ {
+  "series": "Base rate",
+  "value": "Cut to 4.25%",
+  "date_period": "2025-05",
+  "source_id": "S53",
+  "status": "SUPPORTED",
+  "notes": "Implied by 1.5pp total cuts Aug 2024-Dec 2025 and 4% hold in Sep 2025",
+  "value_numeric": 4.25,
+  "unit": "%",
+  "date": "2025-05-08"
+ },
+ {
+  "series": "Base rate",
+  "value": "Cut to 4.00%",
+  "date_period": "2025-08",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": "HOA timeline: held at 4% Sep 2025",
+  "value_numeric": 4,
+  "unit": "%",
+  "date": "2025-08-07"
+ },
+ {
+  "series": "Base rate",
+  "value": "Cut to 3.75%",
+  "date_period": "2025-12",
+  "source_id": "S02;S53",
+  "status": "CONFIRMED",
+  "notes": "Unchanged since (held six times in 2026)",
+  "value_numeric": 3.75,
+  "unit": "%",
+  "date": "2025-12-18"
+ },
+ {
+  "series": "Avg 2-yr fixed (Moneyfacts)",
+  "value": "5.56%",
+  "date_period": "2024-09",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": null,
+  "value_numeric": 5.56,
+  "unit": "%",
+  "date": "2024-09-01"
+ },
+ {
+  "series": "Avg 5-yr fixed (Moneyfacts)",
+  "value": "2.63%",
+  "date_period": "2021-09",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": null,
+  "value_numeric": 2.63,
+  "unit": "%",
+  "date": "2021-09-01"
+ },
+ {
+  "series": "Avg 2-yr fixed (Moneyfacts)",
+  "value": "4.84% -> 5.73%",
+  "date_period": "2026-03 to 2026-09",
+  "source_id": "S60",
+  "status": "SUPPORTED",
+  "notes": "Rise since start of March 2026",
+  "value_numeric": 5.73,
+  "unit": "%",
+  "date": "2026-09-25"
+ },
+ {
+  "series": "Avg 5-yr fixed (Moneyfacts)",
+  "value": "4.94% -> 5.91%",
+  "date_period": "2026-03 to 2026-09",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": null,
+  "value_numeric": 5.91,
+  "unit": "%",
+  "date": "2026-09-25"
+ },
+ {
+  "series": "Avg 2-yr / 5-yr fixed (Moneyfacts)",
+  "value": "5.52% / 5.64%",
+  "date_period": "2026-09-01",
+  "source_id": "S02",
+  "status": "SUPPORTED",
+  "notes": "Start of month",
+  "value_numeric": 5.52,
+  "unit": "%",
+  "date": "2026-09-01"
+ },
+ {
+  "series": "BoE effective rate new mortgages",
+  "value": "4.34%",
+  "date_period": "2025-06",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": null,
+  "value_numeric": 4.34,
+  "unit": "%",
+  "date": "2025-06-01"
+ },
+ {
+  "series": "BoE effective rate new mortgages",
+  "value": "4.22%",
+  "date_period": "2026-05",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": null,
+  "value_numeric": 4.22,
+  "unit": "%",
+  "date": "2026-05-01"
+ },
+ {
+  "series": "BoE effective rate new mortgages",
+  "value": "4.35%",
+  "date_period": "2026-06",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": null,
+  "value_numeric": 4.35,
+  "unit": "%",
+  "date": "2026-06-01"
+ },
+ {
+  "series": "House-purchase approvals",
+  "value": "64,200",
+  "date_period": "2025-06",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": "Remortgage 41,800",
+  "value_numeric": 64200,
+  "unit": "count",
+  "date": "2025-06-01"
+ },
+ {
+  "series": "House-purchase approvals",
+  "value": "56,600",
+  "date_period": "2026-05",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": "Remortgage 33,800",
+  "value_numeric": 56600,
+  "unit": "count",
+  "date": "2026-05-01"
+ },
+ {
+  "series": "House-purchase approvals",
+  "value": "58,200",
+  "date_period": "2026-06",
+  "source_id": "S57",
+  "status": "CONFIRMED",
+  "notes": "Remortgage 34,200 (revised 34,100 in July release)",
+  "value_numeric": 58200,
+  "unit": "count",
+  "date": "2026-06-01"
+ },
+ {
+  "series": "Lender events",
+  "value": "Nationwide acquires Virgin Money",
+  "date_period": "2024-10",
+  "source_id": "S38",
+  "status": "CONFIRMED",
+  "notes": "Business transferred 2 Apr 2026",
+  "value_numeric": null,
+  "unit": "event",
+  "date": "2024-10-01"
+ },
+ {
+  "series": "Lender events",
+  "value": "Santander completes TSB acquisition",
+  "date_period": "2026-04-30",
+  "source_id": "S27",
+  "status": "CONFIRMED",
+  "notes": null,
+  "value_numeric": null,
+  "unit": "event",
+  "date": "2026-04-30"
+ },
+ {
+  "series": "Lender events",
+  "value": "LBG announces Halifax to become Lloyds",
+  "date_period": "2026-07-01",
+  "source_id": "S15",
+  "status": "SUPPORTED",
+  "notes": "Intermediary rebrand Q1 2027",
+  "value_numeric": null,
+  "unit": "event",
+  "date": "2026-07-01"
+ }
+]

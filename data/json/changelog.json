@@ -1,0 +1,1001 @@
+[
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S69",
+  "old_value": null,
+  "new_value": "HSBC UK - Mortgage rates (moving home)",
+  "change_type": "added",
+  "source_id": "S69"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S70",
+  "old_value": null,
+  "new_value": "HSBC UK - First-time buyer mortgage rates",
+  "change_type": "added",
+  "source_id": "S70"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S71",
+  "old_value": null,
+  "new_value": "HSBC for Intermediaries - We've increased our maximum mortgage term (40 years)",
+  "change_type": "added",
+  "source_id": "S71"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S72",
+  "old_value": null,
+  "new_value": "HSBC UK - Personal Loan interest rates (PDF)",
+  "change_type": "added",
+  "source_id": "S72"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "NatWest Group",
+  "item": "S73",
+  "old_value": null,
+  "new_value": "NatWest Intermediaries - New Business rate sheet, rates effective 24 September 2026 (PDF)",
+  "change_type": "added",
+  "source_id": "S73"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Nationwide",
+  "item": "S74",
+  "old_value": null,
+  "new_value": "Nationwide for Intermediaries - Product guide, with effect from 15 September 2026 (PDF)",
+  "change_type": "added",
+  "source_id": "S74"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Nationwide",
+  "item": "S75",
+  "old_value": null,
+  "new_value": "Virgin Money Intermediaries - Product guide issue 440, valid from 16 September 2026 (PDF)",
+  "change_type": "added",
+  "source_id": "S75"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Nationwide",
+  "item": "S76",
+  "old_value": null,
+  "new_value": "Virgin Money Intermediaries - Residential lending criteria A-Z",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Nationwide",
+  "item": "S77",
+  "old_value": null,
+  "new_value": "Clydesdale for Intermediaries - Mortgage product guide, correct as at 23/09/2026 (PDF)",
+  "change_type": "added",
+  "source_id": "S77"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "TSB",
+  "item": "S78",
+  "old_value": null,
+  "new_value": "TSB Intermediaries - Residential criteria (age, LTV & lending limits, adverse credit, self-employed, foreign nationals, income treatment, affordability)",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Coventry BS",
+  "item": "S79",
+  "old_value": null,
+  "new_value": "Coventry for Intermediaries - First-time buyer product guide page",
+  "change_type": "added",
+  "source_id": "S79"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Leeds BS",
+  "item": "S80",
+  "old_value": null,
+  "new_value": "Leeds Building Society - Mainstream Mortgage Products information sheet (PDF, v2.0 April 2025)",
+  "change_type": "added",
+  "source_id": "S80"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Co-operative Bank",
+  "item": "S81",
+  "old_value": null,
+  "new_value": "The Co-operative Bank - Coventry Building Society completes acquisition of The Co-operative Bank",
+  "change_type": "added",
+  "source_id": "S81"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Co-operative Bank",
+  "item": "S82",
+  "old_value": null,
+  "new_value": "The Co-operative Bank - Customers contacted as legal process begins (Part VII transfer)",
+  "change_type": "added",
+  "source_id": "S82"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Market",
+  "item": "S83",
+  "old_value": null,
+  "new_value": "Bank of England Statistical Interactive Database - series IUDBEDR, LPMVTVX, LPMB4B3, IUMZICQ, IUMBV34, IUMZICR, IUMB482, IUM2WTL, IUMBV42, IUM5WTL, IUMBV48, IUMTLMV, CFMHSDE",
+  "change_type": "added",
+  "source_id": "S83"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Government",
+  "item": "S84",
+  "old_value": null,
+  "new_value": "GOV.UK - Stamp Duty Land Tax: residential property rates",
+  "change_type": "added",
+  "source_id": "S84"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Government",
+  "item": "S85",
+  "old_value": null,
+  "new_value": "Revenue Scotland - LBTT residential property",
+  "change_type": "added",
+  "source_id": "S85"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Government",
+  "item": "S86",
+  "old_value": null,
+  "new_value": "Revenue Scotland - Additional Dwelling Supplement (ADS)",
+  "change_type": "added",
+  "source_id": "S86"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Government",
+  "item": "S87",
+  "old_value": null,
+  "new_value": "Welsh Government / WRA - Land Transaction Tax rates and bands",
+  "change_type": "added",
+  "source_id": "S87"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Regulation",
+  "item": "S88",
+  "old_value": null,
+  "new_value": "FCA - Interest rate 'stress test' rule: application of MCOB 11.6.18R",
+  "change_type": "added",
+  "source_id": "S88"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Regulation",
+  "item": "S89",
+  "old_value": null,
+  "new_value": "FCA - The FPC's mortgage market recommendations",
+  "change_type": "added",
+  "source_id": "S89"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Regulation",
+  "item": "S90",
+  "old_value": null,
+  "new_value": "FCA CP26/12 / PRA CP6/26 - Proposed amendments concerning the LTI flow limit",
+  "change_type": "added",
+  "source_id": "S90"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Santander UK",
+  "item": "S91",
+  "old_value": null,
+  "new_value": "Mortgage One - Santander mortgage rates (checked Sept 2026)",
+  "change_type": "added",
+  "source_id": "S91"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Lloyds Banking Group",
+  "item": "S92",
+  "old_value": null,
+  "new_value": "Mortgage One - Halifax mortgage rates (checked Sept 2026)",
+  "change_type": "added",
+  "source_id": "S92"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S93",
+  "old_value": null,
+  "new_value": "Trinity Financial - HSBC interest-only criteria",
+  "change_type": "added",
+  "source_id": "S93"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "HSBC UK",
+  "item": "S94",
+  "old_value": null,
+  "new_value": "Brilliant Solutions - HSBC lending into retirement update",
+  "change_type": "added",
+  "source_id": "S94"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Santander UK",
+  "item": "S95",
+  "old_value": null,
+  "new_value": "MoneyHelpdesk - Santander mortgages criteria",
+  "change_type": "added",
+  "source_id": "S95"
+ },
+ {
+  "sheet": "Sources",
+  "lender_group": "Coventry BS",
+  "item": "S96",
+  "old_value": null,
+  "new_value": "Coventry Building Society - Welcoming The Co-operative Bank (member update)",
+  "change_type": "added",
+  "source_id": "S96"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "HSBC UK",
+  "item": "Minimum / maximum age",
+  "old_value": "Not captured - intermediary criteria page is script-rendered [NOT VERIFIED]",
+  "new_value": "Min 18; term may run to age 80, with affordability evidenced to the oldest applicant's 70th birthday (per HSBC broker notice reproduced by third parties) [SUPPORTED]",
+  "change_type": "updated",
+  "source_id": "S94;S63"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Maximum age",
+  "old_value": "Reported inconsistently by third parties (70/75 working age 2024; 75 end of term 2026) [UNCONFIRMED]",
+  "new_value": "Min 18; max 75 at end of term; 70 (or retirement if lower) if any interest-only, or if <10 years to retirement using earned income; 75 with pension evidence or pension income; oldest applicant used [CONFIRMED]",
+  "change_type": "updated",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "HSBC UK",
+  "item": "Maximum term",
+  "old_value": null,
+  "new_value": "40 years (capital repayment); interest-only 25 years",
+  "change_type": "added",
+  "source_id": "S71;S93"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "HSBC UK",
+  "item": "Interest-only",
+  "old_value": null,
+  "new_value": "Reported: min income £75,000 (one applicant); IO must end by 70th birthday",
+  "change_type": "added",
+  "source_id": "S93"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Lending limits by loan size",
+  "old_value": null,
+  "new_value": "<£570k 95%; >£570k-£750k 90%; >£750k-£1m 85%; >£1m-£2m 75%; 90-95% LTV houses/bungalows only",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Scenario limits",
+  "old_value": null,
+  "new_value": "Flats/maisonettes (not new build) 90%, max loan £500k above 85%; remortgage no extra borrowing 90% (<£1m); with capital raising 85%; unencumbered 85%; interest-only 75%, part & part 85%; second homes 75%",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Self-employed",
+  "old_value": null,
+  "new_value": "Min 2 years' trading and 2 years' finalised figures; latest evidence no older than 18 months; directors >25% use business-year figures",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Variable income",
+  "old_value": null,
+  "new_value": "Overtime, bonus, commission: 60% used for affordability; probationary contract 100%; temporary/seasonal/piecework 0%",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "TSB",
+  "item": "Foreign nationals",
+  "old_value": null,
+  "new_value": "Without permanent right to reside: in UK >=12 months, >=18 months left on visa, listed visa types; max LTV 85% with income >=£50k sole/£75k joint (15% deposit), otherwise 75%",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Minimum / maximum age",
+  "old_value": null,
+  "new_value": "Min 18 at application; max 75 (and 364 days) at end of term; interest-only with downsizing: lower of 70 (and 364 days) or retirement age",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Maximum LTV by property value",
+  "old_value": null,
+  "new_value": "Up to £600,000: 95% (C&I), 75% IO, 85% part & part; £600,001-£750,000: 85%; £750,001-£1,250,000: 80%; over £1,250,000: 75%; max loan £1m",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Minimum / maximum loan",
+  "old_value": null,
+  "new_value": "No minimum loan size (product minimums may apply, e.g. £50k on £0-fee products); maximum £1m",
+  "change_type": "added",
+  "source_id": "S76;S75"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Self-employed",
+  "old_value": null,
+  "new_value": "2 years' trading (3 years if loan >£1m); no loss or negative net worth in last 2 years; <20% shareholders treated as employed",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "First-time buyer definition",
+  "old_value": null,
+  "new_value": "Never had a mortgage (joint: neither applicant); FTBs acceptable to 95% LTV",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Buy-to-let",
+  "old_value": null,
+  "new_value": "Virgin Money no longer offers new BTL mortgages",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Co-operative Bank",
+  "item": "Ownership",
+  "old_value": null,
+  "new_value": "Subsidiary of Coventry Building Society since 1 Jan 2025; Part VII transfer to the Society expected 1 Jan 2027 (final hearing 2 Dec 2026)",
+  "change_type": "added",
+  "source_id": "S81;S82;S96"
+ },
+ {
+  "sheet": "Mortgage_Requirements",
+  "lender_group": "Coventry BS",
+  "item": "First-time buyers",
+  "old_value": null,
+  "new_value": "Up to 6.5x LTI (conditions behind asterisk not captured) and up to 95% LTV",
+  "change_type": "added",
+  "source_id": "S79"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "LTI: income <=£50,000",
+  "old_value": null,
+  "new_value": "4.49 (all columns, all LTVs)",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "LTI: income £50,001-£75,000",
+  "old_value": null,
+  "new_value": "<=85% LTV 5.00 (remortgage LFL 5.50); 85-90% 4.49 (LFL 5.50); >90% 4.49",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "LTI: income £75,001-£100,000",
+  "old_value": null,
+  "new_value": "<=85% 5.50; 85-90% 5.50 new build employed / 4.49 mainstream & self-employed / 5.50 LFL; >90% 4.49",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "LTI: income Over £100,001",
+  "old_value": null,
+  "new_value": "As £75,001-£100,000",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "Stress rate",
+  "old_value": null,
+  "new_value": "6.25% (or product rate +1% if higher) for fixes of 5+ years; 6.75% (or product +1%) for fixes <5 years and trackers",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "TSB",
+  "item": "Debt-to-income decline rule",
+  "old_value": null,
+  "new_value": "Declined if 3+ accounts opened in 6 months OR unsecured balances up >20% in 3 months, AND unsecured payments >20% of gross monthly income or unsecured balances >100% of gross annual income",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "Nationwide",
+  "item": "Virgin Money LTI",
+  "old_value": null,
+  "new_value": "<£50k 4.49x; £50k-£74,999 5.0x; >=£75k 5.5x; 4.49x if >85% LTV, self-employed, shared ownership; remortgage no extra borrowing 5.5x to 85% LTV; variable income at 60%",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "Coventry BS",
+  "item": "First-time buyers",
+  "old_value": null,
+  "new_value": "Up to 6.5x LTI (conditions not captured)",
+  "change_type": "added",
+  "source_id": "S79"
+ },
+ {
+  "sheet": "Affordability",
+  "lender_group": "Santander UK",
+  "item": "General LTI (latest third-party)",
+  "old_value": null,
+  "new_value": "Reported Sept 2026: 5.5x for households >=£100k to 90% LTV; 4.45x at 95% LTV; 5.5x all remortgages",
+  "change_type": "added",
+  "source_id": "S91"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "TSB",
+  "item": "CCJs",
+  "old_value": null,
+  "new_value": "Auto-decline: outstanding CCJ >£100 in 6 yrs; satisfied CCJ >£500 in 6 yrs",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "TSB",
+  "item": "Defaults",
+  "old_value": null,
+  "new_value": "Auto-decline: default >£100 in 12 months; >£500 in 3 yrs; 2+ defaults with latest in 3 yrs",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "TSB",
+  "item": "Arrears",
+  "old_value": null,
+  "new_value": "Auto-decline: 2+ months late on other debts in 6 months; 1+ month mortgage arrears >£100 in 12 months",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "TSB",
+  "item": "Bankruptcy / IVA / DRO / DMP / repossession",
+  "old_value": null,
+  "new_value": "Declined within 6 years; must be discharged at least 6 years",
+  "change_type": "added",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Arrears",
+  "old_value": null,
+  "new_value": "Mortgage: none in 6 months, max 2 months per mortgage in 2 yrs; other credit limits apply",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Defaults",
+  "old_value": null,
+  "new_value": "None unsatisfied; none satisfied in 12 months; max 2 satisfied totalling <=£2,000 in 6 yrs",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "Nationwide",
+  "item": "CCJs",
+  "old_value": null,
+  "new_value": "None unsatisfied; none satisfied in 6 months; max 1 satisfied <=£500 in 6 yrs",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Credit_Requirements",
+  "lender_group": "Nationwide",
+  "item": "Insolvency / DMP / repossession",
+  "old_value": null,
+  "new_value": "No IVA, administration order, DRO or bankruptcy in 6 yrs; no current DMP; never repossessed",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Barclays",
+  "item": "First-time buyer support",
+  "old_value": "Yes - Family Springboard, 95% LTV (S10)",
+  "new_value": "Yes - standard purchase up to 95% LTV; Family Springboard up to 100% LTV (S10)",
+  "change_type": "updated",
+  "source_id": "S10"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "First-time buyer support",
+  "old_value": "Not verified",
+  "new_value": "Yes - FTBs to 95% LTV; FTB = never had a mortgage (S76)",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "Buy-to-let",
+  "old_value": "Not verified",
+  "new_value": "No - no new BTL mortgages (S76)",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "Self-employed support",
+  "old_value": "Not verified",
+  "new_value": "Yes - 2 years' trading, LTI 4.49x (S76)",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "Official mortgage criteria source",
+  "old_value": "Not captured (virginmoneyforintermediaries site not retrievable)",
+  "new_value": "https://intermediaries.virginmoney.com/lending-criteria/residential/",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "Research depth",
+  "old_value": "Overview",
+  "new_value": "Partial",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Virgin Money",
+  "item": "Notes",
+  "old_value": "Separate criteria may still apply; flagged for next pass.",
+  "new_value": "Own intermediary criteria site and product guide still separate from Nationwide's (S75, S76).",
+  "change_type": "updated",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Co-operative Bank (incl. Platform)",
+  "item": "Parent group",
+  "old_value": "Coventry Building Society group (ownership not re-verified in this pass)",
+  "new_value": "Coventry Building Society (subsidiary since 2025-01-01; Part VII transfer expected 2027-01-01)",
+  "change_type": "updated",
+  "source_id": "S81;S82"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Co-operative Bank (incl. Platform)",
+  "item": "Notes",
+  "old_value": "Parent ownership should be re-verified before import.",
+  "new_value": "Parent re-verified (S81, S82).",
+  "change_type": "updated",
+  "source_id": "S81"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "TSB",
+  "item": "Self-employed support",
+  "old_value": "Not verified",
+  "new_value": "Yes - min 2 years' trading (S78)",
+  "change_type": "updated",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "TSB",
+  "item": "Official mortgage criteria source",
+  "old_value": "https://intermediary.tsb.co.uk/",
+  "new_value": "https://intermediary.tsb.co.uk/criteria/residential-criteria/",
+  "change_type": "updated",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Coventry Building Society",
+  "item": "First-time buyer support",
+  "old_value": "Not verified",
+  "new_value": "Yes - up to 95% LTV and up to 6.5x LTI (S79)",
+  "change_type": "updated",
+  "source_id": "S79"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Coventry Building Society",
+  "item": "Research depth",
+  "old_value": "Overview",
+  "new_value": "Partial",
+  "change_type": "updated",
+  "source_id": "S79"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "Coventry Building Society",
+  "item": "Notes",
+  "old_value": "Coverage gap - next pass.",
+  "new_value": "Parent of Co-operative Bank since 2025-01-01 (S81).",
+  "change_type": "updated",
+  "source_id": "S81"
+ },
+ {
+  "sheet": "Lender_Overview",
+  "lender_group": "HSBC UK",
+  "item": "Self-employed support",
+  "old_value": "Yes (S03)",
+  "new_value": "Yes (S03)",
+  "change_type": "updated",
+  "source_id": "S03"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "2yr fixed (Virgin Money) Remortgage <=75% 5.01%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "2yr fixed (Virgin Money) Remortgage <=60% 5.06%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "5yr fixed Purchase <=60% 4.94%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "NatWest Group",
+  "item": "5yr fixed Remortgage <=60% 5.02%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "2yr variable Purchase <=60% 4.09%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "NatWest Group",
+  "item": "2yr variable Purchase <=60% 4.10%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "HSBC UK",
+  "item": "2yr variable Purchase <=60% 4.15%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "2yr variable Remortgage <=60% 4.13%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "NatWest Group",
+  "item": "2yr variable Remortgage <=60% 4.18%",
+  "old_value": "SUPPORTED (third-party)",
+  "new_value": "OUTDATED - superseded by official rate sheet",
+  "change_type": "status changed",
+  "source_id": "S02"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "NatWest Group",
+  "item": "Official rate rows",
+  "old_value": null,
+  "new_value": "240 rows added from official sheet(s)",
+  "change_type": "added",
+  "source_id": "S73"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "Nationwide",
+  "item": "Official rate rows",
+  "old_value": null,
+  "new_value": "281 rows added from official sheet(s)",
+  "change_type": "added",
+  "source_id": "S74;S75;S77"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "HSBC UK",
+  "item": "Official rate rows",
+  "old_value": null,
+  "new_value": "153 rows added from official sheet(s)",
+  "change_type": "added",
+  "source_id": "S69;S70"
+ },
+ {
+  "sheet": "Mortgage_Rates",
+  "lender_group": "TSB",
+  "item": "Reversion rate row",
+  "old_value": "Homeowner Variable Rate 7.24% (existing row)",
+  "new_value": "Unchanged; confirmed",
+  "change_type": "updated",
+  "source_id": "S40"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "HSBC UK",
+  "item": "Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S06"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "HSBC UK",
+  "item": "Premier Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S07"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "Barclays",
+  "item": "Barclayloan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S08;S09"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "Lloyds Banking Group",
+  "item": "Lloyds Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S16;S17"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "Lloyds Banking Group",
+  "item": "Halifax Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S18;S19;S20"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "NatWest Group",
+  "item": "NatWest Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S22"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "NatWest Group",
+  "item": "RBS Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S23"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "Santander UK",
+  "item": "Santander Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S24"
+ },
+ {
+  "sheet": "Personal_Loans",
+  "lender_group": "TSB",
+  "item": "TSB Personal Loan numeric fields",
+  "old_value": null,
+  "new_value": "Numeric columns populated",
+  "change_type": "added",
+  "source_id": "S41"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "HSBC UK",
+  "item": "C02",
+  "old_value": "UNRESOLVED - both official; confirm with HSBC before encoding",
+  "new_value": "UNRESOLVED - FAQ (standard criteria) and packaging page (foreign national criteria) still differ; confirm with HSBC BDM",
+  "change_type": "updated",
+  "source_id": "S03;S04"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "HSBC UK",
+  "item": "C03",
+  "old_value": "UNRESOLVED - likely overtime-specific 50%; encode conservatively",
+  "new_value": "UNRESOLVED - overtime 50% (specific) vs variable pay 60% (general); encode overtime at 50% conservatively",
+  "change_type": "updated",
+  "source_id": "S03"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "Lloyds Banking Group",
+  "item": "C06",
+  "old_value": "UNRESOLVED - newer pages say £35k; encode as range pending confirmation",
+  "new_value": "UNRESOLVED - keep range £25k-£35k for non-current-account customers",
+  "change_type": "updated",
+  "source_id": "S18;S19;S20"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "Government",
+  "item": "C08",
+  "old_value": "UNRESOLVED - scheme rules for permanent scheme not retrieved",
+  "new_value": "UNRESOLVED - cap confirmed only for 2021 scheme",
+  "change_type": "updated",
+  "source_id": "S45;S46"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "Santander UK",
+  "item": "C09",
+  "old_value": "UNRESOLVED - official A-Z not captured",
+  "new_value": "UNRESOLVED - latest third-party: 5.5x for households >=£100k to 90% LTV, 4.45x at 95%, 5.5x remortgages; official only confirms 4.45x above 95%",
+  "change_type": "updated",
+  "source_id": "S26;S91"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "TSB",
+  "item": "C10",
+  "old_value": "UNRESOLVED - TSB criteria not captured",
+  "new_value": "RESOLVED - official: 75 at end of term; 70 if IO or <10 yrs to retirement on earned income",
+  "change_type": "updated",
+  "source_id": "S78"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "Barclays",
+  "item": "C13",
+  "old_value": null,
+  "new_value": "Added and resolved",
+  "change_type": "added",
+  "source_id": "S10"
+ },
+ {
+  "sheet": "Conflicts",
+  "lender_group": "Nationwide",
+  "item": "C14",
+  "old_value": null,
+  "new_value": "Added (brand difference documented)",
+  "change_type": "added",
+  "source_id": "S76"
+ },
+ {
+  "sheet": "Market_Reports",
+  "lender_group": "FCA",
+  "item": "Interest rate 'stress test' rule - MCOB 11.6.18R",
+  "old_value": null,
+  "new_value": "Lenders set own stress basis; 5-year horizon unless fixed 5+ years; no prevailing FPC recommendation.",
+  "change_type": "added",
+  "source_id": "S88"
+ },
+ {
+  "sheet": "Market_Reports",
+  "lender_group": "FCA / PRA",
+  "item": "CP26/12 & CP6/26 - LTI flow limit",
+  "old_value": null,
+  "new_value": "Proposal to remove firm-level 15% limit while keeping 15% aggregate.",
+  "change_type": "added",
+  "source_id": "S90"
+ },
+ {
+  "sheet": "Market_Reports",
+  "lender_group": "Bank of England",
+  "item": "Statistical database - quoted rates by LTV and approvals",
+  "old_value": null,
+  "new_value": "2yr fixed 95% LTV quoted rate 5.52% (Aug 2026); 5yr 95% 5.36%; revert-to rate 6.58%.",
+  "change_type": "added",
+  "source_id": "S83"
+ },
+ {
+  "sheet": "Market_Reports",
+  "lender_group": "The Co-operative Bank",
+  "item": "Part VII transfer to Coventry BS",
+  "old_value": null,
+  "new_value": "Final hearing 2 Dec 2026; completion expected 1 Jan 2027.",
+  "change_type": "added",
+  "source_id": "S82"
+ }
+]

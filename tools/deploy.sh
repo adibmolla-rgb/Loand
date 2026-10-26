@@ -23,8 +23,8 @@ if [ -n "$NEWEST_BOOK" ]; then
     BUILT_FROM="$(grep -o '"source_file": "[^"]*"' data/research.js | head -1 | cut -d'"' -f4)"
     if [ "$BOOK_NAME" != "$BUILT_FROM" ]; then
         echo "New research release ($BOOK_NAME); rebuilding data/research.js."
-        python3 tools/convert.py 2>/dev/null || {
-            echo "Rebuild failed. Install openpyxl (pip install openpyxl) and try again." >&2
+        node scripts/build-data.js || {
+            echo "Rebuild failed. Install Node.js and run 'npm install', then try again." >&2
             exit 1
         }
     fi
