@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  data-and-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Validates the workbook and rebuilds data/json and data/research.js.
+      - run: npm run build-data
+      # The committed generated files must match the workbook.
+      - name: Generated data is up to date
+        run: git diff --exit-code -- data/
+      - run: npm test
