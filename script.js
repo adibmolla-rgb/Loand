@@ -342,10 +342,16 @@ function setUpDrawer() {
     const opener = document.querySelector('[data-action="open-menu"]');
     if (!drawer || !opener) return;
 
+    // Everything except the drawer is made inert while it is open, so neither
+    // Tab nor a screen reader can reach the page behind it.
+    const background = () => [...document.body.children].filter(element => element !== drawer && !element.matches("script, #glossary-tip"));
+    const focusable = () => [...drawer.querySelectorAll('.drawer-panel a[href], .drawer-panel button:not([disabled])')];
+
     function setOpen(open) {
         drawer.dataset.open = String(open);
         opener.setAttribute("aria-expanded", String(open));
         document.body.style.overflow = open ? "hidden" : "";
+        background().forEach(element => { element.inert = open; });
         if (open) drawer.querySelector(".drawer-nav a, .drawer-nav button").focus();
         else opener.focus();
     }
@@ -358,7 +364,15 @@ function setUpDrawer() {
             event.target.closest("a")) setOpen(false);
     });
     document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && drawer.dataset.open === "true") setOpen(false);
+        if (drawer.dataset.open !== "true") return;
+        if (event.key === "Escape") { setOpen(false); return; }
+        if (event.key !== "Tab") return;
+        // Keep Tab and Shift+Tab cycling inside the drawer.
+        const items = focusable();
+        const first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        else if (!drawer.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
     });
 }
 

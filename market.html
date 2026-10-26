@@ -74,13 +74,20 @@
                 <a href="index.html" class="back-link">Back to home</a>
                 <h1>Market trends</h1>
                 <p class="hero-text">How mortgage rates, Bank Rate and lending have moved, from Bank of England data. This is historical context, not rates you can get today.</p>
-                <div class="market-strip" id="market-latest" aria-label="Latest market figures"></div>
+                <h2 class="market-heading">Latest figures in our research</h2>
+                <p class="hint">Each figure is shown with the date it applies to. They are a snapshot from the research, not live rates.</p>
+                <div class="market-strip" id="market-latest" aria-label="Latest market figures in our research, with dates"></div>
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" aria-labelledby="historical-heading">
+            <div class="container">
+                <h2 class="section-title" id="historical-heading">Historical data</h2>
+                <p class="section-intro">The charts below show what happened in past months, from the Bank of England's published series. They are not rates you can get today. The most recent point is the latest month in the series.</p>
+            </div>
             <div class="container chart-grid" id="market-charts">
                 <article class="chart-card chart-wide">
+                    <p class="chart-kind"><span class="badge badge-hist">Historical data</span></p>
                     <h2 class="section-title">Mortgage rates and Bank Rate</h2>
                     <p class="chart-takeaway"></p>
                     <div class="chart-box"><canvas id="chart-rates" role="img"></canvas></div>
@@ -88,13 +95,15 @@
                 </article>
 
                 <article class="chart-card">
+                    <p class="chart-kind"><span class="badge badge-hist">Historical data</span></p>
                     <h2 class="section-title">How your deposit affects the rate</h2>
                     <p class="chart-takeaway"></p>
                     <div class="chart-box"><canvas id="chart-ltv" role="img"></canvas></div>
-                    <p class="table-note">Average quoted 2-year fixed rate by <span class="term" data-term="LTV">LTV</span>, latest month. Source: Bank of England <span data-source="S83"></span></p>
+                    <p class="table-note">Average quoted 2-year fixed rate by <span class="term" data-term="LTV">LTV</span>, latest month in the series, not today's rates. Source: Bank of England <span data-source="S83"></span></p>
                 </article>
 
                 <article class="chart-card">
+                    <p class="chart-kind"><span class="badge badge-hist">Historical data</span></p>
                     <h2 class="section-title">Mortgage approvals</h2>
                     <p class="chart-takeaway"></p>
                     <div class="chart-box"><canvas id="chart-approvals" role="img"></canvas></div>
@@ -117,7 +126,8 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>LoanD provides estimates and research for guidance only. It is not a lender and cannot approve or reject applications. Lenders make their own decisions using their own criteria, and published criteria can change.</p>
+            <p class="footer-disclaimer">LoanD gives estimates and research for guidance only. It is not a lender, broker or adviser, and nothing on this site is financial advice or an offer of credit. Whether you can borrow is each lender's decision, using criteria that can change. Check with the lender or an FCA-authorised adviser before you apply.</p>
+            <nav class="footer-links" aria-label="About LoanD"><a href="methodology.html">Data &amp; methodology</a><a href="lenders.html">Lender criteria</a><a href="rates.html">Mortgage rates</a></nav>
             <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
         </div>
     </footer>

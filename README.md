@@ -32,7 +32,8 @@ Loand/
 ├── compare.html            side-by-side comparison
 ├── rates.html              filterable, sortable mortgage rate table
 ├── loans.html              personal loan APRs by amount and term
-├── market.html             Bank of England trend charts
+├── market.html             Bank of England trend charts (historical)
+├── methodology.html        data and methodology: statuses, sources, conflicts
 ├── style.css               one shared stylesheet
 ├── script.js               shared helpers: formatting, sources, glossary,
 │                           theme, navigation
@@ -45,7 +46,7 @@ Loand/
 │   │   └── loans.js        loan APR bands and payments (pure, tested)
 │   ├── lender-pages.js     directory and profile pages
 │   ├── compare.js          comparison table
-│   ├── rates.js, loans.js  page code for the rates and loans pages
+│   ├── rates.js, loans.js, methodology.js   page code for those pages
 │   └── market.js           charts
 ├── data/
 │   ├── research.js         GENERATED from the workbook — do not edit
@@ -158,6 +159,6 @@ Deliberate, and worth keeping:
 
 ## Still to build
 
-- A "Data & methodology" page and a site-wide disclaimer
+- Chart.js is loaded from a CDN without an integrity hash; self-host or add one
 - Node/Express backend and PostgreSQL, replacing the generated data file
 - User accounts and saved calculations

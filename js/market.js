@@ -71,6 +71,7 @@ if (marketRoot && RESEARCH && window.Chart) {
                 }))
             },
             options: baseOptions("Interest rate", percent),
+            format: percent, firstColumn: "Month", newestFirst: true,
             takeaway: () => {
                 // Latest month where every line has a value, so figures match the month named.
                 let index = keys.length - 1;
@@ -97,6 +98,7 @@ if (marketRoot && RESEARCH && window.Chart) {
                 datasets: [{ label: `2-year fixed, ${month}`, data: latest.map(row => row.value_numeric), backgroundColor: cssVar("--chart-2"), borderRadius: 6 }]
             },
             options: { ...baseOptions("Interest rate", percent), plugins: { ...baseOptions("", percent).plugins, legend: { display: false } } },
+            format: percent, firstColumn: "Loan-to-value", newestFirst: false,
             takeaway: () => {
                 const gap = latest[4].value_numeric - latest[0].value_numeric;
                 return `In ${month}, borrowing 95% of the price cost ${gap.toFixed(2)} points more than borrowing 60% on an average 2-year fix `
@@ -123,6 +125,7 @@ if (marketRoot && RESEARCH && window.Chart) {
                 }))
             },
             options: baseOptions("Approvals per month", count),
+            format: count, firstColumn: "Month", newestFirst: true,
             takeaway: () => {
                 const purchase = values[0].filter(value => value !== null);
                 const lastKey = keys[values[0].lastIndexOf(purchase[purchase.length - 1])];
@@ -135,6 +138,30 @@ if (marketRoot && RESEARCH && window.Chart) {
 
     const definitions = { "chart-rates": ratesChart, "chart-ltv": ltvChart, "chart-approvals": approvalsChart };
 
+    // The same numbers as the chart, as a real table: for screen readers, for
+    // anyone who wants exact values, and as a fallback if the chart can't draw.
+    // Newest first for time series. Built once; redrawing for a theme change
+    // leaves it (and whether it is open) alone.
+    function dataTable(card, config, format, firstColumn, newestFirst) {
+        if (card.querySelector(".chart-data")) return;
+        const { labels, datasets } = config.data;
+        const order = labels.map((_, index) => index);
+        if (newestFirst) order.reverse();
+        const row = index => `<tr><th scope="row">${escapeHtml(labels[index])}</th>${datasets.map(set =>
+            `<td class="num">${set.data[index] === null || set.data[index] === undefined ? "No data" : escapeHtml(format(set.data[index]))}</td>`).join("")}</tr>`;
+        card.querySelector(".chart-box").insertAdjacentHTML("afterend", `
+            <details class="chart-data">
+                <summary>View this chart's data as a table</summary>
+                <div class="table-scroll chart-table" tabindex="0" role="region" aria-label="Chart data table, scrollable">
+                    <table class="data-table">
+                        <caption class="visually-hidden">Historical data behind the chart "${escapeHtml(card.querySelector(".section-title").textContent)}"</caption>
+                        <thead><tr><th scope="col">${escapeHtml(firstColumn)}</th>${datasets.map(set => `<th scope="col">${escapeHtml(set.label)}</th>`).join("")}</tr></thead>
+                        <tbody>${order.map(row).join("")}</tbody>
+                    </table>
+                </div>
+            </details>`);
+    }
+
     function drawAll() {
         charts.forEach(chart => chart.destroy());
         charts.length = 0;
@@ -142,10 +169,12 @@ if (marketRoot && RESEARCH && window.Chart) {
             const canvas = document.getElementById(id);
             if (!canvas) return;
             const config = build();
-            const takeaway = canvas.closest(".chart-card").querySelector(".chart-takeaway");
+            const card = canvas.closest(".chart-card");
+            const takeaway = card.querySelector(".chart-takeaway");
             takeaway.textContent = config.takeaway();
-            canvas.setAttribute("aria-label", takeaway.textContent);
-            delete config.takeaway;
+            canvas.setAttribute("aria-label", `Historical data. ${takeaway.textContent}`);
+            dataTable(card, config, config.format, config.firstColumn, config.newestFirst);
+            delete config.takeaway; delete config.format; delete config.firstColumn; delete config.newestFirst;
             charts.push(new Chart(canvas, config));
         });
     }

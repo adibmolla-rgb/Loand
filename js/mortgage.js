@@ -482,11 +482,22 @@ if (form) {
         updateJumpBar(null);
     }
 
+    // The results panel is rebuilt on every keystroke, so it is not a live region
+    // (a screen reader would read it all out each time). Instead one short
+    // summary is announced after the person pauses, and only when it changes.
+    const statusLine = document.getElementById("results-status");
+    let announceTimer = null;
+
+    function announce(message) {
+        clearTimeout(announceTimer);
+        announceTimer = setTimeout(() => { if (statusLine.textContent !== message) statusLine.textContent = message; }, 900);
+    }
+
     function update() {
         if (!hasCalculated) return;
         const inputs = readInputs();
         const problem = findProblem(inputs);
-        if (problem) { renderProblem(problem); return; }
+        if (problem) { renderProblem(problem); announce(problem); return; }
         const result = calculateMortgage(inputs);
         const tax = isRemortgage(inputs) ? null
             : calculatePropertyTax(inputs.price, inputs.nation, inputs.buyerType === "first-time buyer", RESEARCH.property_taxes, { additionalProperty: inputs.additionalProperty });
@@ -496,6 +507,8 @@ if (form) {
         renderBandRates(inputs, result);
         renderStressRates(inputs, result);
         updateJumpBar(result.monthly);
+        announce(`Estimated monthly payment ${formatPounds(result.monthly)}. Loan-to-value ${formatPercent(result.ltv)}. `
+            + `Within published limits at ${counts.within} of ${counts.within + counts.outside + counts.partial} lenders.`);
     }
 
     /* ----- Level 3: schemes and lender checks, straight from the research ----- */

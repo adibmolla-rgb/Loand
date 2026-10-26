@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data and methodology | LoanD</title>
+
+    <!-- Apply a saved light/dark choice before the page is drawn (no flash) -->
+    <script>
+        try { const theme = localStorage.getItem("loand-theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (error) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Order matters: data first, then shared helpers, then this page's code -->
+    <script src="data/research.js" defer></script>
+    <script src="data/lender-registry.js" defer></script>
+    <script src="data/glossary.js" defer></script>
+    <script src="js/engine/rates.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/methodology.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="LoanD home">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="mortgage.html">Mortgages</a>
+                <a href="lenders.html">Lenders</a>
+                <a href="compare.html">Compare</a>
+                <a href="rates.html">Rates</a>
+                <a href="market.html">Market</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+            <button type="button" class="icon-button" data-action="toggle-theme" aria-label="Switch theme"></button>
+            <button type="button" class="icon-button menu-button" data-action="open-menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile navigation; hidden until the menu button opens it -->
+    <div class="drawer" id="menu-drawer" data-open="false">
+        <div class="drawer-scrim" data-action="close-menu"></div>
+        <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="drawer-head">
+                <span class="wordmark wordmark-small">Loan<span class="wordmark-d">D</span></span>
+                <button type="button" class="icon-button" data-action="close-menu" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Main">
+                    <a href="mortgage.html">Mortgages</a>
+                    <a href="lenders.html">Lenders</a>
+                    <a href="compare.html">Compare</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="market.html">Market</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <a href="index.html" class="back-link">Back to home</a>
+                <h1>Data and methodology</h1>
+                <p class="hero-text">Where every figure on LoanD comes from, how current it is, what the labels mean, and what this site cannot tell you.</p>
+            </div>
+        </section>
+
+        <div class="container with-sidebar lower">
+            <nav class="page-sidebar" aria-label="On this page">
+                <p class="sidebar-title">On this page</p>
+                <div class="sidebar-nav">
+                    <a href="#what">What LoanD is</a>
+                    <a href="#release">This release</a>
+                    <a href="#statuses">Status labels</a>
+                    <a href="#sources">Sources</a>
+                    <a href="#estimates">How estimates work</a>
+                    <a href="#gaps">What isn't published</a>
+                    <a href="#conflicts">Unresolved conflicts</a>
+                    <a href="#changes">Changes</a>
+                </div>
+            </nav>
+            <div class="lower-body">
+                <section class="lower-section" id="what" aria-labelledby="what-h">
+                    <h2 class="section-title" id="what-h">What LoanD is, and isn't</h2>
+                    <p>LoanD helps you see whether your figures fall within mainstream UK lenders' <strong>published</strong> mortgage and personal loan limits, and compare what lenders publish side by side. It is not a lender, broker or adviser.</p>
+                    <ul class="plain-list">
+                        <li>It never says you "will be approved". Lenders also check your credit history, spending and the property using models they don't publish.</li>
+                        <li>It doesn't rank or score lenders. You choose how to sort.</li>
+                        <li>Nothing on it is financial advice or an offer of credit. Check with the lender or an FCA-authorised adviser before you apply.</li>
+                        <li>Everything is worked out in your browser. Nothing you type is sent anywhere.</li>
+                    </ul>
+                </section>
+
+                <section class="lower-section" id="release" aria-labelledby="release-h">
+                    <h2 class="section-title" id="release-h">This release, and how current it is</h2>
+                    <div id="method-release"></div>
+                    <h3 class="group-heading">What's in it</h3>
+                    <div id="method-counts"></div>
+                </section>
+
+                <section class="lower-section" id="statuses" aria-labelledby="statuses-h">
+                    <h2 class="section-title" id="statuses-h">Status labels</h2>
+                    <p class="section-intro">Every fact in the research carries one of six labels. The definitions below are read from the research itself.</p>
+                    <div id="method-statuses"></div>
+                </section>
+
+                <section class="lower-section" id="sources" aria-labelledby="sources-h">
+                    <h2 class="section-title" id="sources-h">Sources: official or third-party</h2>
+                    <p class="section-intro">Every fact links to its source by a code such as S13. Official and third-party sources are always labelled as such, and historical series are kept apart from current figures.</p>
+                    <div id="method-sources"></div>
+                </section>
+
+                <section class="lower-section" id="estimates" aria-labelledby="estimates-h">
+                    <h2 class="section-title" id="estimates-h">How the estimates work</h2>
+                    <ul class="plain-list">
+                        <li><strong>Within or outside published limits.</strong> Your loan-to-value, income multiple, loan size, term, age, repayment type and (if self-employed) years trading are compared with each lender's published numeric rules. Only CONFIRMED rules decide the result. Where several limits apply, the strictest wins, except income multiples: lenders publish those as tables of income and LTV bands, so the highest multiple in your band applies, and a debt-to-income rule can then lower it.</li>
+                        <li><strong>Special routes</strong> (for example family-assisted mortgages) are listed separately and never used to judge your figures.</li>
+                        <li><strong>Indicative maximum borrowing</strong> is the lowest of a lender's published caps (income multiple, LTV and maximum loan) for your figures. Lenders' own affordability models aren't public, so what a lender would actually lend can be lower.</li>
+                        <li><strong>Repayments</strong> use the standard repayment or interest-only formulas at the rate you enter, held for the whole term. Fees, insurance and legal costs are not included.</li>
+                        <li><strong>Purchase tax</strong> uses the official bands in the research for England and Northern Ireland (SDLT), Scotland (LBTT) and Wales (LTT), including first-time buyer relief where it exists and the higher rates for additional homes.</li>
+                        <li><strong>Estimated cost over a deal</strong> is the interest paid during the initial period plus the product fee. It assumes the fee is paid up front and the rate is fixed for the period.</li>
+                        <li><strong>Personal loan payments</strong> use the lender's published APR as if it were the rate you'd be offered. Your offer may be higher.</li>
+                        <li><strong>Historical data</strong> (the Market page) comes from Bank of England series and is always labelled as history, never as a current rate.</li>
+                    </ul>
+                </section>
+
+                <section class="lower-section" id="gaps" aria-labelledby="gaps-h">
+                    <h2 class="section-title" id="gaps-h">What isn't published</h2>
+                    <div id="method-gaps"></div>
+                </section>
+
+                <section class="lower-section" id="conflicts" aria-labelledby="conflicts-h">
+                    <h2 class="section-title" id="conflicts-h">Unresolved conflicts between sources</h2>
+                    <div id="method-conflicts"></div>
+                </section>
+
+                <section class="lower-section" id="changes" aria-labelledby="changes-h">
+                    <h2 class="section-title" id="changes-h">Changes in this release</h2>
+                    <div id="method-changes"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-disclaimer">LoanD gives estimates and research for guidance only. It is not a lender, broker or adviser, and nothing on this site is financial advice or an offer of credit. Whether you can borrow is each lender's decision, using criteria that can change. Check with the lender or an FCA-authorised adviser before you apply.</p>
+            <nav class="footer-links" aria-label="About LoanD"><a href="methodology.html">Data &amp; methodology</a><a href="lenders.html">Lender criteria</a><a href="rates.html">Mortgage rates</a></nav>
+            <p class="footer-small">Research data as at <span data-fill="data-date"></span>. &copy; 2026 LoanD. A portfolio project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
