@@ -20,7 +20,8 @@
     <script src="data/lender-registry.js" defer></script>
     <script src="data/glossary.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="js/lender-match.js" defer></script>
+    <script src="js/engine/rules.js" defer></script>
+    <script src="js/engine/calc.js" defer></script>
     <script src="js/mortgage.js" defer></script>
 </head>
 <body>
@@ -84,10 +85,16 @@
                     <p class="form-note">The form starts with example figures. Replace them with your own, then press Calculate.</p>
 
                     <div class="field">
-                        <label for="income">Yearly income before tax</label>
+                        <label for="income" id="income-label">Yearly income before tax</label>
                         <div class="input-wrap"><span class="input-prefix">£</span>
                             <input id="income" type="number" inputmode="decimal" min="0" step="1000" value="45000"></div>
-                        <p class="hint">Combined, if you're buying with someone.</p>
+                    </div>
+
+                    <div class="field" id="income2-field" hidden>
+                        <label for="income2">Second applicant's yearly income before tax</label>
+                        <div class="input-wrap"><span class="input-prefix">£</span>
+                            <input id="income2" type="number" inputmode="decimal" min="0" step="1000" value="0"></div>
+                        <p class="hint">Lenders' income rules use the combined figure; the two are added together.</p>
                     </div>
 
                     <div class="field">
@@ -130,6 +137,7 @@
                                 <select id="buyer-type" class="select">
                                     <option value="first-time buyer">First-time buyer</option>
                                     <option value="home mover">Moving home</option>
+                                    <option value="remortgage">Remortgaging</option>
                                 </select>
                             </div>
                             <div class="field">
@@ -159,6 +167,31 @@
                                     <option value="joint">With someone</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="repayment-type">Repayment type</label>
+                                <select id="repayment-type" class="select">
+                                    <option value="capital &amp; interest">Repayment (capital &amp; interest)</option>
+                                    <option value="interest-only">Interest-only</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="employment">Employment</label>
+                                <select id="employment" class="select">
+                                    <option value="employed">Employed</option>
+                                    <option value="self-employed">Self-employed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field" id="trading-field" hidden>
+                            <label for="trading">Years trading <span class="optional">(optional)</span></label>
+                            <div class="input-wrap input-short"><input id="trading" type="number" inputmode="decimal" min="0" max="80" step="0.5"><span class="input-suffix">years</span></div>
+                            <p class="hint">Lets us check lenders' minimum trading history.</p>
+                        </div>
+                        <div class="field check-field" id="additional-field">
+                            <label><input id="additional" type="checkbox"> I will own another home after this purchase</label>
+                            <p class="hint">Applies the higher purchase-tax rates. Left unticked, the tax assumes this is your only home.</p>
                         </div>
                         <div class="field">
                             <label for="age">Age of oldest buyer <span class="optional">(optional)</span></label>
@@ -199,6 +232,10 @@
         <section class="lower-section" id="scenarios-section" aria-labelledby="scenario-heading">
                 <h2 id="scenario-heading" class="section-title">What if things change?</h2>
                 <p class="section-intro">See how one change affects your monthly repayment.</p>
+                <div class="field inline-field">
+                    <label for="whatif-rate">If rates rose to <span class="optional">(optional)</span></label>
+                    <div class="input-wrap input-short"><input id="whatif-rate" type="number" inputmode="decimal" min="0" max="20" step="0.01" placeholder="e.g. 7"><span class="input-suffix">%</span></div>
+                </div>
                 <div class="table-scroll">
                     <table class="data-table">
                         <thead><tr>

@@ -1,115 +1,9 @@
 /* ==========================================================
-   LoanD – mortgage calculator (mortgage.html)
-   Part A: pure calculation functions (numbers in, numbers out).
-           No page access, so they're easy to test and can move
-           to the Node backend later unchanged.
-   Part B: page code (reads the form, writes the results).
-   The lender limits check lives in js/lender-match.js.
+   LoanD – mortgage calculator page (mortgage.html)
+   Reads the form and writes the results. All the maths lives
+   in js/engine/calc.js (repayments, taxes, scenarios) and the
+   lender limits check in js/engine/rules.js, both pure and tested.
    ========================================================== */
-
-
-/* ==================== Part A: calculations ==================== */
-
-// Benchmarks taken from the research (Affordability and Rules_Numeric sheets).
-const STANDARD_LTI = 4.49;      // Barclays, Lloyds Banking Group (<£40k), Nationwide and TSB (<=£50k) standard cap
-const HIGHEST_LTI = 6.5;        // Highest multiple in the research (HSBC Premier, Coventry FTB, Nationwide like-for-like remortgage)
-const DTI_THRESHOLD = 20;       // Barclays: commitments >= 20% of gross monthly income caps LTI at 4.0x
-const MAINSTREAM_MAX_LTV = 95;  // Most common maximum in the research
-
-// Standard repayment (capital and interest) mortgage formula:
-// M = P × r / (1 − (1 + r)^−n), with r = monthly rate and n = number of payments.
-function calculateMonthlyRepayment(loanAmount, annualRatePercent, termYears) {
-    const payments = termYears * 12;
-    const monthlyRate = annualRatePercent / 100 / 12;
-    if (loanAmount <= 0 || payments <= 0) return 0;
-    if (monthlyRate === 0) return loanAmount / payments;
-    return loanAmount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -payments));
-}
-
-function calculateLtv(loanAmount, propertyPrice) {
-    return propertyPrice > 0 ? (loanAmount / propertyPrice) * 100 : 0;
-}
-
-function calculateDti(monthlyDebts, annualIncome) {
-    const monthlyIncome = annualIncome / 12;
-    return monthlyIncome > 0 ? (monthlyDebts / monthlyIncome) * 100 : 0;
-}
-
-// Runs every calculation for one set of inputs and returns a plain object.
-function calculateMortgage({ income, price, deposit, termYears, ratePercent, monthlyDebts }) {
-    const loan = Math.max(price - deposit, 0);
-    const monthly = calculateMonthlyRepayment(loan, ratePercent, termYears);
-    return {
-        loan,
-        monthly,
-        totalInterest: monthly * termYears * 12 - loan,
-        ltv: calculateLtv(loan, price),
-        depositPercent: price > 0 ? (deposit / price) * 100 : 0,
-        incomeMultiple: income > 0 ? loan / income : 0,
-        dti: calculateDti(monthlyDebts, income),
-        borrowingAtStandard: income * STANDARD_LTI,
-        borrowingAtHighest: income * HIGHEST_LTI
-    };
-}
-
-// Tiered purchase tax: each band's rate applies only to the slice of the
-// price inside that band. Bands come straight from the Property_Taxes sheet.
-function taxFromBands(price, bands) {
-    return bands.reduce((total, band) => {
-        const lower = band.band_from === 0 ? 0 : band.band_from - 1;
-        const upper = band.band_to === null ? Infinity : band.band_to;
-        const slice = Math.max(0, Math.min(price, upper) - lower);
-        return total + slice * band.rate / 100;
-    }, 0);
-}
-
-const TAX_BY_NATION = {
-    England: { tax: "SDLT", sheetNation: "England & Northern Ireland", name: "Stamp Duty Land Tax" },
-    "Northern Ireland": { tax: "SDLT", sheetNation: "England & Northern Ireland", name: "Stamp Duty Land Tax" },
-    Scotland: { tax: "LBTT", sheetNation: "Scotland", name: "Land and Buildings Transaction Tax" },
-    Wales: { tax: "LTT", sheetNation: "Wales", name: "Land Transaction Tax" }
-};
-
-// Tax on a main home, assuming it's the only property you'll own after
-// buying. Surcharges for additional homes aren't modelled.
-function calculatePropertyTax(price, nation, isFirstTimeBuyer, taxRows) {
-    const info = TAX_BY_NATION[nation];
-    const rows = taxRows.filter(row => row.tax === info.tax && row.nation === info.sheetNation && row.status === "CONFIRMED");
-    const standard = rows.filter(row => /^(Standard residential|Main residential rates)$/.test(row.band_relief));
-    const result = { ...info, amount: taxFromBands(price, standard), relief: null, sources: [...new Set(rows.map(row => row.source_id))] };
-
-    if (!isFirstTimeBuyer) return result;
-
-    if (info.tax === "SDLT") {
-        // First-time buyer relief applies only up to a £500,000 price.
-        const reliefBands = rows.filter(row => row.band_relief === "First-time buyer relief");
-        const cap = Math.max(...reliefBands.map(row => row.band_to || 0));
-        if (price <= cap) {
-            result.amount = taxFromBands(price, reliefBands);
-            result.relief = "First-time buyer relief applied.";
-        } else {
-            result.relief = `First-time buyer relief isn't available above £${cap.toLocaleString("en-GB")}.`;
-        }
-    } else if (info.tax === "LBTT") {
-        // The nil-rate band rises for first-time buyers; the other bands stay.
-        const nilBand = rows.find(row => row.band_relief.startsWith("First-time buyer relief"));
-        if (nilBand) {
-            const raised = standard.map(row => ({ ...row }));
-            raised[0].band_to = nilBand.band_to;
-            raised[1].band_from = Math.max(raised[1].band_from, nilBand.band_to + 1);
-            result.amount = taxFromBands(price, raised.filter(row => row.band_to === null || row.band_from <= row.band_to));
-            result.relief = "First-time buyer relief applied.";
-        }
-    } else {
-        result.relief = "Wales has no first-time buyer relief on its official rates page.";
-    }
-    return result;
-}
-
-// Rate filters (SPECIAL_PRODUCT, rateMatchesBuyer, ltvInBand) are shared, in script.js.
-
-
-/* ==================== Part B: page code ==================== */
 
 const form = document.getElementById("mortgage-form");
 
@@ -125,9 +19,15 @@ if (form) {
         propertyType: document.getElementById("property-type"),
         applicants: document.getElementById("applicants"),
         nation: document.getElementById("nation"),
-        age: document.getElementById("age")
+        age: document.getElementById("age"),
+        income2: document.getElementById("income2"),
+        repaymentType: document.getElementById("repayment-type"),
+        employment: document.getElementById("employment"),
+        trading: document.getElementById("trading"),
+        whatIfRate: document.getElementById("whatif-rate")
     };
-    const TEXT_FIELDS = ["buyerType", "propertyType", "applicants", "nation"];
+    const TEXT_FIELDS = ["buyerType", "propertyType", "applicants", "nation", "repaymentType", "employment"];
+    const additionalBox = document.getElementById("additional");
 
     const resultsPanel = document.getElementById("results");
     const scenariosBody = document.getElementById("scenarios-body");
@@ -178,11 +78,22 @@ if (form) {
         }
         if (Number.isNaN(values.monthlyDebts)) values.monthlyDebts = 0;
         if (Number.isNaN(values.age)) values.age = null;
+        if (Number.isNaN(values.income2)) values.income2 = 0;
+        // Lenders' income rules use the combined income of everyone on the application.
+        values.income1 = values.income;
+        values.income = values.income + (values.applicants === "joint" ? values.income2 : 0);
+        values.selfEmployed = values.employment === "self-employed";
+        values.yearsTrading = values.selfEmployed && !Number.isNaN(values.trading) ? values.trading : null;
+        values.customRate = Number.isNaN(values.whatIfRate) ? null : values.whatIfRate;
+        values.additionalProperty = additionalBox.checked && values.buyerType !== "remortgage";
         return values;
     }
 
     function findProblem(v) {
-        if (!(v.income > 0)) return "Enter your yearly income before tax.";
+        if (!(v.income1 > 0)) return "Enter your yearly income before tax.";
+        if (v.income2 < 0) return "The second applicant's income can't be negative.";
+        if (v.yearsTrading !== null && !(v.yearsTrading >= 0)) return "Years trading can't be negative.";
+        if (v.customRate !== null && !(v.customRate >= 0 && v.customRate <= 20)) return "Enter a 'rates rose to' figure between 0% and 20%, or leave it blank.";
         if (!(v.price > 0)) return "Enter the property price.";
         if (!(v.deposit >= 0)) return "Enter your deposit (0 if none).";
         if (v.deposit >= v.price) return "Your deposit covers the whole price, so you wouldn't need a mortgage.";
@@ -272,11 +183,14 @@ if (form) {
 
     function renderLimits(inputs, r) {
         const user = { ...inputs, loan: r.loan, ltv: r.ltv, incomeMultiple: r.incomeMultiple, dti: r.dti };
-        const results = units.map(unit => ({ unit, ...checkLender(unit.rules, user, { productMaxLtv: productMaxLtv(unit, user) }) }));
+        const results = units.map(unit => {
+            const result = checkLender(unit.rules, user, { productMaxLtv: productMaxLtv(unit, user) });
+            return { unit, ...result, maxBorrowing: indicativeMaxBorrowing(result, user) };
+        });
         const counts = { within: 0, outside: 0, partial: 0 };
         results.forEach(result => counts[result.verdict]++);
 
-        const rows = results.map(({ unit, verdict, checks, failed, specials, unverified }) => {
+        const rows = results.map(({ unit, verdict, checks, failed, specials, unverified, maxBorrowing }) => {
             const headline = verdict === "outside"
                 ? failed.map(check => `${check.label.replace(/ \(from current products\)/, "")}: ${formatLimit(check.limit, check.unit)} ${check.isMinimum ? "minimum" : "maximum"}`).join("; ")
                 : VERDICT_TEXT[verdict];
@@ -300,6 +214,13 @@ if (form) {
                 <p class="group-heading">Check with the lender</p>
                 <ul class="plain-list">${unverified.map(rule => `<li>${glossarize(rule.related_criteria_row || rule.rule_type)} ${statusBadge(rule.status)} ${sourceLinks(rule.source_id)}</li>`).join("")}</ul>` : "";
 
+            const borrowingLine = maxBorrowing ? `
+                <p class="borrowing-line"><strong>Indicative maximum borrowing: ${formatPounds(maxBorrowing.amount)}</strong>,
+                    limited by its ${maxBorrowing.limitedBy}${maxBorrowing.limitedBy === "income multiple" ? ` (${formatLimit(maxBorrowing.multiple, "×")} your income)` : ""}.
+                    ${sourceLinks([...new Set(maxBorrowing.rules.flatMap(rule => parseSourceIds(rule.source_id)))])}
+                    <span class="fact-meta">The lowest of this lender's published caps for your figures. Lenders' own affordability models aren't public, so what they would actually lend can be lower.</span></p>`
+                : `<p class="borrowing-line muted">Indicative maximum borrowing: not published (no confirmed income multiple).</p>`;
+
             return `
                 <details class="match match-${verdict}">
                     <summary>
@@ -313,8 +234,10 @@ if (form) {
                                 <tbody>${checkRows}</tbody>
                             </table>
                         </div>
+                        ${borrowingLine}
                         ${specialList}${unverifiedList}
                         ${user.age ? "" : '<p class="fact-meta">Add your age above to check age limits too.</p>'}
+                        ${user.selfEmployed && user.yearsTrading === null ? '<p class="fact-meta">Add your years trading above to check self-employed history rules.</p>' : ""}
                         <p><a href="lender.html?id=${unit.lenderId}">Full ${escapeHtml(unit.name)} criteria</a></p>
                     </div>
                 </details>`;
@@ -411,6 +334,17 @@ if (form) {
 
     /* ----- Results ----- */
 
+    const isRemortgage = inputs => inputs.buyerType === "remortgage";
+    let ltvBands = [];
+
+    // Which pricing band the LTV falls in, and what a bigger deposit would change.
+    function ltvBandLine(r, inputs) {
+        const { band, next } = ltvBandFor(r.ltv, inputs.price, ltvBands);
+        if (band === null) return `<p class="result-caption">Your LTV is above the highest band in our rate data (${ltvBands[ltvBands.length - 1]}%).</p>`;
+        const move = next ? ` ${isRemortgage(inputs) ? "Keeping" : "Putting down"} ${formatPounds(next.extraDeposit)} more ${isRemortgage(inputs) ? "equity" : "deposit"} would move you into the ${next.ceiling}% band.` : "";
+        return `<p class="result-caption">Pricing band: up to ${band}% <span class="term" data-term="LTV">LTV</span>.${move}</p>`;
+    }
+
     function renderResults(inputs, r, tax, counts) {
         const notes = [explainIncomeMultiple(r), explainLtv(r), explainDti(r)].filter(Boolean);
         const checked = counts.within + counts.outside + counts.partial;
@@ -425,17 +359,21 @@ if (form) {
             </div>
             <p class="result-label">Estimated monthly repayment</p>
             <p class="result-figure">${formatPounds(r.monthly)}</p>
-            <p class="result-caption">Over ${inputs.termYears} years at ${inputs.ratePercent}% on a <span class="term" data-term="Repayment mortgage">repayment mortgage</span>.</p>
+            <p class="result-caption">${inputs.repaymentType === "interest-only"
+                ? `Over ${inputs.termYears} years at ${inputs.ratePercent}%, <strong>interest-only</strong>: you would still owe ${formatPounds(r.loan)} at the end, so lenders also ask how you will repay it.`
+                : `Over ${inputs.termYears} years at ${inputs.ratePercent}% on a <span class="term" data-term="Repayment mortgage">repayment mortgage</span>.`}</p>
 
             <dl class="stat-grid">
                 <div><dt>Loan amount</dt><dd>${formatPounds(r.loan)}</dd></div>
                 <div><dt><span class="term" data-term="LTV">LTV</span></dt><dd>${formatPercent(r.ltv)}</dd></div>
-                <div><dt>Deposit</dt><dd>${formatPercent(r.depositPercent)}</dd></div>
+                <div><dt>${isRemortgage(inputs) ? "Equity" : "Deposit"}</dt><dd>${formatPercent(r.depositPercent)}</dd></div>
                 <div><dt>Income multiple</dt><dd>${r.incomeMultiple.toFixed(2)}×</dd></div>
             </dl>
+            ${ltvBandLine(r, inputs)}
 
-            <p class="tax-line"><span>${escapeHtml(tax.name)} (${escapeHtml(inputs.nation)})</span> <strong>${formatPounds(tax.amount)}</strong></p>
-            <p class="result-caption">${tax.relief ? escapeHtml(tax.relief) + " " : ""}Assumes this will be your only home. ${sourceLinks(tax.sources)}</p>
+            ${tax ? `<p class="tax-line"><span>${escapeHtml(tax.name)} (${escapeHtml(inputs.nation)})</span> <strong>${formatPounds(tax.amount)}</strong></p>
+            <p class="result-caption">${tax.surcharge ? escapeHtml(tax.surcharge) + " " : ""}${tax.relief ? escapeHtml(tax.relief) + " " : ""}${inputs.additionalProperty ? "" : "Assumes this will be your only home. "}${sourceLinks(tax.sources)}</p>`
+                : `<p class="result-caption">No purchase tax applies to a remortgage.</p>`}
 
             <div class="borrowing">
                 <p class="borrowing-label">Estimated borrowing capacity</p>
@@ -483,13 +421,7 @@ if (form) {
     }
 
     function renderScenarios(inputs, base) {
-        const altTerm = inputs.termYears === 35 ? 25 : 35;
-        const scenarios = [
-            { label: "Your figures", inputs },
-            { label: "£10,000 more deposit", inputs: { ...inputs, deposit: inputs.deposit + 10000 } },
-            { label: `Rate 1 point higher (${(inputs.ratePercent + 1).toFixed(2)}%)`, inputs: { ...inputs, ratePercent: inputs.ratePercent + 1 } },
-            { label: `${altTerm}-year term`, inputs: { ...inputs, termYears: altTerm } }
-        ];
+        const scenarios = whatIfScenarios(inputs, { customRate: inputs.customRate });
 
         scenariosBody.innerHTML = scenarios.map((scenario, index) => {
             if (scenario.inputs.deposit >= scenario.inputs.price) {
@@ -519,10 +451,16 @@ if (form) {
         container.innerHTML = `
             ${regulation ? `<p>${glossarize(regulation.detail)}. ${sourceLinks(regulation.source_id)}</p>` : ""}
             <p>Most lenders don't publish the rate they test against. For the one that does in our research, your repayment at that rate would be:</p>
-            <ul class="plain-list">${published.map(row => `
+            <ul class="plain-list">${published.map(row => {
+                const stress = stressRate(row.value_numeric, inputs.ratePercent);
+                const why = stress.basis === "published"
+                    ? `The published ${row.value_numeric.toFixed(2)}% is higher than your rate plus 1 point (${(inputs.ratePercent + 1).toFixed(2)}%), so it applies.`
+                    : `Your rate plus 1 point (${stress.rate.toFixed(2)}%) is higher than the published ${row.value_numeric.toFixed(2)}%, so that applies.`;
+                return `
                 <li><strong>${escapeHtml(row.lender_scope)}, ${escapeHtml(row.item.replace("Stress rate - ", "").toLowerCase())}:</strong>
-                    ${formatPounds(calculateMonthlyRepayment(r.loan, Math.max(row.value_numeric, inputs.ratePercent + 1), inputs.termYears))} a month
-                    at ${Math.max(row.value_numeric, inputs.ratePercent + 1).toFixed(2)}%. ${escapeHtml(row.detail)}. ${sourceLinks(row.source_id)}</li>`).join("")}
+                    ${formatPounds(calculateMonthlyPayment(r.loan, stress.rate, inputs.termYears, inputs.repaymentType))} a month
+                    at ${stress.rate.toFixed(2)}%. ${escapeHtml(row.lender_scope)} states: "${escapeHtml(row.detail)}". ${why} ${sourceLinks(row.source_id)}</li>`;
+            }).join("")}
             </ul>`;
     }
 
@@ -550,7 +488,8 @@ if (form) {
         const problem = findProblem(inputs);
         if (problem) { renderProblem(problem); return; }
         const result = calculateMortgage(inputs);
-        const tax = calculatePropertyTax(inputs.price, inputs.nation, inputs.buyerType === "first-time buyer", RESEARCH.property_taxes);
+        const tax = isRemortgage(inputs) ? null
+            : calculatePropertyTax(inputs.price, inputs.nation, inputs.buyerType === "first-time buyer", RESEARCH.property_taxes, { additionalProperty: inputs.additionalProperty });
         const counts = renderLimits(inputs, result);
         renderResults(inputs, result, tax, counts);
         renderScenarios(inputs, result);
@@ -600,6 +539,20 @@ if (form) {
 
     /* ----- Wiring ----- */
 
+    // Shows only the fields that apply, and renames price/deposit for a remortgage.
+    // (Registered before the update listeners so the form is in shape when results are built.)
+    function syncForm() {
+        const remortgage = fields.buyerType.value === "remortgage";
+        const joint = fields.applicants.value === "joint";
+        document.getElementById("income2-field").hidden = !joint;
+        document.getElementById("income-label").textContent = joint ? "First applicant's yearly income before tax" : "Yearly income before tax";
+        document.getElementById("trading-field").hidden = fields.employment.value !== "self-employed";
+        document.getElementById("additional-field").hidden = remortgage;
+        document.querySelector('label[for="price"]').textContent = remortgage ? "Current property value" : "Property price";
+        document.querySelector('label[for="deposit"]').textContent = remortgage ? "Equity you keep (value minus new loan)" : "Deposit";
+    }
+    form.addEventListener("change", syncForm);
+
     // Once calculated, "input" and "change" keep the figures live.
     form.addEventListener("input", update);
     form.addEventListener("change", update);
@@ -640,6 +593,8 @@ if (form) {
 
     if (RESEARCH) {
         units = buildUnits();
+        ltvBands = ltvCeilings(RESEARCH.mortgage_rates.filter(isDisplayable));
+        syncForm();
         renderMarketStrip();
         setDefaultRate();
         renderSchemes();

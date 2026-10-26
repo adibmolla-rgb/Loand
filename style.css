@@ -1117,6 +1117,19 @@ a.source-ref:hover {
     margin-bottom: 0.4rem;
 }
 
+.check-field label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+}
+
+.check-field input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--ink);
+}
+
 .input-wrap {
     display: flex;
     align-items: center;

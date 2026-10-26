@@ -131,6 +131,7 @@ const SPECIAL_PRODUCT = /shared equity|shared ownership|premier|help to buy|righ
 
 // Does a rate row suit this kind of buyer? ("first-time buyer" or "home mover")
 function rateMatchesBuyer(row, buyerType) {
+    if (buyerType === "remortgage") return row.purpose === "Remortgage" && row.buyer_type === "Remortgage";
     const buyers = buyerType === "first-time buyer"
         ? ["First-time buyer", "Purchase", "Purchase (segment not disambiguated)"]
         : ["Home mover / purchase", "Purchase", "Purchase (segment not disambiguated)"];

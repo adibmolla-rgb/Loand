@@ -14,7 +14,8 @@ LoanD is not a lender. It gives estimates, not decisions.
 No server needed to view the site: open `index.html` in a browser. (A build
 step is only needed when the research workbook changes; see "Updating the
 research data".)
-Everything runs in the browser; no data is sent anywhere.
+Everything runs in the browser; no data is sent anywhere. For a local preview
+server, run `node scripts/serve.js` and open http://localhost:4173.
 
 ## Structure
 
@@ -34,8 +35,10 @@ Loand/
 ├── script.js               shared helpers: formatting, sources, glossary,
 │                           theme, navigation
 ├── js/
-│   ├── mortgage.js         calculator: maths (Part A) + page code (Part B)
-│   ├── lender-match.js     checks figures against lenders' published rules
+│   ├── mortgage.js         calculator page code (reads the form, writes results)
+│   ├── engine/
+│   │   ├── rules.js        checks figures against lenders' published rules (pure, tested)
+│   │   └── calc.js         repayments, purchase taxes, stress rates, scenarios (pure, tested)
 │   ├── lender-pages.js     directory and profile pages
 │   ├── compare.js          comparison table
 │   └── market.js           charts
@@ -126,7 +129,7 @@ Output: `data/json/<sheet>.json` (one file per sheet), `data/json/meta.json`
 fix the spreadsheet and re-run. Run the tests with `npm test`.
 
 After a new release, re-check `GENERAL_CONDITION_RULES` in
-`js/lender-match.js`. It lists the rule IDs reviewed as applying to ordinary
+`js/engine/rules.js`. It lists the rule IDs reviewed as applying to ordinary
 cases; unreviewed rules are treated as special routes and never used to judge
 someone's figures.
 
