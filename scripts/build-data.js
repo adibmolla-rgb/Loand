@@ -11,34 +11,23 @@
 
 const fs = require("fs");
 const path = require("path");
-const XLSX = require("xlsx");
-const { SKIP_SHEETS, slug, tableFromRows, validate } = require("./lib-data");
+const { slug, validate } = require("./lib-data");
+const { ROOT, findWorkbooks, readWorkbookTables } = require("./lib-workbook");
 
-const ROOT = path.join(__dirname, "..");
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const given = args.find(arg => !arg.startsWith("--"));
 
 function findWorkbook() {
     if (given) return path.resolve(given);
-    const found = ["data", "tools"].flatMap(dir => {
-        const full = path.join(ROOT, dir);
-        return fs.existsSync(full) ? fs.readdirSync(full).filter(f => /^Loand_UK_Lender_Research_.*\.xlsx$/.test(f)).map(f => path.join(full, f)) : [];
-    });
+    const found = findWorkbooks();
     if (!found.length) throw new Error("No Loand_UK_Lender_Research_*.xlsx found in data/ or tools/");
-    return found.sort((a, b) => path.basename(a).localeCompare(path.basename(b))).pop();
+    return found[found.length - 1];
 }
 
 function main() {
     const source = findWorkbook();
-    const workbook = XLSX.read(fs.readFileSync(source), { type: "buffer", cellDates: true });
-
-    const tables = {};
-    for (const name of workbook.SheetNames) {
-        if (SKIP_SHEETS.has(name)) continue;
-        const matrix = XLSX.utils.sheet_to_json(workbook.Sheets[name], { header: 1, raw: true, defval: null, blankrows: false });
-        tables[name] = tableFromRows(matrix);
-    }
+    const tables = readWorkbookTables(source);
 
     const { errors, warnings } = validate(tables);
     warnings.forEach(w => console.warn("WARNING:", w));

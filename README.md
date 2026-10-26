@@ -74,6 +74,24 @@ Output: `data/json/<sheet>.json` (one file per sheet), `data/json/meta.json`
 and `data/research.js` (the bundle the pages load today). Never edit these by
 hand: fix the spreadsheet and re-run. Do not rename sheets or columns.
 
+### Checking what a new release changes
+
+Before you build, compare the new workbook with the one the site uses:
+
+```
+npm run diff-releases -- old.xlsx new.xlsx           # print a checklist
+npm run diff-releases -- old.xlsx new.xlsx --out checklist.md
+```
+
+With no paths it compares the two newest workbooks in `data/` and `tools/`. It
+changes nothing. The checklist lists what to fix before using the release (a
+removed or renamed column, sheet or Source ID; the exit code is then 1), what to
+review (new rules whose "Other condition" needs a human decision, reviewed rules
+that changed, facts that lost or gained `CONFIRMED`, lender groups the site
+doesn't know yet, source changes, and changes the release's own `Changelog`
+doesn't mention), and the steps to run afterwards. Rows where only a
+"last verified" date moved are counted as re-verified, not changed.
+
 After a new release, re-check `GENERAL_CONDITION_RULES` in
 `js/engine/rules.js`. It lists the rule IDs reviewed as applying to ordinary
 cases; unreviewed rules are treated as special routes and never used to judge
@@ -86,7 +104,7 @@ npm test
 ```
 
 Uses Node's built-in test runner; no extra packages. It covers the data
-validator, the rule engine, calculators, rate and loan helpers, and the colour
+validator, the release diff, the rule engine, calculators, rate and loan helpers, and the colour
 contrast of both themes. Fixtures come from the official worked examples (for
 example SDLT on £295,000 is £4,750; LBTT on £875,000 is £63,350; LTT on £280,000
 is £3,300) and from real rows of the `Rules_Numeric` sheet. A GitHub Actions
@@ -137,7 +155,7 @@ Loand/
 │   ├── research.js, meta.js, json/   GENERATED from the workbook: do not edit
 │   ├── lender-registry.js  lender IDs, brand grouping, summaries (hand-written)
 │   └── glossary.js         plain-English definitions for jargon
-├── scripts/                build-data.js (workbook -> data/), serve.js (local preview)
+├── scripts/                build-data.js (workbook -> data/), diff-releases.js (what changed), serve.js (local preview)
 ├── tests/                  Node test runner
 ├── tools/                  the research workbook and the GitHub helper scripts
 └── docs/                   research report, database notes, screenshots, original sketch
@@ -173,8 +191,7 @@ Built in stages.
 
 - **Now:** static HTML, CSS and JavaScript, with a self-hosted copy of Chart.js for the market charts.
 - **Next:** shareable results using only non-personal inputs (to be discussed
-  first), save and compare up to three scenarios in the browser, and a script
-  that diffs two workbook releases using the `Changelog` sheet.
+  first), and save and compare up to three scenarios in the browser.
 - **Later:** Node/Express backend and PostgreSQL replacing the generated data
   files (tables mirroring the JSON: lenders, rules_numeric, mortgage_rates,
   loan_apr_tiers, property_taxes, time_series, sources, conflicts), and an AI
